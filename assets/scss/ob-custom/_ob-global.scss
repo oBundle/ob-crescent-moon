@@ -1,0 +1,31 @@
+
+//***************************
+//Fonts
+//***************************
+
+@font-face {
+  font-family: 'VisbyCF';
+  src: url('https://store-pqywb1ijst.mybigcommerce.com/content/visby-cf/webfonts/visby-cf.woff2') format('woff2'),
+        url('https://store-pqywb1ijst.mybigcommerce.com/content/visby-cf/webfonts/visby-cf.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'VisbyCF';
+  src: url('https://store-pqywb1ijst.mybigcommerce.com/content/visby-cf-bold/webfonts/visby-cf-bold.woff2') format('woff2'),
+        url('https://store-pqywb1ijst.mybigcommerce.com/content/visby-cf-bold/webfonts/visby-cf-bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'VisbyCF';
+  src: url('https://store-pqywb1ijst.mybigcommerce.com/content/visby-cf-medium/webfonts/visby-cf-medium.woff') format('woff2'),
+        url('https://store-pqywb1ijst.mybigcommerce.com/content/visby-cf-medium/webfonts/visby-cf-medium.woff2') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body, h1, h2, h3, h4, h5, h6, p, a, span {
+  font-family: 'VisbyCF' !important;
+}
+

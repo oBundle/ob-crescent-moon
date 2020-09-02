@@ -1,0 +1,41 @@
+
+//***************************
+//Button Styling
+//***************************
+.ob-btn {
+  @include text($size: 15px, $lineHeight: 15px, $weight: 900);
+  padding: 13px 40px;
+  letter-spacing: 0.025em;
+  text-decoration: none; 
+  &-bg-red {
+    background-color: $ob-red;
+  }
+  &-transparent {
+    background-color: transparent;
+  }
+}
+
+.ob-cta-link {
+  @include text($size: 15px, $lineHeight: 15px, $weight: 900);
+  padding: 13px 40px 13px 0px;
+  letter-spacing: 0.025em;
+  text-decoration: none; 
+}
+
+//***************************
+//SVG STYLING
+//***************************
+.ob-arrow-right {
+  &-red {
+    fill: $ob-red;
+    width: 14px;
+    height: 9px;
+    margin-left: 10px;
+  }
+  &-white {
+    fill: $ob-white;
+    width: 14px;
+    height: 9px;
+    margin-left: 10px;
+  }
+}

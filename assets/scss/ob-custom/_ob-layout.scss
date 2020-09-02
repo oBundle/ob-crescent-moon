@@ -1,0 +1,62 @@
+//layouts based on data page type for certain pages
+.container[data-page-type="default"] {
+  max-width: 100vw;
+  padding: 0;
+}
+
+
+//***************************
+//Containers
+//***************************
+.ob-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.row {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  padding: 4rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.columns {
+  position: relative;
+  height: 100%;
+}
+
+.ob-cta-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100%;
+  &-xl {
+    max-width: 100%;
+    width: 625px;
+  }
+  &-lg {
+    max-width: 100%;
+    width: 525px;
+
+  }
+  &-md {
+    max-width: 100%;
+    width: 330px;
+
+  }
+  &-sm {
+    max-width: 100%;
+    width: 200px;
+
+  }
+}
+
+.ob-img-container {
+  position: relative;
+  width: 100%;
+  height: 650px;
+}
