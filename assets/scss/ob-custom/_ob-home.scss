@@ -7,15 +7,21 @@
   height: 1036px;
   position: relative;
   background-size: cover;
+  overflow: hidden;
+}
+
+.ob-hero-cta-container {
+  @include position(absolute, 6, $top: 150px, $right: 150px);
+
 }
 
 
 .ob-hero-img-1 {
-  @include position(absolute, 0, $bottom: 0, $right: 0);
+  @include position(absolute, 0, $bottom: 0, $right: -100px);
 }
 
 .ob-hero-img-2 {
-  @include position(absolute, 2, $bottom: 0, $left: 0);
+  @include position(absolute, 2, $bottom: 0, $left: 150px);
 }
 
 .ob-hero-img-3 {
@@ -37,8 +43,12 @@
 }
 
 .ob-hero-img-5 {
-  @include position(absolute, 5, $bottom: 0, $left: 0);
+  @include position(absolute, 5, $bottom: -1px, $left: 0);
 }
+
+//hide ctas initially
+#ob-hero-heading { display: none; }
+#ob-hero-ctas{ display: none; }
 
 //***************************
 //HOME CTA Sections styling
@@ -54,6 +64,21 @@
   &-3 {
     @include position(absolute, 4, $bottom: -30px, $left: 0);
   }
+  &-4 {
+    @include position(absolute, 4, $top: -150px, $left: 0);
+  }
+  &-5 {
+    @include position(absolute, 4, $bottom: -200px, $left: 0);
+  }
+}
+
+.ob-cta-icon {
+  width: 53px;
+}
+
+.ob-cta-free-shipping {
+  margin-top: 500px;
+  margin-bottom: 150px;
 }
 
 //***************************
@@ -68,6 +93,11 @@
   &-3 {
     background-image: url('../icons/bg-svg-4.svg');
     background-position: top;
+    background-repeat: no-repeat;
+  }
+  &-4 {
+    background-image: url('../icons/bg-svg-5.svg');
+    background-position: bottom;
     background-repeat: no-repeat;
   }
 }
