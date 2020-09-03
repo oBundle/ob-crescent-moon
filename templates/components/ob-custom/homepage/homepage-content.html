@@ -2,7 +2,21 @@
 
 {{> components/ob-custom/homepage/cta-section-1}}
 
-
 {{> components/ob-custom/homepage/shop-by-category}}
+
+{{#if products.featured}}
+  {{> components/products/featured products=products.featured columns=theme_settings.homepage_featured_products_column_count}}
+{{/if}}
+
+{{#if products.new}}
+  <div class="ob-wrapper ob-home-bg-3">
+    <div class="ob-container text-center">
+      <h5 class="ob-heading-cta-md ob-pt-50">New Products</h5>
+      {{> components/products/new products=products.new columns=theme_settings.homepage_new_products_column_count}}
+    </div>
+  </div>
+{{/if}}
+
+
 
 

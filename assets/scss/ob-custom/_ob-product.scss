@@ -1,10 +1,34 @@
 //***************************
-//product card styles
+//product / category card styles
 //***************************
-.ob-product-card {
-  max-width: 330px;
-  width: 330px;
+.ob-category-card {
+  max-width: 300px;
+  min-width: 300px;
+  width: 300px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   &-mix-blend {
+    mix-blend-mode: multiply;
+  }
+}
+
+.ob-product-card {
+  max-width: 300px;
+  .card-body {
+    text-align: center;
+    height: auto;
+  }
+  .card-title {
+    @include text($size: 16px, $lineHeight: 22px, $weight: 900);
+    text-decoration: none;
+    height: 100px;
+  }
+  .card-text {
+    margin-top: 11px;
+  }
+  .card-img-container {
     mix-blend-mode: multiply;
   }
 }
