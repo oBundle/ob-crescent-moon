@@ -29,6 +29,10 @@ html, body, h1, h2, h3, h4, h5, h6, p, a, span {
   font-family: 'VisbyCF' !important;
 }
 
+h1,h2,h3,h4,h5,h6 {
+  margin-top: 0;
+}
+
 a {
   &:hover {
     color: inherit;
