@@ -1,0 +1,43 @@
+//***************************
+//Typography util classes
+//***************************
+
+.ob-heading {
+  &-cta-xl {
+    @include text($size: 80px, $lineHeight: 80px, $weight: 900);
+  }
+  &-cta-lg {
+    @include text($size: 50px, $lineHeight: 52px, $weight: 900);
+  }
+  &-cta-md {
+    @include text($size: 36px, $lineHeight: 30px, $weight: 900);
+  }
+  &-cta-sm {
+    @include text($size: 20px, $lineHeight: 24px, $weight: 900);
+  }
+}
+
+.ob-paragraph {
+  &-lg {
+    @include text($size: 18px, $lineHeight: 30px, $weight: 500);
+  }
+  &-md {
+    @include text($size: 16px, $lineHeight: 22px, $weight: 500);
+  }
+}
+
+.ob-text {
+  &-white {
+    color: $ob-white;
+  }
+  &-primary {
+    color: $ob-text-primary;
+  }
+  &-secondary {
+    color: $ob-text-secondary;
+  }
+  &-red {
+    color: $ob-red;
+  }
+}
+

@@ -1,0 +1,28 @@
+
+.slick-next {
+  right: 5px;
+}
+.slick-prev {
+  left: -15px;
+}
+.slick-next, .slick-prev {
+  background-color: transparent;
+  border: none;
+  &:hover, &:focus {
+    background-color: transparent;
+  }
+}
+.slick-next::before, .slick-next:hover::before, .slick-next:focus:before {
+  background-image: url('../icons/ob-slider-arrow-right.svg');
+  width: 40px;
+  &:hover {
+    background-image: url('../icons/ob-slider-arrow-right.svg');
+  }
+}
+.slick-prev::before, .slick-prev:hover::before, .slick-prev:focus:before {
+  background-image: url('../icons/ob-slider-arrow-left.svg');
+  width: 40px;
+  &:hover {
+    background-image: url('../icons/ob-slider-arrow-left.svg');
+  }
+}

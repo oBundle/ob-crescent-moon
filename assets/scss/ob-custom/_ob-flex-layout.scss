@@ -1,0 +1,47 @@
+.ob-product-card-row {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.ob-flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.ob-flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.ob-flex-align {
+  &-start {
+    align-items: flex-start;
+
+  }
+  &-center {
+    align-items: center;
+  }
+  &-end {
+    align-items: center;
+  }
+}
+
+.ob-flex-justify {
+  &-start {
+    justify-content: flex-start;
+
+  }
+  &-center {
+    justify-content: center;
+  }
+  &-end {
+    justify-content: center;
+  }
+}
+
+.ob-flex-col {
+  display: flex;
+  flex-direction: column;
+}

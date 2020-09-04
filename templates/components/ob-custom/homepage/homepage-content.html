@@ -1,0 +1,45 @@
+{{> components/ob-custom/homepage/hero}}
+
+{{> components/ob-custom/homepage/cta-section-1}}
+
+{{> components/ob-custom/homepage/shop-by-category}}
+
+{{#if products.featured}}
+  {{> components/products/featured products=products.featured columns=theme_settings.homepage_featured_products_column_count}}
+{{/if}}
+
+{{#if products.new}}
+  <div class="ob-wrapper ob-home-bg-3">
+    <div class="ob-container text-center">
+      <h5 class="ob-heading-cta-md ob-pt-50">New Products</h5>
+      {{> components/products/new products=products.new columns=theme_settings.homepage_new_products_column_count}}
+    </div>
+  </div>
+{{/if}}
+
+{{> components/ob-custom/homepage/cta-section-2}}
+
+<div class="ob-container">
+  <div class="ob-blog-carousel">
+    {{#each blog.recent_posts}}
+    <div class="ob-blog-card" href="{{url}}">
+      <a href="{{url}}">
+        <img src="{{cdn 'img/loading.svg'}}" data-src='{{getImage thumbnail "blog_thumbnail_size" }}' class="lazyload"/>
+      </a>
+      <h6 class="ob-heading-cta-sm">{{title}}</h6>
+      <p class="ob-paragraph-md">{{summary}}...</p>
+      <a class="ob-cta-link ob-text-red" href={{url}}>
+        Read Blog <svg class="ob-arrow-right-red"><use xlink:href="#icon-ob-arrow-right" /></svg>
+      </a>
+      
+    </div>
+      {{/each}}
+  </div>
+</div>
+
+<div class="instagram-slider-container">
+</div>
+
+
+
+

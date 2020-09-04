@@ -1,6 +1,15 @@
-@import "ob-product.scss";
-@import "ob-category.scss";
-@import "ob-global.scss";
-@import "ob-home.scss";
-@import "ob-mixins.scss";
-@import "ob-variables.scss";
+@import "ob-variables";
+@import "ob-mixins";
+
+@import "ob-cards";
+@import "ob-category";
+@import "ob-global";
+@import "ob-home";
+@import "ob-layout";
+@import "ob-typography";
+@import "ob-buttons";
+@import "ob-flex-layout";
+@import "ob-carousel";
+@import "ob-blog";
+
+@import "ob-flex-grid";
