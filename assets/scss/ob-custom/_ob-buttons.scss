@@ -16,10 +16,10 @@
     background-color: transparent;
   }
   &:hover {
-    .ob-arrow-right{
+    .ob-arrow-right-red, .ob-arrow-right-white{
       transform: translateX(7px);
     }
-    .ob-arrow-down {
+    .ob-arrow-down-red, .ob-arrow-down-white {
       transform: rotate(90deg) translateX(7px);
     }
   } 
@@ -32,11 +32,11 @@
   text-decoration: none; 
   transition: all ease-in-out .2s;
   &:hover {
-    .ob-arrow-right {
+    .ob-arrow-right-red, .ob-arrow-right-white{
       transform: translateX(7px);
     }
-    .ob-arrow-down {
-      transform: rotate(90deg) translateX(-7px);
+    .ob-arrow-down-red, .ob-arrow-down-white {
+      transform: rotate(90deg) translateX(7px);
     }
   }
 }
