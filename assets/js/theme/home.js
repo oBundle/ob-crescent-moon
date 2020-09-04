@@ -7,9 +7,14 @@ import igSlider from "./ob-custom/ig-slider"
 
 
 export default class Home extends PageManager {
-    onReady() {
-      heroAnimation()
-      blogCarousel()
-      igSlider()
-    }
+  constructor(context) {
+		super(context);
+  }
+  
+  onReady() {
+    heroAnimation()
+    blogCarousel(this.context)
+    igSlider()
+    console.log(this.context)
+  }
 }
