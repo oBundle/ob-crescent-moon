@@ -7,13 +7,22 @@
   padding: 15px 38px;
   letter-spacing: 0.025em;
   border-radius: 6px;
-  text-decoration: none; 
+  text-decoration: none;
+  transition: all ease-in-out .2s;
   &-bg-red {
     background-color: $ob-red;
   }
   &-transparent {
     background-color: transparent;
   }
+  &:hover {
+    .ob-arrow-right{
+      transform: translateX(7px);
+    }
+    .ob-arrow-down {
+      transform: rotate(90deg) translateX(7px);
+    }
+  } 
 }
 
 .ob-cta-link {
@@ -21,6 +30,15 @@
   padding: 13px 40px 13px 0px;
   letter-spacing: 0.025em;
   text-decoration: none; 
+  transition: all ease-in-out .2s;
+  &:hover {
+    .ob-arrow-right {
+      transform: translateX(7px);
+    }
+    .ob-arrow-down {
+      transform: rotate(90deg) translateX(-7px);
+    }
+  }
 }
 
 //***************************
@@ -32,6 +50,8 @@
     width: 14px;
     height: 9px;
     margin-left: 10px;
+    transition: all ease-in-out .2s;
+
   }
   &-white {
     fill: $ob-white;
@@ -39,5 +59,27 @@
     width: 14px;
     height: 9px;
     margin-left: 10px;
+    transition: all ease-in-out .2s;
+
+  }
+}
+
+.ob-arrow-down {
+  &-red {
+    fill: $ob-red;
+    width: 14px;
+    height: 9px;
+    margin-left: 10px;
+    transition: all ease-in-out .2s;
+    transform: rotate(90deg);
+  }
+  &-white {
+    fill: $ob-white;
+    stroke: $ob-white;
+    width: 14px;
+    height: 9px;
+    margin-left: 10px;
+    transition: all ease-in-out .2s;
+    transform: rotate(90deg);
   }
 }

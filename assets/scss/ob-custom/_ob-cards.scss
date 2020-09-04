@@ -29,9 +29,22 @@
   .card-text {
     margin-top: 11px;
   }
+  .card-figure {
+    background-color:  #E5E5E5;
+  }
   .card-img-container {
     mix-blend-mode: multiply;
+    &:after {
+      padding-bottom: 100%;
+    }
   }
+  .card-figcaption {
+    display: none;
+    &:hover {
+      display: none;
+    }
+  }
+  
 }
 
 .ob-blog-card {

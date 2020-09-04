@@ -6,8 +6,11 @@
   left: -15px;
 }
 .slick-next, .slick-prev {
-  background-color: none;
+  background-color: transparent;
   border: none;
+  &:hover, &:focus {
+    background-color: transparent;
+  }
 }
 .slick-next::before, .slick-next:hover::before, .slick-next:focus:before {
   background-image: url('../icons/ob-slider-arrow-right.svg');
