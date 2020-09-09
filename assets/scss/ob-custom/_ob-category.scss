@@ -1,4 +1,15 @@
 //***************************
+//Category Container
+//***************************
+.container[data-page-type="category"] {
+  .ob-container {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  
+  }
+}
+
+//***************************
 //Category Subnav
 //***************************
 .ob-cat-subnav {
@@ -8,6 +19,54 @@
   border-top:1px solid #D2D2D2;
   border-bottom:1px solid #D2D2D2;
   a {
-    margin: 1rem;
+    padding: 1rem;
+    font-weight: 900;
+    &:hover {
+      border-bottom: 2px solid $ob-red;
+      margin-bottom: -2px;
+    }
+  }
+}
+
+.ob-cat-subnav-link--active {
+  border-bottom: 2px solid $ob-red;
+}
+
+
+//***************************
+//Product Grid Styles
+//***************************
+#product-listing-container {
+  .actionBar {
+    display: none;
+  }
+}
+
+
+//***************************
+//Highlights section
+//***************************
+.ob-cat-highlights-img {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.ob-cat-hightlights-list-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-bottom: 15px;
+  svg {
+    width: 16px;
+    height: 16px;
+    min-width: 16px;
+    min-height: 16px;
+    max-width: 16px;
+    max-height: 16px;
+    margin-right: 10px;
+    margin-top: 3px;
   }
 }

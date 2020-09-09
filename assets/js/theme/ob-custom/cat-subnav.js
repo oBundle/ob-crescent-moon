@@ -4,9 +4,21 @@ export default function(context) {
   //target product grid
   let $productGrid = $("li.product")
 
+  //add classes onload
+  $subnavLinks.first().addClass('ob-cat-subnav-link--active')
+  $subnavLinks.first().toggleClass('ob-text-secondary ob-text-primary')
+
   //subnav link click handler
   $subnavLinks.on("click", (event) => {
     event.preventDefault()
+    //add active class to clicked link
+    $(event.currentTarget)
+      .removeClass('ob-text-secondary')
+      .addClass('ob-cat-subnav-link--active ob-text-primary')
+    //add active class to clicked link
+    $(event.currentTarget).siblings()
+      .removeClass('ob-cat-subnav-link--active ob-text-primary')
+      .addClass('ob-text-secondary')
     //target subnavlink title (which is the cat or subcat)
     const subnavCat = $(event.currentTarget).attr('title');
 
