@@ -16,7 +16,7 @@ category:
 {{/partial}}
 
 {{#partial "page"}}
-
+    
     <div class="ob-container">
 
         {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
@@ -28,10 +28,12 @@ category:
             <main class="page-content" id="product-listing-container">
                 {{> components/category/product-listing}}
                 {{{region name="category_below_content"}}}
-                {{> components/ob-custom/category/ob-cat-highlights}}
             </main>
         </div>
 
     </div>
+
+    {{> components/ob-custom/category/ob-cat-highlights}}
+
 {{/partial}}
 {{> layout/base}}
