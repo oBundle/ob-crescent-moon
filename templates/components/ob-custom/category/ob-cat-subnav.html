@@ -1,0 +1,8 @@
+{{#if category}}
+  <nav class="ob-cat-subnav">
+    <a class="ob-text-secondary ob-paragraph-md" href="{{url}}" title="{{name}}">View All</a>
+    {{#each category.subcategories}}
+      <a class="ob-text-secondary ob-paragraph-md" href="{{url}}" title="{{name}}">{{name}}</a>
+    {{/each}}
+  </div>
+{{/if}}

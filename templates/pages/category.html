@@ -17,31 +17,20 @@ category:
 
 {{#partial "page"}}
 
-{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+    <div class="ob-container">
 
-{{> components/ob-custom/category/ob-category-top}}
-<div class="page">
-    {{#if category.faceted_search_enabled}}
-        <aside class="page-sidebar" id="faceted-search-container">
-            {{> components/category/sidebar}}
-        </aside>
-    {{else if category.subcategories}}
-        <aside class="page-sidebar" id="faceted-search-container">
-            {{> components/category/sidebar}}
-        </aside>
-    {{else if category.shop_by_price}}
-        {{#if theme_settings.shop_by_price_visibility}}
-             <aside class="page-sidebar" id="faceted-search-container">
-                {{> components/category/sidebar}}
-            </aside>
-        {{/if}}
-    {{/if}}
+        {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
 
-    <main class="page-content" id="product-listing-container">
-        {{> components/category/product-listing}}
-        {{{region name="category_below_content"}}}
-    </main>
-</div>
+        {{> components/ob-custom/category/ob-category-top}}
 
+        {{> components/ob-custom/category/ob-cat-subnav}}
+        <div class="page">
+            <main class="page-content" id="product-listing-container">
+                {{> components/category/product-listing}}
+                {{{region name="category_below_content"}}}
+            </main>
+        </div>
+
+    </div>
 {{/partial}}
 {{> layout/base}}

@@ -1,0 +1,13 @@
+//***************************
+//Category Subnav
+//***************************
+.ob-cat-subnav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top:1px solid #D2D2D2;
+  border-bottom:1px solid #D2D2D2;
+  a {
+    margin: 1rem;
+  }
+}
