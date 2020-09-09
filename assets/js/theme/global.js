@@ -37,5 +37,6 @@ export default class Global extends PageManager {
         loadingProgressBar();
         svgInjector();
         objectFitImages();
+        console.log(this.context)
     }
 }

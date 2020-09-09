@@ -1,0 +1,23 @@
+<div class="f-grid align-center justify-center">
+  <div class="col-12 col-md-6">
+    {{#if category.image}}
+      {{> components/common/responsive-img
+          image=category.image
+          fallback_size=theme_settings.zoom_size
+          lazyload=theme_settings.lazyload_mode
+          class="category-header-image"
+      }}
+    {{/if}}
+  </div>
+  <div class="col-12 col-md-6">
+    <div class="ob-cta-container-lg">
+      {{#unless theme_settings.hide_category_page_heading }}
+      <h2 class="ob-heading-cta-lg">{{category.name}}</h1>
+      {{{region name="category_below_header"}}}
+    {{/unless}}
+    <p class="ob-paragraph-md">{{{category.description}}}</p> 
+    <a class="ob-cta-link ob-text-primary" href="#">Learn More <svg class="ob-arrow-right-red"><use xlink:href="#icon-ob-arrow-right" /></svg></a>
+    </div>
+  </div>
+</div>
+

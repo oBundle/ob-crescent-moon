@@ -29,9 +29,38 @@ html, body, h1, h2, h3, h4, h5, h6, p, a, span {
   font-family: 'VisbyCF' !important;
 }
 
+h1,h2,h3,h4,h5,h6 {
+  margin-top: 0;
+  text-transform: unset;
+}
+
 a {
+  text-decoration: none;
   &:hover {
     color: inherit;
   }
 }
 
+.body {
+  margin-bottom: 0;
+}
+
+
+//***************************
+//Remove container styling from pages
+//***************************
+//layouts based on data page type for certain pages
+.container[data-page-type="default"] {
+  max-width: 100vw;
+  padding: 0;
+}
+.container[data-page-type="category"] {
+  margin: 0;
+  padding: 0;
+  max-width: 100vw;
+}
+
+.page {
+  max-width: 1400px;
+  margin: 0 auto;
+}

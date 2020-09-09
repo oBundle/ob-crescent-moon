@@ -32,6 +32,9 @@
   }
   &-primary {
     color: $ob-text-primary;
+    &:visited {
+      color: $ob-text-primary;
+    }
   }
   &-secondary {
     color: $ob-text-secondary;

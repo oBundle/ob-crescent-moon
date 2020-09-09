@@ -3,6 +3,9 @@ import CatalogPage from './catalog';
 import compareProducts from './global/compare-products';
 import FacetedSearch from './common/faceted-search';
 
+//ob custom
+import obcatSubnav from "./ob-custom/cat-subnav"
+
 export default class Category extends CatalogPage {
     onReady() {
         compareProducts(this.context.urls);
@@ -13,6 +16,8 @@ export default class Category extends CatalogPage {
             this.onSortBySubmit = this.onSortBySubmit.bind(this);
             hooks.on('sortBy-submitted', this.onSortBySubmit);
         }
+
+        obcatSubnav(this.context)
     }
 
     initFacetedSearch() {
