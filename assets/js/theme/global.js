@@ -1,5 +1,4 @@
 import 'focus-within-polyfill';
-
 import './global/jquery-migrate';
 import './common/select-option-plugin';
 import PageManager from './page-manager';

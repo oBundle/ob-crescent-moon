@@ -47,20 +47,20 @@ a {
 
 
 //***************************
-//Remove container styling from pages
+//Remove container styling from certain pages
 //***************************
 //layouts based on data page type for certain pages
 .container[data-page-type="default"] {
   max-width: 100vw;
   padding: 0;
 }
-.container[data-page-type="category"] {
+.container[data-page-type="category"], .container[data-page-type="blog"] {
   margin: 0;
   padding: 0;
   max-width: 100vw;
 }
 
 .page {
-  max-width: 1400px;
+  max-width: 1600px;
   margin: 0 auto;
 }
