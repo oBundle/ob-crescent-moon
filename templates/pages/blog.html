@@ -6,20 +6,26 @@ blog:
         summary: 200
 ---
 {{#partial "page"}}
+<div class="ob-container">
 
-{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
-
-<main class="page">
-    {{#unless theme_settings.hide_blog_page_heading }}
-        <h1 class="page-heading">{{ blog.name }}</h1>
-    {{/unless}}
-
-    {{#each blog.posts}}
-        {{> components/blog/post post=this}}
-    {{/each}}
-
+    {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+    <div class="f-grid">
+        {{#each blog.posts}}
+            <div class="ob-blog-card ob-mb-25" href="{{url}}">
+                <a href="{{url}}">
+                    <img src="{{cdn 'img/loading.svg'}}" data-src='{{getImage thumbnail "blog_thumbnail_size" }}' class="lazyload ob-blog-card-img"/>
+                </a>
+                <h6 class="ob-heading-cta-sm">{{title}}</h6>
+                <p class="ob-paragraph-md">{{summary}}...</p>
+                <a class="ob-cta-link ob-text-red" href={{url}}>
+                    Read Blog <svg class="ob-arrow-right-red"><use xlink:href="#icon-ob-arrow-right" /></svg>
+                </a>    
+            </div>
+        {{/each}}
+    </div>
     {{> components/common/paginator pagination.blog}}
-</main>
+
+</div>
 
 {{/partial}}
 {{> layout/base}}
