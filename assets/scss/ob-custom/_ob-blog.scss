@@ -11,3 +11,61 @@
   margin-bottom: 18px;
   object-fit: cover;
 }
+
+//***************************
+//Blog Accordion
+//***************************
+.accordion {
+  border: none;
+}
+
+.ob-blog-accordion {
+  padding-right: 15px;
+}
+
+
+.ob-blog-link-container {
+  background-color: $ob-light-gray !important;
+  border-radius: 6px;
+  flex-wrap: wrap;
+}
+
+.ob-accordion-link {
+  width: 100%;
+  padding: 8px 0px;
+  display: flex;
+}
+
+.ob-accordion-title {
+  position: relative;
+  padding: 10px 0 !important;
+  &:hover {
+    background: $ob-light-gray !important;
+  }
+}
+
+.ob-accordion-subtitle {
+  @include text($size: 13px, $lineHeight: 30px, $weight: 500);
+}
+
+.accordion-navigation {
+  .ob-accordion-expand-btn {
+    background-image: url('../icons/ob-accordion-plus.svg');
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 0;
+    top: 12px;
+  }
+}
+
+.accordion-navigation.active {
+  .ob-accordion-expand-btn {
+    background-image: url('../icons/ob-accordion-minus.svg');
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 0;
+    top: 12px;
+  }
+}

@@ -51,28 +51,40 @@ export default class Blog extends PageManager {
     console.log(accordionStructure)
     //accordion markup snippets
     const obAccordion = `
-    <ul class="accordion" data-accordion>
+    <ul class="accordion ob-blog-accordion" data-accordion>
       <li class="accordion-navigation">
-        <a href="#panel1a" class="ob-heading-cta-sm">Snowshoe Lifestyle</a>
+        <a href="#panel1a" class="ob-heading-cta-sm ob-accordion-title">Snowshoe Lifestyle <br/> 
+          <span class="ob-text-secondary ob-accordion-subtitle">Fun lifestyle moments</span>
+          <span class="ob-accordion-expand-btn"></span>
+        </a>
         <div id="panel1a" class="content active ob-blog-link-container">
           ${accordionStructure[0].posts.map(post => `<a class='ob-accordion-link' href='${post.url}'>${post.title}</a>`).join('')}
         </div>
       </li>
       <li class="accordion-navigation">
-        <a href="#panel2a" class="ob-heading-cta-sm">Snowshoe Adventures</a>
+        <a href="#panel2a" class="ob-heading-cta-sm ob-accordion-title">Snowshoe Adventures <br/> 
+          <span class="ob-text-secondary ob-accordion-subtitle">Let's Hit the Trail</span>
+          <span class="ob-accordion-expand-btn"></span>
+        </a>
         <div id="panel2a" class="content ob-blog-link-container">
           ${accordionStructure[1].posts.map(post => `<a class='ob-accordion-link' href='${post.url}'>${post.title}</a>`).join('')}
         </div>
       </li>
       <li class="accordion-navigation">
-        <a href="#panel3a" class="ob-heading-cta-sm">Snowshoe Tips</a>
+        <a href="#panel3a" class="ob-heading-cta-sm ob-accordion-title">Snowshoe Tips <br/> 
+          <span class="ob-text-secondary ob-accordion-subtitle">How to's and Tips</span>
+          <span class="ob-accordion-expand-btn"></span>
+        </a>
         <div id="panel3a" class="content ob-blog-link-container">
           ${accordionStructure[2].posts.map(post => `<a class='ob-accordion-link' href='${post.url}'>${post.title}</a>`).join('')}
         </div>
       </li>
       <li class="accordion-navigation">
-        <a href="#panel3a" class="ob-heading-cta-sm">Crescent Moon News</a>
-        <div id="panel3a" class="content ob-blog-link-container">
+        <a href="#panel4a" class="ob-heading-cta-sm ob-accordion-title">Crescent Moon News <br/> 
+          <span class="ob-text-secondary ob-accordion-subtitle">What's Happening?</span>
+          <span class="ob-accordion-expand-btn"></span>
+        </a>
+        <div id="panel4a" class="content ob-blog-link-container">
           ${accordionStructure[3].posts.map(post => `<a class='ob-accordion-link' href='${post.url}'>${post.title}</a>`).join('')}
         </div>
       </li>
