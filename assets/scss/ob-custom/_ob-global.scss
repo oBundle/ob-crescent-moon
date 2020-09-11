@@ -64,3 +64,34 @@ a {
   max-width: 1600px;
   margin: 0 auto;
 }
+
+//***************************
+//Pagination styles
+//***************************
+.pagination-list {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.pagination-item {
+  width: 30px;
+  height: 30px;
+  margin-right: 6px;
+  margin-left: 6;
+  &--current {
+    border-radius: 50% !important;
+    border: 2px solid $ob-text-primary !important;
+  }
+}
+
+.pagination-link {
+  padding: .5rem !important;
+  font-weight: 900 !important;
+}
+
+.ob-pagination-arrow {
+  svg {
+    fill: $ob-text-primary;
+  }
+}
