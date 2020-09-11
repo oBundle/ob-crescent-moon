@@ -1,41 +1,87 @@
 import PageManager from './page-manager';
-import _ from 'lodash';
+import foundation from './global/foundation';
 //ob custom
-import blogAccordionDsInit from "./ob-custom/blog-accordion-ds-init"
+// import blogAccordionDsInit from "./ob-custom/blog-accordion-ds-init"
 
 export default class Blog extends PageManager {
   constructor(context) {
 		super(context);
   }
-  
-  onReady() {
-    blogAccordionDsInit(this.context)
 
+  onReady() {
+    //init data structure of accordion
+    let accordionStructure =
+    [
+      {
+        catname: "lifestyle",
+        tags: [],
+        posts: []
+      },
+      {
+        catname: "trail",
+        tags: [],
+        posts: []
+      },
+      {
+        catname: "tips",
+        tags: [],
+        posts: []
+      },
+      {
+        catname: "news",
+        tags: [],
+        posts: []
+      }
+    ]
+    
+    //get array of all blog posts
+    let blogPosts = this.context.blog.posts
+    blogPosts.forEach(post => {
+      //define post object to append to posts arr in acrrodionStruct
+      let postObj = { title: post.title, url: post.url }
+      //loop over all tags in post, if it includes one of the parent cat names
+      //push the postObject to that parent car object
+      post.tags.forEach(tag => {
+        tag.name === 'lifestyle' && (accordionStructure[0].posts.push(postObj))
+        tag.name === 'trail' && (accordionStructure[1].posts.push(postObj))
+        tag.name === 'tips' && (accordionStructure[2].posts.push(postObj))
+        tag.name === 'news' && (accordionStructure[3].posts.push(postObj))
+      })
+    })
+    console.log(accordionStructure)
+    //accordion markup snippets
     const obAccordion = `
     <ul class="accordion" data-accordion>
-    <li class="accordion-navigation">
-      <a href="#panel1a">Accordion 1</a>
-      <div id="panel1a" class="content active">
-        Panel 1. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      </div>
-    </li>
-    <li class="accordion-navigation">
-      <a href="#panel2a">Accordion 2</a>
-      <div id="panel2a" class="content">
-        Panel 2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      </div>
-    </li>
-    <li class="accordion-navigation">
-      <a href="#panel3a">Accordion 3</a>
-      <div id="panel3a" class="content">
-        Panel 3. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      </div>
-    </li>
-  </ul>
+      <li class="accordion-navigation">
+        <a href="#panel1a" class="ob-heading-cta-sm">Snowshoe Lifestyle</a>
+        <div id="panel1a" class="content active ob-blog-link-container">
+          ${accordionStructure[0].posts.map(post => `<a class='ob-accordion-link' href='${post.url}'>${post.title}</a>`).join('')}
+        </div>
+      </li>
+      <li class="accordion-navigation">
+        <a href="#panel2a" class="ob-heading-cta-sm">Snowshoe Adventures</a>
+        <div id="panel2a" class="content ob-blog-link-container">
+          ${accordionStructure[1].posts.map(post => `<a class='ob-accordion-link' href='${post.url}'>${post.title}</a>`).join('')}
+        </div>
+      </li>
+      <li class="accordion-navigation">
+        <a href="#panel3a" class="ob-heading-cta-sm">Snowshoe Tips</a>
+        <div id="panel3a" class="content ob-blog-link-container">
+          ${accordionStructure[2].posts.map(post => `<a class='ob-accordion-link' href='${post.url}'>${post.title}</a>`).join('')}
+        </div>
+      </li>
+      <li class="accordion-navigation">
+        <a href="#panel3a" class="ob-heading-cta-sm">Crescent Moon News</a>
+        <div id="panel3a" class="content ob-blog-link-container">
+          ${accordionStructure[3].posts.map(post => `<a class='ob-accordion-link' href='${post.url}'>${post.title}</a>`).join('')}
+        </div>
+      </li>
+    </ul>
     `
     $('.ob-blog-accordion').append(obAccordion)
     
-    
-    
+    //have to call foundation on document again since
+    //appending accordion stuff after init page load
+    foundation($(document));
   }
 }
