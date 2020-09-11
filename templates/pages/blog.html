@@ -6,20 +6,22 @@ blog:
         summary: 200
 ---
 {{#partial "page"}}
+<div class="ob-container">
 
-{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+    {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
 
-<main class="page">
-    {{#unless theme_settings.hide_blog_page_heading }}
-        <h1 class="page-heading">{{ blog.name }}</h1>
-    {{/unless}}
-
-    {{#each blog.posts}}
-        {{> components/blog/post post=this}}
-    {{/each}}
-
+    <div class="f-grid">
+        <div class="col-3">
+            <h5 class="ob-heading-cta-md">Blog Categories</h5>
+            <div class="ob-blog-accordion"></div>
+        </div>
+        <div class="col-8">
+            {{> components/ob-custom/blog/ob-blog-card-grid}}
+        </div>
+    </div>
     {{> components/common/paginator pagination.blog}}
-</main>
+
+</div>
 
 {{/partial}}
 {{> layout/base}}

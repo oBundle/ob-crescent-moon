@@ -47,20 +47,59 @@ a {
 
 
 //***************************
-//Remove container styling from pages
+//Remove container styling from certain pages
 //***************************
 //layouts based on data page type for certain pages
 .container[data-page-type="default"] {
   max-width: 100vw;
   padding: 0;
 }
-.container[data-page-type="category"] {
+.container[data-page-type="category"], .container[data-page-type="blog"] {
   margin: 0;
   padding: 0;
   max-width: 100vw;
 }
 
 .page {
-  max-width: 1400px;
+  max-width: 1600px;
   margin: 0 auto;
+}
+
+//***************************
+//Pagination styles
+//***************************
+.pagination-list {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.pagination-item {
+  width: 30px;
+  height: 30px;
+  margin-right: 6px;
+  margin-left: 6;
+  &--current {
+    border-radius: 50% !important;
+    border: 2px solid $ob-text-primary !important;
+  }
+}
+
+.pagination-link {
+  padding: .5rem !important;
+  font-weight: 900 !important;
+}
+
+.ob-pagination-arrow {
+  svg {
+    fill: $ob-text-primary;
+  }
+}
+
+//***************************
+//Breadcrumb styles
+//***************************
+.breadcrumbs {
+  text-align: left;
+  padding-left: 1rem;
 }
