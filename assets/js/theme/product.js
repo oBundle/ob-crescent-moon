@@ -8,6 +8,9 @@ import ProductDetails from './common/product-details';
 import videoGallery from './product/video-gallery';
 import { classifyForm } from './common/utils/form-utils';
 
+//ob custom
+import productVerticalCarousel from './ob-custom/product-vertical-carousel'
+
 export default class Product extends PageManager {
     constructor(context) {
         super(context);
@@ -53,6 +56,9 @@ export default class Product extends PageManager {
 
         this.productReviewHandler();
         this.bulkPricingHandler();
+
+        //ob custom
+        productVerticalCarousel()
     }
 
     ariaDescribeReviewInputs($form) {

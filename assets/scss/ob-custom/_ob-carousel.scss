@@ -26,3 +26,30 @@
     background-image: url('../icons/ob-slider-arrow-left.svg');
   }
 }
+
+.ob-product-carousel-container {
+  display: flex !important;
+  flex-direction: column;
+  .slick-next, .slick-prev {
+    display: none !important;
+  }
+  .productView-thumbnail-link {
+    padding: 0;
+    img {
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+}
+
+.ob-carousel-vertical-next, .ob-carousel-vertical-prev {
+  margin: 0 auto;
+  &:focus, &:hover {
+    background-color: transparent;
+  }
+  svg {
+    width: 50px;
+    height: 30px;
+  }
+  
+}

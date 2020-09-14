@@ -14,7 +14,7 @@ product:
 {{inject "productSize" theme_settings.product_size}}
 
 {{#partial "page"}}
-
+    <div class="ob-container">
     {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
 
     {{#each product.shipping_messages}}
@@ -36,5 +36,12 @@ product:
 
         {{> components/products/tabs}}
     </div>
+
+    <div itemscope itemtype="http://schema.org/Product">
+        {{> components/ob-custom/product/ob-product-page-content}}
+    </div>
+    </div>
+
+
 {{/partial}}
 {{> layout/base}}

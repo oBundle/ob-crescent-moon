@@ -1,0 +1,18 @@
+<div class="productView" {{#if settings.data_tag_enabled}} data-event-type="product" data-entity-id="{{product.id}}" data-name="{{product.title}}" data-product-category="{{#each product.category}}{{#if @last}}{{this}}{{else}}{{this}}, {{/if}}{{/each}}" data-product-brand="{{product.brand.name}}" data-product-price="{{#if product.price.with_tax}}{{product.price.with_tax.value}}{{else}}{{product.price.without_tax.value}}{{/if}}" data-product-variant="single-product-option"{{/if}}>
+<div class="f-grid">
+  <div class="col-2 ob-product-carousel-container col-grid">
+    <button class="ob-carousel-vertical-prev">
+      <svg><use xlink:href="#icon-keyboard-arrow-up" /></svg>
+    </button>
+    {{> components/ob-custom/product/ob-product-image-carousel}}
+    <button class="ob-carousel-vertical-next">
+      <svg><use xlink:href="#icon-keyboard-arrow-down" /></svg>
+    </button>
+  </section>
+  </div>
+  <div class="col-6">
+    {{> components/ob-custom/product/ob-product-image}}
+  </div>
+  <div class="col-4"></div>
+</div>
+</div>
