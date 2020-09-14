@@ -1,0 +1,15 @@
+//***************************
+//Product Images
+//***************************
+.productView-images {
+  width: 100%;
+  max-width: 625px;
+}
+
+.productView-img-container {
+  width: 100%;
+  max-width: 625px;
+  &:after {
+    padding-bottom: 100%;
+  }
+}

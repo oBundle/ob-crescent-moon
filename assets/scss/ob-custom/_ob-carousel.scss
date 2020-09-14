@@ -29,6 +29,7 @@
 
 .ob-product-carousel-container {
   display: flex !important;
+  justify-content: center;
   flex-direction: column;
   .slick-next, .slick-prev {
     display: none !important;
