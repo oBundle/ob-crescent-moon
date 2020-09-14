@@ -29,7 +29,8 @@
 
 .ob-product-carousel-container {
   display: flex !important;
-  justify-content: center;
+  min-width: 100px;
+  width: 100px;
   flex-direction: column;
   .slick-next, .slick-prev {
     display: none !important;
@@ -40,6 +41,21 @@
       object-fit: cover;
       width: 100%;
     }
+  }
+  .productView-thumbnails .slick-list {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .productView-thumbnail {
+    width: 100px !important;
+    height: 100px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
+  .productView-thumbnail-link {
+    max-width: 100px;
+    width: 100px;
+    height: 100px;
   }
 }
 

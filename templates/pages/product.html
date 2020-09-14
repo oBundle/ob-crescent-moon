@@ -14,7 +14,7 @@ product:
 {{inject "productSize" theme_settings.product_size}}
 
 {{#partial "page"}}
-    <div class="ob-container">
+<div class="ob-container">
     {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
 
     {{#each product.shipping_messages}}
@@ -22,25 +22,16 @@ product:
     {{/each}}
 
     <div itemscope itemtype="http://schema.org/Product">
-        {{> components/products/product-view schema=true  }}
-
-        {{{region name="product_below_content"}}}
-
-        {{#if product.videos.list.length}}
-            {{> components/products/videos product.videos}}
-        {{/if}}
-
-        {{#all settings.show_product_reviews theme_settings.show_product_reviews (if theme_settings.show_product_details_tabs '!==' true)}}
-            {{> components/products/reviews reviews=product.reviews product=product urls=urls}}
-        {{/all}}
-
-        {{> components/products/tabs}}
+        {{> components/ob-custom/product/ob-product-page-content}}
     </div>
 
     <div itemscope itemtype="http://schema.org/Product">
-        {{> components/ob-custom/product/ob-product-page-content}}
+        {{#if product.videos.list.length}}
+            {{> components/products/videos product.videos}}
+        {{/if}}
     </div>
-    </div>
+
+</div>
 
 
 {{/partial}}
