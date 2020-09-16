@@ -185,6 +185,11 @@
 //   display: none;
 // }
 .ob-video-card {
-  max-width: 430px;
+  max-width: 100%;
+  width: 430px;
   padding-left: 0px !important;
+  padding-right: 0px !important;
+  iframe {
+    max-width: 100%;
+  }
 }
