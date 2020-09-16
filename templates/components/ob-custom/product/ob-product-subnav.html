@@ -7,6 +7,11 @@
 <div class="ob-product-subnav-content">
   <div class="ob-text-primary ob-paragraph-lg ob-subnav-content-item ob-show" id="subnav-desc">{{{product.description}}}</div>
   <div class="ob-text-primary ob-paragraph-lg ob-subnav-content-item" id="subnav-specs">{{{product.description}}}</div>
-  <div class="ob-text-primary ob-paragraph-lg ob-subnav-content-item" id="subnav-videos">{{{product.description}}}</div>
+  <div class="ob-text-primary ob-paragraph-lg ob-subnav-content-item" id="subnav-videos">
+    <h5 class="ob-text-primary ob-heading-cta-sm ob-mb-25">Video Gallery</h5>
+    {{#if product.videos.list.length}}
+      {{> components/ob-custom/product/ob-product-videos}}
+    {{/if}}
+  </div>
   <div class="ob-text-primary ob-paragraph-lg ob-subnav-content-item" id="subnav-reviews">{{{product.description}}}</div>
 </div>

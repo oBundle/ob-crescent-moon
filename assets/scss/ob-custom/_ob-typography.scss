@@ -15,6 +15,9 @@
   &-cta-sm {
     @include text($size: 20px, $lineHeight: 24px, $weight: 900);
   }
+  &-cta-xs {
+    @include text($size: 16px, $lineHeight: 24px, $weight: 900);
+  }
 }
 
 .ob-paragraph {
