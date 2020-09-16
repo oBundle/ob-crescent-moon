@@ -11,6 +11,7 @@ import { classifyForm } from './common/utils/form-utils';
 //ob custom
 import productVerticalCarousel from './ob-custom/product-vertical-carousel'
 import productSubnav from './ob-custom/product-subnav'
+import productDescTruncate from "./ob-custom/product-desc-truncate"
 
 export default class Product extends PageManager {
     constructor(context) {
@@ -61,6 +62,7 @@ export default class Product extends PageManager {
         //ob custom
         productVerticalCarousel()
         productSubnav()
+        productDescTruncate()
     }
 
     ariaDescribeReviewInputs($form) {
