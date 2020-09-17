@@ -36,5 +36,25 @@ export default function(context) {
       }
     })
 
+    //click handler if on mobile
+    if ($(event.currentTarget).parent().hasClass("ob-cat-subnav--mobile")) {
+      //move clicked item to top of list
+      $(event.currentTarget).parent().prepend(event.currentTarget)
+      $(event.currentTarget).siblings().slideUp()
+      $(event.currentTarget).show()
+      $(".ob-toggle-subcat").addClass('ob-is-closed')
+    }
+
+  })
+  $(".ob-toggle-subcat").on('click', (event) => {
+    if ( $(event.currentTarget).hasClass('ob-is-closed') ) {
+      $(".ob-cat-subnav--mobile").children().slideDown()
+      $(event.currentTarget).removeClass('ob-is-closed')
+    } else {
+      $(".ob-cat-subnav--mobile").children().first().siblings().slideUp()
+      console.log( $(".ob-cat-subnav--mobile").children().first())
+      $(event.currentTarget).addClass('ob-is-closed')
+    }
+    
   })
 }
