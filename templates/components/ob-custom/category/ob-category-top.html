@@ -1,5 +1,7 @@
 <div class="f-grid align-center justify-center">
   <div class="col-12 col-md-6">
+    <h2 class="ob-heading-cta-lg ob-mobile">{{category.name}}</h1>
+
     {{#if category.image}}
       {{> components/common/responsive-img
           image=category.image
@@ -9,7 +11,7 @@
       }}
     {{/if}}
   </div>
-  <div class="col-12 col-md-6">
+  <div class="col-12 col-md-6 ob-desktop">
     <div class="ob-cta-container-lg">
       {{#unless theme_settings.hide_category_page_heading }}
       <h2 class="ob-heading-cta-lg">{{category.name}}</h1>
