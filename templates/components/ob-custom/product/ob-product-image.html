@@ -1,9 +1,9 @@
-<section class="productView-images" data-image-gallery>
+
   {{!--
       Note that these image sizes are coupled to image sizes used in /assets/js/theme/common/product-details.js
       for variant/rule image replacement
   --}}
-  <figure class="productView-image"
+  <figure class="productView-image ob-product-main-image"
           data-image-gallery-main
           {{#if product.main_image}}
           data-zoom-image="{{getImageSrcset product.main_image (cdn theme_settings.default_image_product) 1x=theme_settings.zoom_size }}"
@@ -29,4 +29,3 @@
           {{/if}}
       </div>
   </figure>
-</section>
