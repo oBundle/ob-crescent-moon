@@ -15,6 +15,9 @@
   &-cta-sm {
     @include text($size: 20px, $lineHeight: 24px, $weight: 900);
   }
+  &-cta-xs {
+    @include text($size: 16px, $lineHeight: 24px, $weight: 900);
+  }
 }
 
 .ob-paragraph {
@@ -23,6 +26,9 @@
   }
   &-md {
     @include text($size: 16px, $lineHeight: 22px, $weight: 500);
+  }
+  &-sm {
+    @include text($size: 12px, $lineHeight: 22px, $weight: 500);
   }
 }
 
