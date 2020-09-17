@@ -83,3 +83,15 @@
     transform: rotate(90deg);
   }
 }
+
+.ob-toggle-subcat {
+  &:hover, &:focus {
+    background-color: transparent;
+  }
+}
+.ob-toggle-subcat.ob-is-closed {
+  svg {
+    transition: all ease-in-out .3s;
+    transform: rotate(-180deg);
+  }
+}

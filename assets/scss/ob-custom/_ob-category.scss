@@ -17,18 +17,44 @@
   align-items: center;
   border-top:1px solid #D2D2D2;
   border-bottom:1px solid #D2D2D2;
+  position: relative;
   a {
     padding: 1rem;
     font-weight: 900;
     &:hover {
-      border-bottom: 2px solid $ob-red;
-      margin-bottom: -2px;
+      border-bottom: 1px solid $ob-red;
+    }
+  }
+  &--mobile {
+    flex-direction: column;
+    align-items: flex-start;
+    border-bottom: none;
+
+    a {
+      border-bottom: 1px solid #D2D2D2;
+      width: 100%;
+      &:hover {
+        border-bottom: 1px solid #D2D2D2;
+      }
     }
   }
 }
 
+.ob-toggle-subcat {
+  position: absolute;
+  top: 0;
+  right: 0;
+  svg {
+    width: 20px;
+    height: 20px;
+    fill: $ob-text-secondary;
+    stroke:$ob-text-secondary;
+  }
+  
+}
+
 .ob-cat-subnav-link--active {
-  border-bottom: 2px solid $ob-red;
+  border-bottom: 1px solid $ob-red;
 }
 
 
