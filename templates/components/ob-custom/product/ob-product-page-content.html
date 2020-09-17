@@ -1,5 +1,11 @@
 <div class="ob-product-page-content">
   {{> components/ob-custom/product/ob-product-view}}
-  {{> components/ob-custom/product/ob-product-accordion}}
-  {{> components/ob-custom/product/ob-product-subnav}}
+  
+  <div class="ob-desktop">
+    {{> components/ob-custom/product/ob-product-subnav}}
+  </div>
+
+  <div class="ob-mobile">
+    {{> components/ob-custom/product/ob-product-accordion}}
+  </div>
 </div>

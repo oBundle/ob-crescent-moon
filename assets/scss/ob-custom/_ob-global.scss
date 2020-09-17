@@ -115,3 +115,23 @@ a {
     height: 0!important;
   }
 }
+
+//***************************
+//visibility helpers
+//***************************
+.ob-desktop {
+  @media only screen and (max-width: 801px)  {
+    display: none !important;
+  }
+}
+
+.ob-mobile {
+  @media only screen and (min-width: 801px)  {
+    display: none !important;
+  }
+}
+
+.productView-description--truncate {
+  height: 300px;
+  overflow: hidden;
+}
