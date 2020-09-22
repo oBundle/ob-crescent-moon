@@ -8,6 +8,7 @@
   letter-spacing: 0.025em;
   border-radius: 6px;
   text-decoration: none;
+  white-space: nowrap;
   transition: all ease-in-out .2s;
   &-bg-red {
     background-color: $ob-red;
@@ -27,9 +28,11 @@
 
 .ob-cta-link {
   @include text($size: 15px, $lineHeight: 15px, $weight: 900);
-  padding: 13px 40px 13px 0px;
   letter-spacing: 0.025em;
   text-decoration: none; 
+  padding-top: 15px;
+  padding-bottom: 15px;
+  white-space: nowrap;
   transition: all ease-in-out .2s;
   &:hover {
     .ob-arrow-right-red, .ob-arrow-right-white{

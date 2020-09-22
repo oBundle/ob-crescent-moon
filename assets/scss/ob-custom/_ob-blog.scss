@@ -3,6 +3,17 @@
 //***************************
 .ob-blog-card {
   max-width: 330px;
+  img {
+    object-fit: cover;
+    font-family: 'object-fit: cover;'; //for ie11
+    max-height: 142px;
+    height: 142px;
+    margin-bottom: 15px;
+    @include breakpoint("medium") {
+      max-height: 165px;
+      height: 165px;
+    }
+  }
 }
 
 .ob-blog-card-img {

@@ -2,13 +2,13 @@
 //product / category card styles
 //***************************
 .ob-category-card {
-  max-width: 300px;
-  min-width: 300px;
+  max-width: 100%;
   width: 300px;
   height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   text-decoration: none;
   &-mix-blend {
     mix-blend-mode: multiply;
