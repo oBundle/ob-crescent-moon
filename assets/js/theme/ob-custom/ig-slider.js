@@ -25,7 +25,10 @@ export default function() {
             class="ig-thumbnail-image lazyload"
             alt="Follow crescentmoonsnowshoes on Instagram!"
             src=${thumbnail} 
-          />
+					/>
+					<div class="ob-ig-overlay">
+						<svg><use xlink:href="#icon-ig-grid-icon" /></svg>
+					</div>
         `);
 
 				$img.appendTo($container);

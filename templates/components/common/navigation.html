@@ -41,7 +41,7 @@
                aria-expanded="false"
                aria-label="{{lang 'common.search'}}"
             >
-                {{lang 'common.search'}}
+                <svg class="ob-search-icon"><use xlink:href="#icon-ob-search" /></svg>
             </a>
         </li>
         {{#if settings.gift_certificates_enabled}}
@@ -55,12 +55,13 @@
             </li>
         {{/if}}
         <li class="navUser-item navUser-item--account">
-            {{#if customer}}
+            <!-- {{#if customer}}
                 <a class="navUser-action"
                    href="{{urls.account.index}}"
                    aria-label="{{lang 'common.account'}}"
                 >
-                    {{lang 'common.account'}}
+                    <svg class="ob-account-icon"><use xlink:href="#icon-ob-account" /></svg>
+
                 </a>
                 <a class="navUser-action"
                    href="{{urls.auth.logout}}"
@@ -68,14 +69,15 @@
                 >
                     {{lang 'common.logout'}}
                 </a>
-            {{else}}
+            {{else}} -->
                 <a class="navUser-action"
                    href="{{urls.auth.login}}"
                    aria-label="{{lang 'common.login'}}"
                 >
-                    {{lang 'common.login'}}
+                <svg class="ob-account-icon"><use xlink:href="#icon-ob-account" /></svg>
+
                 </a>
-                {{#if settings.account_creation_enabled}}
+                <!-- {{#if settings.account_creation_enabled}}
                     <span class="navUser-or">{{lang 'common.or'}}</span>
                     <a class="navUser-action"
                        href="{{urls.auth.create_account}}"
@@ -84,7 +86,7 @@
                         {{lang 'common.sign_up'}}
                     </a>
                 {{/if}}
-            {{/if}}
+            {{/if}} -->
         </li>
         <li class="navUser-item navUser-item--cart">
             <a class="navUser-action"
@@ -94,7 +96,9 @@
                href="{{urls.cart}}"
                aria-label="{{lang 'cart.nav_aria_label'}}"
             >
-                <span class="navUser-item-cartLabel">{{lang 'common.cart'}}</span>
+                <span class="navUser-item-cartLabel">
+                    <svg class="ob-cart-icon"><use xlink:href="#icon-ob-cart--nav" /></svg>
+                </span>
                 <span class="countPill cart-quantity"></span>
             </a>
 
