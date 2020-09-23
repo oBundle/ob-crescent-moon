@@ -5,9 +5,52 @@
   display: flex;
   align-items: center;
   .ob-cta-link  {
+    margin-bottom: 0;
   }
   .ob-heading-cta-xs{
     margin-left: auto;
     margin-bottom: 0;
   }
+}
+
+//***************************
+//mid styles
+//***************************
+.ob-product-wizard-mid-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+//***************************
+//sidebar styles
+//***************************
+.ob-wizard-sidebar-container {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.wizard-sidebar-rows-container {
+  background-color: $ob-light-gray;
+  border-radius: 6px;
+}
+.ob-wizard-sidebar-row {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  p {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+}
+.wizard-row-number {
+  margin-left: 15px;
+}
+.wizard-row-name {
+  margin-left: 3px;
+}
+.wizard-row-checkbox {
+  margin-left: auto;
 }
