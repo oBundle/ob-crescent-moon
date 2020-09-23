@@ -33,6 +33,7 @@ module.exports = {
                                 targets: '> 1%, last 2 versions, Firefox ESR',
                                 corejs: '^3.6.5',
                             }],
+                            ['@babel/preset-react'],
                         ],
                     },
                 },
