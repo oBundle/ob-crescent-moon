@@ -4,7 +4,9 @@ export default function MainPanelStepBtns(props) {
   const {step, setStep, setUserChoices, userChoices, selectedChoice} = props
   
   const handlePrevClick = () => {
-    setUserChoices(prevState => [...prevState])
+    let prevUserChoices = userChoices
+    prevUserChoices.pop()
+    setUserChoices(prevUserChoices)
     setStep(step - 1)
   }
 
