@@ -31,6 +31,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-right: 25px;
 }
 .wizard-sidebar-rows-container {
   background-color: $ob-light-gray;
@@ -53,4 +54,36 @@
 }
 .wizard-row-checkbox {
   margin-left: auto;
+}
+
+//***************************
+//mainpanel styles
+//***************************
+.ob-wizard-mainpanel-container {
+  background-color: $ob-bg-dark;
+  border-radius: 6px;
+  padding: 30px;
+}
+.ob-wizard-mainpanel-tip {
+  display: flex;
+  align-items: flex-start;
+  img {
+    margin-right: 10px;
+  }
+}
+.ob-wizard-step-btns-row {
+  display: flex;
+  .ob-btn {
+    margin-left: auto;
+  }
+}
+
+.wizard-mainpanel-user-choice-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: 6px auto;
+  border-radius: 6px;
+  background-color: #fff;
 }
