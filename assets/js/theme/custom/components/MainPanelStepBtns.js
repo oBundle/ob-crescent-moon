@@ -18,12 +18,14 @@ export default function MainPanelStepBtns(props) {
   }
   return (
     <div class="ob-wizard-step-btns-row">
-      <button 
+      {step !== 1 &&
+        <button 
         class="ob-cta-link ob-text-white"
         onClick={handlePrevClick}
-      >
-        <img src="https://store-pqywb1ijst.mybigcommerce.com/content/ob-arrow-right.svg" className="ob-arrow-left-red"/> Previous
-      </button>
+        >
+          <img src="https://store-pqywb1ijst.mybigcommerce.com/content/ob-arrow-right.svg" className="ob-arrow-left-red"/> Previous
+        </button>
+      }
       <button 
         class="ob-btn ob-btn-bg-red ob-text-white"
         onClick={handleNextClick}
