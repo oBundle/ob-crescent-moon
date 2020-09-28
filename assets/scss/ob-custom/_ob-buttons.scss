@@ -2,6 +2,16 @@
 //***************************
 //Button Styling
 //***************************
+button[disabled] {
+  background-color: $ob-btn-disabled;
+  &:hover, &:focus {
+    background-color: $ob-btn-disabled;
+  }
+  &:hover {
+    cursor: not-allowed;
+  }
+}
+
 .ob-btn {
   @include text($size: 15px, $lineHeight: 15px, $weight: 900);
   padding: 15px 38px;
@@ -40,6 +50,9 @@
     }
     .ob-arrow-down-red, .ob-arrow-down-white {
       transform: rotate(90deg) translateX(7px);
+    }
+    .ob-arrow-left-red {
+      transform: rotate(180deg) translateX(7px);
     }
   }
 }
@@ -84,6 +97,17 @@
     margin-left: 10px;
     transition: all ease-in-out .2s;
     transform: rotate(90deg);
+  }
+}
+
+.ob-arrow-left {
+  &-red {
+    fill: $ob-red;
+    width: 14px;
+    height: 9px;
+    margin-right: 10px;
+    transition: all ease-in-out .2s;
+    transform: rotate(180deg);
   }
 }
 

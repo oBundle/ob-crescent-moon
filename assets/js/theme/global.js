@@ -16,6 +16,8 @@ import loadingProgressBar from './global/loading-progress-bar';
 import svgInjector from './global/svg-injector';
 import objectFitImages from './global/object-fit-polyfill';
 
+import obProductGqlSearch from "./ob-custom/obProductGqlSearch"
+
 export default class Global extends PageManager {
     onReady() {
         const {
@@ -37,5 +39,6 @@ export default class Global extends PageManager {
         svgInjector();
         objectFitImages();
         console.log(this.context)
+        // obProductGqlSearch(this.context.storefrontAPIToken)
     }
 }
