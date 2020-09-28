@@ -67,6 +67,68 @@
   margin-left: auto;
 }
 
+.ob-sidebar-shoe-container {
+  position: relative;
+  margin-bottom: 25px;
+  width: 300px;
+  height: 93px;
+  overflow: hidden;
+  transition: background-color 300ms ease-in-out;
+}
+.ob-wizard-sidebar-shoe {
+  width: 300px;
+  height: auto;
+  border: none;
+  top: -1px;
+  position: absolute;
+  left: 0;
+}
+.ob-sidebar-shoe-container-step {
+  &-1 {
+    background-color: #D2D2D2;
+  }
+  &-2 {
+    background-image: linear-gradient(
+      to right, 
+    #C41230,
+    #C41230 20%,
+    #D2D2D2 20%,
+    #D2D2D2 100%
+    );
+  }
+  &-3 {
+    background-image: linear-gradient(
+      to right, 
+    #C41230,
+    #C41230 40%,
+    #D2D2D2 40%,
+    #D2D2D2 100%
+    );
+  }
+  &-4 {
+    background-image: linear-gradient(
+      to right, 
+    #C41230,
+    #C41230 60%,
+    #D2D2D2 60%,
+    #D2D2D2 100%
+    );
+  }
+  &-5 {
+    background-image: linear-gradient(
+      to right, 
+    #C41230,
+    #C41230 80%,
+    #D2D2D2 80%,
+    #D2D2D2 100%
+    );
+  }
+  &-6 {
+    background-color: #C41230;
+  }
+
+}
+
 //***************************
 //mainpanel styles
 //***************************
@@ -138,13 +200,13 @@
 //***************************
 .wizard-result-grid-container {
   display: flex;
-  flex-wrap: wrap;
   width: 100%;
 }
 .wizard-result-card {
   width: 275px;
   max-width: 275px;
   margin-right: 25px;
+  flex-shrink: 1;
   text-align: center;
   img {
     width: 100%;

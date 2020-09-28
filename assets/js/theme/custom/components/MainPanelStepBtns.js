@@ -29,7 +29,7 @@ export default function MainPanelStepBtns(props) {
       
       {step !== 6 && 
         <button 
-          className={`ob-btn ob-btn-bg-red ob-text-primary`}
+          className={`ob-btn ob-btn-bg-red ob-text-white`}
           onClick={handleNextClick}
           disabled={selectedChoice ? false : true}
         >
