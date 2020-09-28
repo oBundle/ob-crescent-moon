@@ -2,25 +2,25 @@ import React, {useState, useEffect} from 'react'
 
 import MainPanelUserChoiceBtn from "./MainPanelUserChoiceBtn"
 import MainPanelStepBtns from './MainPanelStepBtns'
+import ResultGrid from "./ResultGrid"
 
 
-export default function Step3(props) {
-  const {userChoices, setUserChoices, step, setStep } = props
+export default function Step6(props) {
+  const {userChoices, setUserChoices, step, setStep, context, csvData } = props
   const [selectedChoice, setSelectedChoice] = useState('') 
 
-  const btnChoices = ["Under 195 lbs", "Over 195 lbs"]
-  const allUserChoiceBtns = btnChoices.map((name, index) => <MainPanelUserChoiceBtn key={index} name={name} setSelectedChoice={setSelectedChoice} selectedChoice={selectedChoice} />)
+  const btnChoices = [""]
 
   return (
     <div className="ob-mainpanel-step-container">
       <div class="ob-cta-container-lg ob-mb-0-auto ob-pb-25">
         <h2 class="ob-text-white ob-heading-cta-md text-center">
-          Including your backpack, how much do you weigh?
+          Here are your results...
         </h2>
       </div>
 
       <div className="wizard-choice-btn-container">
-      {allUserChoiceBtns}
+      <ResultGrid userChoices={userChoices} context={context} csvData={csvData} />
       </div>
 
       <div className="ob-wizard-mainpanel-tip ob-mt-12">

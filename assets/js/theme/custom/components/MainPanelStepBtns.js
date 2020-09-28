@@ -17,21 +17,26 @@ export default function MainPanelStepBtns(props) {
     }  
   }
   return (
-    <div class="ob-wizard-step-btns-row">
+    <div className="ob-wizard-step-btns-row">
       {step !== 1 &&
         <button 
-        class="ob-cta-link ob-text-white"
+        className="ob-cta-link ob-text-white"
         onClick={handlePrevClick}
         >
           <img src="https://store-pqywb1ijst.mybigcommerce.com/content/ob-arrow-right.svg" className="ob-arrow-left-red"/> Previous
         </button>
       }
-      <button 
-        class="ob-btn ob-btn-bg-red ob-text-white"
-        onClick={handleNextClick}
-      >
-        Next <img src="https://store-pqywb1ijst.mybigcommerce.com/content/ob-arrow-right.svg" className="ob-arrow-right-white"/>
-      </button>
+      
+      {step !== 6 && 
+        <button 
+          className={`ob-btn ob-btn-bg-red ob-text-white`}
+          onClick={handleNextClick}
+          disabled={selectedChoice ? false : true}
+        >
+          Next <img src="https://store-pqywb1ijst.mybigcommerce.com/content/ob-arrow-right.svg" className="ob-arrow-right-white"/>
+        </button>
+      }
     </div>
+      
   )
 }

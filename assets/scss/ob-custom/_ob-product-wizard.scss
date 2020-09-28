@@ -21,6 +21,9 @@
   align-items: center;
   justify-content: space-between;
 }
+.wizard-choice-btn-container {
+  min-height: 300px;
+}
 
 
 //***************************
@@ -41,10 +44,18 @@
   display: flex;
   align-items: center;
   padding: 20px;
+  border-left: 2px solid transparent;
+
   p {
     margin-bottom: 0;
     margin-top: 0;
   }
+}
+.wizard-row-complete {
+  border-left: 2px solid $ob-red;
+}
+.wizard-row-incomplete {
+  opacity: .6;
 }
 .wizard-row-number {
   margin-left: 15px;
@@ -60,9 +71,25 @@
 //mainpanel styles
 //***************************
 .ob-wizard-mainpanel-container {
+
   background-color: $ob-bg-dark;
   border-radius: 6px;
   padding: 30px;
+  background-image: url('../icons/bg-svg-product-wizard.svg');
+  background-position: bottom;
+  background-repeat: no-repeat;
+  min-height: 700px;
+  height: 700px;
+}
+.ob-mainpanel-step-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex-grow: 1;
+}
+.ob-wizard-mainpanel-bottom {
+  margin-top: auto;
+  margin-bottom: 30px;
 }
 .ob-wizard-mainpanel-tip {
   display: flex;
@@ -82,7 +109,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  width: 75%;
   margin: 8px auto;
   border-radius: 6px;
   background-color: #fff;

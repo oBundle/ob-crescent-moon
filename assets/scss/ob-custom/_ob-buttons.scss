@@ -2,6 +2,16 @@
 //***************************
 //Button Styling
 //***************************
+button[disabled] {
+  background-color: $ob-btn-disabled;
+  &:hover, &:focus {
+    background-color: $ob-btn-disabled;
+  }
+  &:hover {
+    cursor: not-allowed;
+  }
+}
+
 .ob-btn {
   @include text($size: 15px, $lineHeight: 15px, $weight: 900);
   padding: 15px 38px;

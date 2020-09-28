@@ -13,22 +13,32 @@ export default function Step1(props) {
 
   return (
     <div className="ob-mainpanel-step-container">
-      {allUserChoiceBtns}
+      <div class="ob-cta-container-lg ob-mb-0-auto ob-pb-25">
+        <h2 class="ob-text-white ob-heading-cta-md text-center">
+          What conditions do you intend to snowshoe in?
+        </h2>
+      </div>
 
-      <div className="ob-wizard-mainpanel-tip">
+      <div className="wizard-choice-btn-container">
+      {allUserChoiceBtns}
+      </div>
+
+      <div className="ob-wizard-mainpanel-tip ob-mt-12">
         <img src="https://store-pqywb1ijst.mybigcommerce.com/content/ob-info-icon.svg" />
         <p className="ob-paragraph-sm ob-text-white">
           Snowshoe Tip: Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
           sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
         </p>
       </div>
-      <MainPanelStepBtns 
-        step={step} 
-        setStep={setStep} 
-        setUserChoices={setUserChoices} 
-        userChoices={userChoices} 
-        selectedChoice={selectedChoice}
-      />
+      <div className='ob-wizard-mainpanel-bottom'>
+        <MainPanelStepBtns 
+          step={step} 
+          setStep={setStep} 
+          setUserChoices={setUserChoices} 
+          userChoices={userChoices} 
+          selectedChoice={selectedChoice}
+        />
+      </div>
     </div>
   )
 }
