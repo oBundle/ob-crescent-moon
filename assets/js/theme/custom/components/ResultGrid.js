@@ -3,6 +3,7 @@ import ApolloClient from "apollo-boost";
 import gql from "graphql-tag";
 
 import ProductResultCard from "./ProductResultCard"
+import Loading from "./Loading"
 
 export default function ResultGrid(props) {
   const { context, csvData, userChoices } = props;
@@ -10,19 +11,23 @@ export default function ResultGrid(props) {
   const [hasError, sethasError] = useState(false) 
   const [productData, setProductData] = useState([]) 
 
+  const productIds = getRecommendedProducts(userChoices, csvData)
+
   //fetch graphql data (async)
 	useEffect(() => {
     getProductData(context.storefrontAPIToken, productIds, sethasLoaded, sethasError, setProductData);
-	}, []);
+  }, []);
+  
 
-  const productIds = getRecommendedProducts(userChoices, csvData)
   console.log('product Ids', productIds)
   let productCards
   if (hasLoaded) {
+    console.log('productIds', productIds)
     console.log('product data to render', productData)
+    productCards = productData.map((product, index) => <ProductResultCard key={name+index} url={product.url} name={product.name} price={product.price} imgUrl={product.imgUrl} />)
   }
 
-  return <div className="wizard-result-grid-container">{productCards}</div>;
+  return <div className="wizard-result-grid-container">{productCards ? productCards : <Loading />}</div>;
 }
 
 //function to check if userChoices exists inside of csvData
@@ -42,7 +47,7 @@ const getRecommendedProducts = (userChoices, csvData) => {
 
 //function that returns react components based off of getRecommendedProducts gql query
 
-const getProductData = (token, productIds, sethasLoaded, setProductData, sethasError) => {
+const getProductData = (token, productIds, sethasLoaded, sethasError, setProductData) => {
   const client = new ApolloClient({
     headers: { Authorization: `Bearer ${token}` },
   });
@@ -66,26 +71,6 @@ const getProductData = (token, productIds, sethasLoaded, setProductData, sethasE
                       currencyCode
                     }
                   }
-                  productOptions {
-                    edges {
-                      node {
-                        entityId
-                        displayName
-                        ... on MultipleChoiceOption {
-                          values {
-                            edges {
-                              node {
-                                ... on SwatchOptionValue {
-                                  label
-                                  hexColors
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
                 }
               }
             }
@@ -106,9 +91,31 @@ const getProductData = (token, productIds, sethasLoaded, setProductData, sethasE
         return productObj
       })
       console.log('productDataArr',productDataArr)
-      setProductData([...productDataArr])
+      setProductData(productDataArr)
       sethasLoaded(true)
      
     })
     .catch((error) => error && sethasError(true));
 };
+
+
+// productOptions {
+//   edges {
+//     node {
+//       entityId
+//       displayName
+//       ... on MultipleChoiceOption {
+//         values {
+//           edges {
+//             node {
+//               ... on SwatchOptionValue {
+//                 label
+//                 hexColors
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }

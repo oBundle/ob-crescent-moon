@@ -8,7 +8,7 @@ export default function Step4(props) {
   const {userChoices, setUserChoices, step, setStep } = props
   const [selectedChoice, setSelectedChoice] = useState('') 
 
-  const btnChoices = ["Less than 10.5", "Smaller than 10.5"]
+  const btnChoices = ["Greater than 10.5", "Smaller than 10.5"]
   const allUserChoiceBtns = btnChoices.map((name, index) => <MainPanelUserChoiceBtn key={index} name={name} setSelectedChoice={setSelectedChoice} selectedChoice={selectedChoice} />)
 
   return (

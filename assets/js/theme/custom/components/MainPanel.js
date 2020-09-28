@@ -14,8 +14,8 @@ export default function MainPanel(props) {
   const { step, setStep, csvData, userChoices, setUserChoices, context } = props
 
   return (
-    <div className="ob-wizard-mainpanel-container">
-      <p className="text-center ob-text-white ob-paragraph-md">{step < 6 ? `${step}/5` : "You're all set!"}</p>
+    <div className={`ob-wizard-mainpanel-container ${step >= 6 ? 'ob-bg-light' : 'ob-bg-dark'}`}>
+      <p className={`text-center ob-paragraph-md ${step < 6 ? 'ob-text-white' : 'ob-text-primary'}`}>{step < 6 ? `${step}/5` : "You're all set!"}</p>
       {step === 1 && <Step1 step={step} setStep={setStep} userChoices={userChoices} setUserChoices={setUserChoices}/>}
       {step === 2 && <Step2 step={step} setStep={setStep} userChoices={userChoices} setUserChoices={setUserChoices}/>}
       {step === 3 && <Step3 step={step} setStep={setStep} userChoices={userChoices} setUserChoices={setUserChoices}/>}

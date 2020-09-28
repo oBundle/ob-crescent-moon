@@ -20,7 +20,7 @@ export default function MainPanelStepBtns(props) {
     <div className="ob-wizard-step-btns-row">
       {step !== 1 &&
         <button 
-        className="ob-cta-link ob-text-white"
+        className="ob-cta-link ob-text-primary"
         onClick={handlePrevClick}
         >
           <img src="https://store-pqywb1ijst.mybigcommerce.com/content/ob-arrow-right.svg" className="ob-arrow-left-red"/> Previous
@@ -29,7 +29,7 @@ export default function MainPanelStepBtns(props) {
       
       {step !== 6 && 
         <button 
-          className={`ob-btn ob-btn-bg-red ob-text-white`}
+          className={`ob-btn ob-btn-bg-red ob-text-primary`}
           onClick={handleNextClick}
           disabled={selectedChoice ? false : true}
         >

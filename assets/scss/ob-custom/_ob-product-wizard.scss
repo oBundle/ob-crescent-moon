@@ -70,9 +70,13 @@
 //***************************
 //mainpanel styles
 //***************************
-.ob-wizard-mainpanel-container {
-
+.ob-bg-dark {
   background-color: $ob-bg-dark;
+}
+.ob-bg-light {
+  background-color: $ob-light-gray;
+}
+.ob-wizard-mainpanel-container {
   border-radius: 6px;
   padding: 30px;
   background-image: url('../icons/bg-svg-product-wizard.svg');
@@ -126,4 +130,34 @@
   background-color: white;
   color: $ob-red;
 
+}
+
+
+//***************************
+//results grid styles
+//***************************
+.wizard-result-grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.wizard-result-card {
+  width: 275px;
+  max-width: 275px;
+  margin-right: 25px;
+  text-align: center;
+  img {
+    width: 100%;
+    max-width: 100%;
+    height: 275px;
+    max-height: 275px;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+    transition: all .3s ease-in-out;
+    // font-family: "object-fit: cover;";
+    margin-bottom: 15px;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
 }
