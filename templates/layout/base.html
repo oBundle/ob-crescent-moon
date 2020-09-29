@@ -44,13 +44,16 @@
         {{~inject 'categories' categories}}
         {{~inject 'blog' blog}}
         {{~inject 'storefrontAPIToken' settings.storefront_api.token}}
+        {{~inject 'page_type' page_type}}
     </head>
     <body>
         <svg data-src="{{cdn 'img/icon-sprite.svg'}}" class="icons-svg-sprite"></svg>
 
         {{> components/common/header }}
         {{> components/common/body }}
-        {{> components/common/footer }}
+        {{> components/ob-custom/footer/ob-footer }}
+        {{> components/ob-custom/footer/ob-footer-mobile }}
+        
 
         <script>window.__webpack_public_path__ = "{{cdn 'assets/dist/'}}";</script>
         <script src="{{cdn 'assets/dist/theme-bundle.main.js'}}"></script>

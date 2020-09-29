@@ -1,6 +1,14 @@
+
 //***************************
 //header layout styles
 //***************************
+.header {
+  border-bottom: none;
+}
+.navPages {
+  padding: 0px;
+  background-color: white;
+}
 .header-logo {
   svg {
     max-height: 50px;
@@ -25,6 +33,7 @@
     display: block!important;
     .navUser-item-cartLabel {
       display: inline-block!important;
+      box-shadow: 0px 15px 30px rgba(108, 43, 54, 0.25);
     }
   }
   .navUser-action {
@@ -39,17 +48,50 @@
 .mobileMenu-toggleIcon {
   width: 25% !important;
 }
+.navPages-item {
+  border-bottom: 2px solid $ob-text-primary;
+}
+.navPages-quickSearch {
+  display: none;
+}
+.navPages-action {
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  .ob-account-icon {
+    margin-right: 10px;
+  }
+}
+.navPage-childList-action  {
+  padding: .2rem 0rem;
+}
+.navPage-subMenu-item {
+  padding-left: 1rem;
+}
+.navPages-list + .navPages-list {
+  border-top: none;
+  margin-top: 0px;
+  padding-top: 0px;
+}
+.ob-guidance-navitem {
+  padding-left: 1.5rem !important;
+}
+
 @include breakpoint("medium") {
   .header {
     display: flex;
     align-items: center;
     height: auto;
     padding: 10px 0;
+    position: fixed;
+    transition: all .2s ease-in-out;
   }
   .header-logo {
     order: 1;
     margin-top: 0;
     margin-bottom: 0;
+    margin-right: 15px;
     svg {
       max-height: 50px;
       width: 221px;
@@ -59,9 +101,17 @@
     order: 2;
     flex: 1;
   }
+  .navPages {
+    padding: 0px;
+  }
+  .navPages-action {
+    padding: 5px 0px;
+    margin: 0px 10px;
+  }
   .navPages-item {
     display: inline-block;
     font-size: 16px;
+    border-bottom: 2px solid transparent;
   }
   .navUser {
     order: 3;
@@ -92,7 +142,21 @@
     height: 100%;
   }
   .navPage-subMenu.is-open {
-    width: 100%;
+    width: 100vw!important;
+    margin-left: -277px;
+    /* margin-top: 70px; */
+    top: 62px;
+    overflow: hidden;
+  }
+  .navPages-list:not(.navPages-list-depth-max).navPages-action.has-subMenu {
+    background-color: transparent;
+  }
+  .navPages-action {
+    border-bottom: 2px solid transparent;
+  }
+  .navPages-action.is-open {
+    border-bottom: 2px solid $ob-red;
+    background-color: transparent;
   }
   .navPage-subMenu-list {
     display: flex;
@@ -109,6 +173,7 @@
   }
   .navPage-subMenu-item {
     width: 25%;
+    padding-left: 0px;
   }
   .navPages-list--user {
     display: none;
@@ -150,6 +215,7 @@
 }
 .ob-account-icon {
   width: 23px;
+  height: 23px;
   max-height: 100%;
   stroke: none!important;
 }
@@ -157,14 +223,83 @@
   width: 23px;
   max-height: 100%;
   stroke: none!important;
-
+}
+.navPage-subMenu-action .collapsible-icon-wrapper {
+  width: auto;
+}
+.navPage-childList {
+  display: block !important;
+  margin-left: 0px !important;
+  padding-left: 1.5rem;
+  border: none!important;
+}
+.collapsible-icon-wrapper[data-collapsible="navPages-39"] {
+  display: none;
 }
 
-
+#navPages-36 {
+  .ob-guidance-navitem {
+    display: none;
+    @include breakpoint("medium") {
+      display: flex;
+    }
+  }
+}
 
 //***************************
 //transparent nav styles for homepage
 //***************************
-.ob-nav-tansparent {
-
+.ob-transparent {
+  @include breakpoint("medium") {
+    background-color: transparent !important;
+    .navPages {
+      background-color: transparent;
+    }
+    .navPages-action svg {
+      fill: white;
+      stroke: white;
+    }
+    .navPages-item {
+      .navPages-action {
+        color: white !important;
+      }
+      .navPage-subMenu-action, .navPage-childList-action {
+        color: $ob-text-primary !important;
+      }
+    }
+    .ob-account-icon {
+      fill: white !important;
+      stroke: white !important;
+    }
+    .ob-search-icon {
+      fill: white !important;
+      stroke: white !important;
+    }
+  }
 }
+
+.ob-header-shadow {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.08);
+}
+
+//***************************
+//mobile navpages animation styles
+//***************************
+.navPages-container {
+  display: block !important;
+  padding-top: 55px;
+  transition: all 300ms ease-in-out;
+  transform: translateX(-1000px);
+  @include breakpoint("medium") {
+    transform: none;
+      padding-top: 0px;
+  }
+} 
+
+.navPages-container.is-open {
+  transition: all 400ms ease-in-out;
+  transform: translateX(0px);
+  @include breakpoint("medium") {
+    transform: none;
+  }
+} 
