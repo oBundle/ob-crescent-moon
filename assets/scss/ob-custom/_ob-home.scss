@@ -105,8 +105,13 @@
   }
   &-2 {
     @include position(absolute, 4, $top: 20%, $right: -10%);
+    width: 250px;
     @include breakpoint("medium") {
       @include position(absolute, 4, $top: 20%, $left: -10%);
+      width: 275px;
+    }
+    @include breakpoint("large") {
+      width: auto;
     }
   }
   &-3 {

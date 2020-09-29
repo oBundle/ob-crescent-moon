@@ -18,6 +18,15 @@ export default class Category extends CatalogPage {
         }
 
         obcatSubnav(this.context)
+        //handle click from mega menu
+        setTimeout(() => {
+            const urlParams = new URLSearchParams(window.location.search);
+            let urlSubcat = urlParams.get("subcat");
+            console.log(urlSubcat)
+            if(urlSubcat) { $(`.ob-cat-subnav-link[title="${urlSubcat}"]`).click() }
+        }, 300)
+        
+        
     }
 
     initFacetedSearch() {

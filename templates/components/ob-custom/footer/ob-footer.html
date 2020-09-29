@@ -1,0 +1,49 @@
+<div class="ob-container ob-footer-container ob-desktop">
+  <div class="f-grid">
+    <div class="col-xs-6 col-md-2">
+      <h5 class="ob-heading-cta-xs">Shop</h5>
+      {{#each categories}}
+      <a class="ob-text-primary ob-paragraph-md ob-footer-link" href={{url}}>{{name}}</a><br/>
+      {{/each}}
+    </div>
+    <div class=" col-xs-6 col-md-2">
+      <h5 class="ob-heading-cta-xs">Support</h5>
+      {{#each pages.[0].children}}
+      <a class="ob-text-primary ob-paragraph-md ob-footer-link" href={{url}}>{{name}}</a><br/>
+      {{/each}}
+    </div>
+    <div class="col-xs-6 col-md-2">
+      <h5 class="ob-heading-cta-xs">Learn</h5>
+      {{#each pages.[1].children}}
+      <a class="ob-text-primary ob-paragraph-md ob-footer-link" href={{url}}>{{name}}</a><br/>
+      {{/each}}
+    </div>
+    <div class="col-xs-6 col-md-2 ob-footer-address-col">
+      <h5 class="ob-heading-cta-xs">Follow Us</h5>
+      <a href="" class="ob-footer-social-icon"><svg class="ob-footer-icon"><use xlink:href="#icon-facebook-footer" /></svg></a>
+      <a href="" class="ob-footer-social-icon"><svg class="ob-footer-icon"><use xlink:href="#icon-twitter-footer" /></svg></a>
+      <a href="" class="ob-footer-social-icon"><svg class="ob-footer-icon"><use xlink:href="#icon-instagram-footer" /></svg></a>
+
+      <h6 class="ob-paragraph-md">Crescent Moon Snowshoes</h6>
+      <p class="ob-paragraph-md">5401 Western Avenue, Suite C</p>
+      <p class="ob-paragraph-md">Boulder, Colorado 80301</p>
+      <p class="ob-paragraph-md">303.494.5506</p>
+    </div>
+    <div class="col-12-xs col-md-4 order-xs-1">
+      <h5 class="ob-heading-cta-xs">Sign Up For Our Newsletter</h5>
+      <p>Submit a product review and learn how to get a free Crescent Moon T-shirt.</p>
+      {{> components/common/subscription-form}}
+    </div>
+  </div>
+</div>
+<div class="f-grid align-center ob-footer-bottom-row ob-desktop">
+  <div class="col-3 footer-bottom-col">
+    <p class="ob-paragraph-md text-center">&copy; 2020 Crescent Moon Snowshoes | <a href="/sitemap.php" class="ob-paragraph-md">Sitemap</a></p>
+  </div>
+  <div class="col-6 footer-bottom-col">
+    {{> components/common/payment-icons}}
+  </div>
+  <div class="col-3 footer-bottom-col">
+    <a href="https://obundle.com/" class="text-center">Designed and developed by <svg class="ob-obundle-logo"><use xlink:href="#icon-obundle-logo" /></svg></a>
+  </div>
+</div>

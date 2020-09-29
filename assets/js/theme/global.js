@@ -17,6 +17,7 @@ import svgInjector from './global/svg-injector';
 import objectFitImages from './global/object-fit-polyfill';
 
 import obProductGqlSearch from "./ob-custom/obProductGqlSearch"
+import obNavbar from "./ob-custom/ob-navbar";
 
 export default class Global extends PageManager {
     onReady() {
@@ -40,5 +41,6 @@ export default class Global extends PageManager {
         objectFitImages();
         console.log(this.context)
         // obProductGqlSearch(this.context.storefrontAPIToken)
+        obNavbar(this.context)
     }
 }

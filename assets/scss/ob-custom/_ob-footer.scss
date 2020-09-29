@@ -1,0 +1,70 @@
+.ob-footer-container {
+  h5 {
+    margin-top: 1.3rem;
+  }
+  .ob-support-mobile {
+    margin-top: 6rem;
+  }
+  .ob-footer-link {
+    width: 100%;
+    padding-bottom: 12px;
+  }
+  
+  .ob-subscription-input {
+    margin-bottom: 0 !important;
+    border-radius: 6px 0px 0px 6px !important;
+    border-right: none;
+    border: 1px solid transparent !important;
+    &:focus {
+      border: 1px solid $ob-red !important;
+    }
+  }
+  .ob-subscription-btn {
+    max-height: 100%;
+    border-radius: 0px 6px 6px 0px;
+    padding: 8px 25px 8px 20px;
+  }
+  
+  .ob-footer-icon {
+    height: 15px;
+    width: 15px;
+    margin-right: 10px;
+  }
+
+}
+
+.ob-obundle-logo {
+  width: 80px;
+  height: 18px;
+  margin: 0 auto;
+  @include breakpoint("medium") {
+    margin-left: 5px;
+  }
+}
+
+.footer-bottom-col {
+  p, a {
+    margin-bottom: 0;
+  }
+}
+.ob-footer-address-col {
+  p {
+    margin-bottom: 0px;
+  }
+}
+
+.footer-payment-icons {
+  margin-top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.ob-footer-bottom-row {
+  margin-top: 30px;
+  border-top: 2px solid $ob-text-primary;
+  @include breakpoint("medium") {
+    margin-top: 175px !important;
+  }
+}
