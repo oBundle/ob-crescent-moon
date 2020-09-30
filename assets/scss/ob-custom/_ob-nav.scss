@@ -10,13 +10,12 @@
   background-color: white;
 }
 .header-logo {
+  position: absolute;
+  z-index: 6;
   svg {
     max-height: 50px;
     width: 150px;
   }
-}
-.navUser {
-  width: auto;
 }
 .navUser-section {
   max-height: 100% !important;
@@ -95,6 +94,7 @@
     margin-top: 0;
     margin-bottom: 0;
     margin-right: 15px;
+    position: relative;
     svg {
       max-height: 50px;
       width: 221px;
