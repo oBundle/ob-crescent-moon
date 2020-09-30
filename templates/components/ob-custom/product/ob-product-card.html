@@ -17,7 +17,7 @@
             {{/if}}
         {{/or}}
         <a href="{{url}}" {{#if settings.data_tag_enabled}} data-event-type="product-click" {{/if}}>
-            <div class="card-img-container">
+            <div class="card-img-container" data-product-id={{id}}>
                 {{> components/common/responsive-img
                     image=image
                     class="card-image"
@@ -26,6 +26,7 @@
                     default_image=theme_settings.default_image_product
                 }}
             </div>
+            <div class="ob-swatch-hover-container" data-product-id={{id}}></div>
         </a>
 
         <figcaption class="card-figcaption">
