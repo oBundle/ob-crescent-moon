@@ -50,8 +50,21 @@
 .mobileMenu-toggleIcon {
   width: 25% !important;
 }
+.navPage-subMenu-action[aria-label="Blank"] {
+  display: none!important;
+}
 .navPages-item {
   border-bottom: 2px solid $ob-text-primary;
+}
+// .ob-top-level-navlink {
+//   svg {
+//     display: none;
+//   }
+// }
+.navPage-subMenu-action {
+  svg {
+    display: none;
+  }
 }
 .navPages-quickSearch {
   display: none;
@@ -119,6 +132,9 @@
     display: inline-block;
     font-size: 16px;
     border-bottom: 2px solid transparent;
+  }
+  .navPage-subMenu-action[aria-label="Blank"] {
+    opacity: 0;
   }
   .navUser {
     order: 3;
