@@ -36,9 +36,9 @@ export default function ProductWizardContainer(props) {
 	console.log("userChoiceArr", userChoices);
 
 	return (
-		<div className="ob-container ob-wizard-container">
+		<div className="ob-container ob-wizard-container ob-pt-0-mobile">
 			<TopBar context={props.context} />
-			<div className="ob-product-wizard-mid-row ob-mt-25">
+			<div className="ob-product-wizard-mid-row ob-mt-25 ob-mt-0-mobile">
 				<Sidebar context={props.context} step={step} />
 				<MainPanel
 					context={context}

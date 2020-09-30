@@ -14,7 +14,7 @@ export default function SidebarRow(props) {
   return (
     <div className={`ob-wizard-sidebar-row ${stepIsComplete ? 'wizard-row-complete' : 'wizard-row-incomplete'}`}>
       <img src={iconUrl} />
-      <p className="ob-text-primary ob-paragraph-md wizard-row-number">{number}.</p>
+      <p className="ob-text-primary ob-paragraph-md wizard-row-number ob-desktop">{number}.</p>
       <p className="ob-text-primary ob-paragraph-md wizard-row-name">{name}</p>
       <img src={stepIsComplete ? redCheckBoxUrl : grayCheckBoxUrl} className="wizard-row-checkbox"/>
     </div>

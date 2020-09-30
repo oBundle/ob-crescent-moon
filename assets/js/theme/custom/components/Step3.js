@@ -13,7 +13,7 @@ export default function Step3(props) {
 
   return (
     <div className="ob-mainpanel-step-container">
-      <div class="ob-cta-container-lg ob-mb-0-auto ob-pb-25">
+      <div class="ob-cta-container-lg ob-mb-0-auto ob-pb-25 ob-pb-0-mobile">
         <h2 class="ob-text-white ob-heading-cta-md text-center">
           Including your backpack, how much do you weigh?
         </h2>
