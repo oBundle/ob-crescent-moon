@@ -63,6 +63,16 @@ export default class Product extends PageManager {
         productVerticalCarousel()
         productSubnav()
         productDescTruncate()
+        //click the product variant option in url param
+        setTimeout(() => {
+            const urlParams = new URLSearchParams(window.location.search);
+            console.log(urlParams)
+            let urlVariant = urlParams.get("variant");
+            console.log(urlVariant)
+            if(urlVariant) { 
+                $(`.form-option-variant--color[style="background-color: #${urlVariant}"]`).click() 
+            }
+        }, 300)
     }
 
     ariaDescribeReviewInputs($form) {
