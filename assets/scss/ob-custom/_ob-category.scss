@@ -66,7 +66,22 @@
     display: none;
   }
 }
-
+.ob-swatch-hover-container {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  align-items: center;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.ob-cat-product-card-swatch {
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
 
 //***************************
 //Highlights section
