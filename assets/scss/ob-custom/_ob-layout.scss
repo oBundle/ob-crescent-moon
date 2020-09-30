@@ -104,7 +104,7 @@
       margin-top: 50px;
     }
     &-25-mobile {
-      margin-top: 25px;
+      margin-top: 25px !important;
     }
     &-12-mobile {
       margin-top: 12px;
@@ -152,7 +152,7 @@
       margin-bottom: 50px;
     }
     &-25-mobile {
-      margin-bottom: 25px;
+      margin-bottom: 25px !important;
     }
     &-12-mobile {
       margin-bottom: 12px;
@@ -160,6 +160,12 @@
     &-0-mobile {
       margin-bottom: 0px;
     }
+  }
+}
+
+.ob-ml {
+  &-12 {
+    margin-left: 12px;
   }
 }
 
