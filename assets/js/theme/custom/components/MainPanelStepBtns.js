@@ -33,7 +33,7 @@ export default function MainPanelStepBtns(props) {
           onClick={handleNextClick}
           disabled={selectedChoice ? false : true}
         >
-          Next <img src="https://store-pqywb1ijst.mybigcommerce.com/content/ob-arrow-right.svg" className="ob-arrow-right-white"/>
+          Next <img src="https://store-pqywb1ijst.mybigcommerce.com/content/arrow-right-white.svg" className="ob-arrow-right-white"/>
         </button>
       }
     </div>

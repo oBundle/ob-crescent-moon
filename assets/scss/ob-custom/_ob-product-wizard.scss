@@ -38,7 +38,8 @@
   overflow:auto;
   @include breakpoint("medium") {
     flex-direction: column;
-    min-height: 300px;
+    min-height: 375px;
+    max-height: 375px;
   }
 }
 
