@@ -22,7 +22,7 @@ export default function(context) {
 
       let $swatchDiv = $(`<a class="ob-cat-product-card-swatch" data-img-url=${variant.imgUrl} style="background-color: #${variant.color}" href='${product.url}?variant=${variant.color}'></a>`)
       $swatchDiv.mouseenter(() => $imgContainerDiv.children().first().attr('srcset', variant.imgUrl))
-      $swatchDiv.mouseleave(() => $imgContainerDiv.children().first().attr('srcset', originalImgUrl))
+      // $swatchDiv.mouseleave(() => $imgContainerDiv.children().first().attr('srcset', originalImgUrl))
       $swatchHoverRow.append($swatchDiv)
     })
     
