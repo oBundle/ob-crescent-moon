@@ -186,7 +186,8 @@
   border-radius: 6px;
   padding: 15px;
   background-image: url('../icons/bg-svg-product-wizard.svg');
-  background-position: bottom -30px left 0px;
+  background-position: bottom 0px left 0px;
+  background-size: 100%;
   background-repeat: no-repeat;
   height: 400px;
   min-height: 400px;
@@ -194,7 +195,7 @@
     min-height: 700px;
     height: 700px;
     padding: 30px;
-    background-position: bottom -1px left 0px;
+    background-position: bottom -50px left 0px;
   }
   @media only screen and (max-device-width: 330px) {
     height: 350px;
@@ -210,7 +211,10 @@
 }
 .ob-wizard-mainpanel-bottom {
   margin-top: auto;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
+  @include breakpoint("medium") {
+    margin-bottom: 30px;
+  }
 }
 .ob-wizard-mainpanel-tip {
   display: none;
@@ -225,6 +229,7 @@
 }
 .ob-wizard-step-btns-row {
   display: flex;
+  padding-top: 12px;
   .ob-cta-link {
     padding-left: 0;
   }

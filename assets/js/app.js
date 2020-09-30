@@ -54,6 +54,7 @@ const pageClasses = {
 
 const customClasses = {
     'pages\\custom\\page\\react-product-wizard': () => import('./theme/custom/react-product-wizard'), // Windows
+    'pages/custom/page/react-product-wizard': () => import('./theme/custom/react-product-wizard'), // mac
 };
 
 /**

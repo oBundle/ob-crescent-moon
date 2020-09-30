@@ -56,18 +56,27 @@
 .ob-text {
   &-white {
     color: $ob-white;
+    &:hover {
+      color: $ob-white;
+    }
   }
   &-primary {
     color: $ob-text-primary;
-    &:visited {
+    &:visited, &:hover {
       color: $ob-text-primary;
     }
   }
   &-secondary {
     color: $ob-text-secondary;
+    &:hover {
+      color: $ob-text-secondary;
+    }
   }
   &-red {
     color: $ob-red;
+    &:hover {
+      color: $ob-red;
+    }
   }
 }
 
