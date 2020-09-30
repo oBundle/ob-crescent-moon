@@ -14,7 +14,7 @@ export default function Step2(props) {
 
   return (
     <div className="ob-mainpanel-step-container">
-      <div class="ob-cta-container-lg ob-mb-0-auto ob-pb-25">
+      <div class="ob-cta-container-lg ob-mb-0-auto ob-pb-25 ob-pb-0-mobile">
         <h2 class="ob-text-white ob-heading-cta-md text-center">
           How fast do you intend to snowshoe?
         </h2>

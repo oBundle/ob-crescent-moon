@@ -97,8 +97,11 @@ li.product {
 //***************************
 .ob-cat-highlights {
   background-image: url('../icons/ob-cat-highlights-bg.svg');
-  background-position: top;
+  background-position: top -50px left 0;
   background-size: cover;
+  @include breakpoint("medium") {
+    background-position: top;
+  }
 }
 
 .ob-cat-highlights-img {

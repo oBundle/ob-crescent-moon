@@ -1,3 +1,9 @@
+
+.ob-wizard-container {
+  height: calc(100vh - 55px);
+  padding-bottom: 0px;
+}
+
 //***************************
 //topbar styles
 //***************************
@@ -20,9 +26,21 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-direction: column-reverse;
+  @include breakpoint("medium") {
+    flex-direction: row;
+  }
 }
 .wizard-choice-btn-container {
-  min-height: 300px;
+  min-height: 165px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow:auto;
+  @include breakpoint("medium") {
+    flex-direction: column;
+    min-height: 375px;
+    max-height: 375px;
+  }
 }
 
 
@@ -30,29 +48,51 @@
 //sidebar styles
 //***************************
 .ob-wizard-sidebar-container {
-  width: 300px;
+  width: 97%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-right: 25px;
+  position: absolute;
+  bottom:0;
+  @include breakpoint("medium") {
+    width: 300px;
+    margin-right: 25px;
+    position: relative;
+  }
 }
 .wizard-sidebar-rows-container {
   background-color: $ob-light-gray;
   border-radius: 6px;
+  display: flex;
+  @include breakpoint("medium") {
+    flex-direction: column;
+  }
 }
 .ob-wizard-sidebar-row {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   padding: 20px;
   border-left: 2px solid transparent;
-
+  border-top: 2px solid transparent;
+  width: 20%;
   p {
     margin-bottom: 0;
     margin-top: 0;
   }
+  @include breakpoint("medium") {
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-start;
+  }
 }
 .wizard-row-complete {
-  border-left: 2px solid $ob-red;
+  border-top: 2px solid $ob-red;
+  @include breakpoint("medium") {
+    border-left: 2px solid $ob-red;
+    border-top: 2px solid transparent;
+  }
 }
 .wizard-row-incomplete {
   opacity: .6;
@@ -64,7 +104,9 @@
   margin-left: 3px;
 }
 .wizard-row-checkbox {
-  margin-left: auto;
+  @include breakpoint("medium") {
+    margin-left: auto;
+  }
 }
 
 .ob-sidebar-shoe-container {
@@ -79,7 +121,7 @@
   width: 300px;
   height: auto;
   border: none;
-  top: -1px;
+  bottom: -1px;
   position: absolute;
   left: 0;
 }
@@ -139,13 +181,26 @@
   background-color: $ob-light-gray;
 }
 .ob-wizard-mainpanel-container {
+  max-width: 100%;
+  width:100%;
   border-radius: 6px;
-  padding: 30px;
+  padding: 15px;
   background-image: url('../icons/bg-svg-product-wizard.svg');
-  background-position: bottom;
+  background-position: bottom -30px left 0px;
   background-repeat: no-repeat;
-  min-height: 700px;
-  height: 700px;
+  height: 400px;
+  min-height: 400px;
+  @include breakpoint("medium") {
+    min-height: 700px;
+    height: 700px;
+    padding: 30px;
+    background-position: bottom -1px left 0px;
+  }
+  @media only screen and (max-device-width: 330px) {
+    height: 350px;
+    min-height: 350px;
+    background-position: bottom -75px left 0px;
+  }
 }
 .ob-mainpanel-step-container {
   display: flex;
@@ -158,14 +213,21 @@
   margin-bottom: 30px;
 }
 .ob-wizard-mainpanel-tip {
-  display: flex;
-  align-items: flex-start;
-  img {
-    margin-right: 10px;
+  display: none;
+  @include breakpoint("medium") {
+    display: flex;
+    align-items: flex-start;
+    img {
+      margin-right: 10px;
+    }
   }
+  
 }
 .ob-wizard-step-btns-row {
   display: flex;
+  .ob-cta-link {
+    padding-left: 0;
+  }
   .ob-btn {
     margin-left: auto;
   }
@@ -175,15 +237,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 75%;
-  margin: 8px auto;
+  width: calc(50% - 16px);
+  margin: 8px;
   border-radius: 6px;
+  max-height: 65px;
   background-color: #fff;
   border: 2px solid transparent;
   &:hover, &:focus {
     border: 2px solid $ob-red;
     background-color: white;
     color: $ob-red;
+  }
+  @include breakpoint("medium") {
+    width: 75%;
+    margin: 8px auto;
   }
 }
 
@@ -201,18 +268,25 @@
 .wizard-result-grid-container {
   display: flex;
   width: 100%;
+  @include breakpoint("medium") {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 .wizard-result-card {
-  width: 275px;
-  max-width: 275px;
+  width: 125px;
+  max-width: 125px;
+  min-width: 125px;
   margin-right: 25px;
   flex-shrink: 1;
   text-align: center;
   img {
     width: 100%;
     max-width: 100%;
-    height: 275px;
-    max-height: 275px;
+    height: 125px;
+    max-height: 125px;
+    min-width: 125px;
+
     object-fit: contain;
     mix-blend-mode: multiply;
     transition: all .3s ease-in-out;
@@ -220,6 +294,14 @@
     margin-bottom: 15px;
     &:hover {
       transform: scale(1.1);
+    }
+  }
+  @include breakpoint("medium") {
+    width: 275px;
+    max-width: 275px;
+    img {
+      height: 275px;
+      max-height: 275px;
     }
   }
 }

@@ -7,7 +7,7 @@ export default function TopBar() {
         <img src="https://store-pqywb1ijst.mybigcommerce.com/content/ob-arrow-right.svg" className="ob-arrow-left-red"/> Return
       </a>
       <h6 className="ob-heading-cta-xs ob-text-primary">
-      Crescent Moon Snowshoe Finder</h6>
+      <span class="ob-desktop">Crescent Moon</span> Snowshoe Finder</h6>
     </div>
   )
 }

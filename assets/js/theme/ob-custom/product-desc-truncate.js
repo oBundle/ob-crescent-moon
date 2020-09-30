@@ -14,4 +14,12 @@ export default function() {
       $('#accordion-read-more').hide()
     })
   }
+
+  //add color to product info on select
+  $('.form-option-variant--color').on('click', (event) => {
+    let $label = $('#swatchGroup').find("small")
+    let title = $(event.currentTarget).attr('title')
+    $label.text(title)
+  })
+
 }

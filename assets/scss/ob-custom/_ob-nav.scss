@@ -10,6 +10,8 @@
   background-color: white;
 }
 .header-logo {
+  position: absolute;
+  z-index: 6;
   svg {
     max-height: 50px;
     width: 150px;
@@ -48,8 +50,21 @@
 .mobileMenu-toggleIcon {
   width: 25% !important;
 }
+.navPage-subMenu-action[aria-label="Blank"] {
+  display: none!important;
+}
 .navPages-item {
   border-bottom: 2px solid $ob-text-primary;
+}
+// .ob-top-level-navlink {
+//   svg {
+//     display: none;
+//   }
+// }
+.navPage-subMenu-action {
+  svg {
+    display: none;
+  }
 }
 .navPages-quickSearch {
   display: none;
@@ -92,9 +107,14 @@
     margin-top: 0;
     margin-bottom: 0;
     margin-right: 15px;
+    position: relative;
     svg {
       max-height: 50px;
       width: 221px;
+    }
+    a {
+      height: 100%;
+      width: 100%;
     }
   }
   .navPages-container {
@@ -112,6 +132,9 @@
     display: inline-block;
     font-size: 16px;
     border-bottom: 2px solid transparent;
+  }
+  .navPage-subMenu-action[aria-label="Blank"] {
+    opacity: 0;
   }
   .navUser {
     order: 3;

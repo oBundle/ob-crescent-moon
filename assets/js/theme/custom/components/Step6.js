@@ -13,7 +13,7 @@ export default function Step6(props) {
 
   return (
     <div className="ob-mainpanel-step-container">
-      <div class="ob-cta-container-lg ob-mb-0-auto ob-pb-25">
+      <div class="ob-cta-container-lg ob-mb-0-auto ob-pb-25 ob-pb-0-mobile">
         <h2 class="ob-text-primary ob-heading-cta-md text-center">
           Here are your results...
         </h2>
