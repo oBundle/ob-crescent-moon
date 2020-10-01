@@ -19,7 +19,7 @@
             </a>
         </li> -->
         {{#each children}}
-            <li class="navPage-subMenu-item">
+            <li class="navPage-subMenu-item" data-cat-id={{id}}>
                 {{#if children}}
                     <a class="navPage-subMenu-action navPages-action has-subMenu{{#if is_active}} activePage{{/if}}"
                        href="{{url}}"

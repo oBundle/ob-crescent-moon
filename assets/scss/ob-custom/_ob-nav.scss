@@ -197,6 +197,17 @@
   .navPage-subMenu-item {
     width: 25%;
     padding-left: 0px;
+    &[data-cat-id='38'] {
+      width: 50%;
+      .navPage-childList {
+        display: flex !important;
+        flex-wrap: wrap;
+        max-height: 200px;
+        flex-direction: column;
+        width: 100%;
+      }
+      }
+    }
   }
   .navPages-list--user {
     display: none;
