@@ -1,0 +1,45 @@
+.ob-container[data-page-type="page"] {
+  max-width: 1080px;
+}
+
+.ob-webpage-hero {
+  width: 100%;
+  height: 370px;
+  object-fit:cover;
+  font-family: "object-fit: cover;";
+}
+
+.ob-newsletter-widget {
+  background-image: url('https://cdn11.bigcommerce.com/s-pqywb1ijst/product_images/uploaded_images/rectangle-63-2-.png');
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  height: auto;
+  .form-field {
+    margin-bottom: 0px;
+  }
+  .ob-subscription-input {
+    margin-bottom: 0px;
+  }
+  .ob-subscription-btn {
+    border-radius: 0px 6px 6px 0px;
+  }
+  @include breakpoint("medium") {
+    height: 250px;
+  }
+}
+
+.ob-newsletter-input-container {
+  background-color: $ob-bg-dark;
+  padding: 20px;
+  height: 50%;
+  width: 90%;
+  border-radius: 6px;
+  h5 {
+    margin-bottom: 0px;
+  }
+  .ob-subscription-form {
+    margin-bottom: 0px;
+  }
+}

@@ -1,5 +1,7 @@
 export default function(context) {
-  let accordionStructure =
+  console.log("blgo script run")
+  if ((localStorage.getItem("accordionStructure") || (!localStorage.getItem("accordionStructure")) === null)) {
+    let accordionStructure =
     [
       {
         catname: "lifestyle",
@@ -38,6 +40,11 @@ export default function(context) {
       })
     })
 
+    localStorage.setItem('accordionStructure', accordionStructure)
+  } else {
+    let accordionStructure = localStorage.getItem("accordionStructure")
+  }
+  
     // //
     // // FOLLOWING CODE IS IF CLIENT WANTS TO CHAGE IT TO BE BASED OFF OF TAGS
     // //
