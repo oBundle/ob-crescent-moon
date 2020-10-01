@@ -4,6 +4,7 @@
 //***************************
 .header {
   border-bottom: none;
+  font-family: 'VisbyCF' !important;
 }
 .navPages {
   padding: 0px;
@@ -47,6 +48,9 @@
     }
   }
 }
+.navPages-action-moreIcon {
+  margin-left: 7px !important;
+}
 .mobileMenu-toggleIcon {
   width: 25% !important;
 }
@@ -56,11 +60,7 @@
 .navPages-item {
   border-bottom: 2px solid $ob-text-primary;
 }
-// .ob-top-level-navlink {
-//   svg {
-//     display: none;
-//   }
-// }
+
 .navPage-subMenu-action {
   svg {
     display: none;
@@ -74,6 +74,9 @@
   display: flex;
   align-items: center;
   text-transform: capitalize;
+  font-size: 16px;
+  letter-spacing: .025em;
+  font-weight: 900;
   .ob-account-icon {
     margin-right: 10px;
   }
@@ -91,6 +94,9 @@
 }
 .ob-guidance-navitem {
   padding-left: 1.5rem !important;
+}
+.ob-cm-logo-white {
+  display: none;
 }
 
 @include breakpoint("medium") {
@@ -126,7 +132,7 @@
   }
   .navPages-action {
     padding: 5px 0px;
-    margin: 0px 10px;
+    margin: 0px 20px;
   }
   .navPages-item {
     display: inline-block;
@@ -283,6 +289,16 @@
 .ob-transparent {
   @include breakpoint("medium") {
     background-color: transparent !important;
+    .ob-cm-logo-black {
+      display: none;
+    }
+    .ob-cm-logo-white {
+      display: block;
+    }
+    .ob-account-icon, .ob-search-icon {
+      fill: white;
+      stroke: white;
+    }
     .navPages {
       background-color: transparent;
     }
@@ -298,14 +314,7 @@
         color: $ob-text-primary !important;
       }
     }
-    .ob-account-icon {
-      fill: white !important;
-      stroke: white !important;
-    }
-    .ob-search-icon {
-      fill: white !important;
-      stroke: white !important;
-    }
+
   }
 }
 
