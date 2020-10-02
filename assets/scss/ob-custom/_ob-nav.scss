@@ -230,6 +230,9 @@
     color: $ob-text-primary;
     border-bottom: 2px solid $ob-red;
   }
+  .ob-search-icon {
+    width: 23px;
+  }
 }
 
 
@@ -240,8 +243,9 @@
   background-color: $ob-red;
   border-radius: 6px;
   padding: 6px 10px;
+  margin-bottom: 5px;
   @include breakpoint("medium") {
-    padding: 10px 12px;
+    padding: 10px 12px 6px 12px;
   }
 }
 .ob-cart-icon {
@@ -257,7 +261,7 @@
   stroke: none!important;
 }
 .ob-search-icon {
-  width: 23px;
+  width: 21px;
   max-height: 100%;
   stroke: none!important;
 }

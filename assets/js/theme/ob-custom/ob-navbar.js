@@ -1,6 +1,24 @@
 export default function(context) {
   console.log('nav script run', context)
+  //click on hover bind
+  $('.has-subMenu.ob-top-level-navlink').on('mouseover', (e) => {
+    $(e.currentTarget).click()
+    $('.ob-dark-overlay').fadeIn()
+  })
 
+  $('.navPage-subMenu').on('mouseleave', (e) => {
+    $(e.currentTarget).removeClass('is-open')
+    $('body').trigger('click')
+
+    $('.ob-dark-overlay').fadeOut()
+  })
+
+  $('.navPage-subMenu').on('mouseleave', (e) => {
+    if ($('.navPages-action.is-open').length < 1) {
+      $('.ob-dark-overlay').fadeOut()
+    }
+  })
+  
   //target DOM nodes 
   let $header = $(".header");
   let $nav = $(".navUser")
