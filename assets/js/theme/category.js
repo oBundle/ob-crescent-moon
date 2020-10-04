@@ -28,7 +28,7 @@ export default class Category extends CatalogPage {
         }, 300)
         
         obVariantHover(this.context)
-        
+        $('.ob-toggle-subcat').trigger('click')
     }
 
     initFacetedSearch() {

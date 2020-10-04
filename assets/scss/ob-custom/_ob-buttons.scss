@@ -22,6 +22,7 @@ button[disabled] {
   transition: all ease-in-out .2s;
   &-bg-red {
     background-color: $ob-red;
+    box-shadow: 0px 15px 30px rgba(108, 43, 54, 0.25);
   }
   &-transparent {
     background-color: transparent;
@@ -71,7 +72,6 @@ button[disabled] {
   }
   &-white {
     fill: $ob-white;
-    stroke: $ob-white;
     width: 14px;
     height: 9px;
     margin-left: 10px;

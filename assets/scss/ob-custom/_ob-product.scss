@@ -1,6 +1,7 @@
 .ob-productView {
   display: flex;
   flex-direction: row;
+  align-items: flex-start;
   justify-content: space-between;
   flex-wrap: wrap;
 }
@@ -155,10 +156,15 @@
 .ob-product-free-shipping {
   svg {
     fill: black;
-    stroke: black;
     width: 50px;
     height: 50px;
     margin-top: 10px;
+  }
+  .col-2 {
+    padding: 0px;
+    @include breakpoint("medium") {
+      padding: 0px 10px;
+    }
   }
 }
 
@@ -171,9 +177,12 @@
     align-items: center;
     justify-content: flex-end;
     label#swatchGroup {
-      display: flex; 
-      flex-direction: column;
+      display: flex;
+      align-items:center;
       margin-right: auto;
+      small {
+        margin-top: 0px;
+      }
     }
    
   }

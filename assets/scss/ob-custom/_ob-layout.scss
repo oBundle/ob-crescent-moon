@@ -63,7 +63,11 @@
   height: auto;
   @include breakpoint("medium") {
     height: 650px;
-
+    &-1 {
+      height: 575px;
+      display: flex;
+      align-items: flex-start;
+    }
   }
 }
 
@@ -185,6 +189,9 @@
   &-25 {
     padding-top: 25px;
   }
+  &-0 {
+    padding-top: 0px;
+  }
   //mobile
   @media only screen and (max-width: 801px) {
     &-200-mobile {
@@ -260,4 +267,25 @@
 
 .ob-relative {
   position: relative;
+}
+
+//***************************
+//Width
+//***************************
+.ob-mw {
+  &-1400 {
+    max-width: 1400px;
+  }
+  &-1200 {
+    max-width: 1200px;
+  }
+  &-500 {
+    max-width: 500px;
+  }
+  &-400 {
+    max-width: 400px;
+  }
+  &-200 {
+    max-width: 200px;
+  }
 }

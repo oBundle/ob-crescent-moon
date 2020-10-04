@@ -86,6 +86,10 @@
 }
 .navPage-subMenu-item {
   padding-left: 1rem;
+  &[data-cat-id='45'] {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
 }
 .navPages-list + .navPages-list {
   border-top: none;

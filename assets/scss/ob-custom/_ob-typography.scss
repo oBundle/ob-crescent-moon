@@ -18,7 +18,7 @@
   &-cta-md {
     @include text($size: 24px, $lineHeight: 26px, $weight: 900);
     @include breakpoint("medium") {
-      @include text($size: 36px, $lineHeight: 30px, $weight: 900);
+      @include text($size: 36px, $lineHeight: 40px, $weight: 900);
     }
   }
   &-cta-sm {
@@ -80,3 +80,12 @@
   }
 }
 
+.ob-visby-bold {
+  @font-face {
+    font-family: 'VisbyCF Bold';
+    src: url('https://store-pqywb1ijst.mybigcommerce.com/content/visby-cf-bold/webfonts/visby-cf-bold.woff2') format('woff2'),
+          url('https://store-pqywb1ijst.mybigcommerce.com/content/visby-cf-bold/webfonts/visby-cf-bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+}

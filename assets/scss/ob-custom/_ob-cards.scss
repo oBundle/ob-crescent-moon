@@ -37,6 +37,12 @@
     &:after {
       padding-bottom: 100%;
     }
+    img {
+      transition: all .3s ease-in-out;
+      &:hover {
+        opacity: .75;
+      }
+    }
   }
   .card-figcaption {
     display: none;
@@ -48,5 +54,9 @@
 }
 
 .ob-blog-card {
-  margin-right: 15px;
+  margin: 0px 7px;
+  padding: 0px 25px;
+  @include breakpoint("medium") {
+    padding: 0px;
+  }
 }

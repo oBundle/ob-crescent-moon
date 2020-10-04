@@ -9,9 +9,9 @@
 {{/if}}
 
 {{#if products.new}}
-  <div class="ob-wrapper ob-home-bg-3">
-    <div class="ob-container text-center ob-pt-25-mobile">
-      <h5 class="ob-heading-cta-md ob-pt-100 ob-pt-25-mobile ob-pb-25-mobile ob-mb-25">Trending Gear</h5>
+  <div class="ob-wrapper ob-home-bg-5">
+    <div class="ob-container text-center ob-pt-25-mobile ob-pb-25 ob-pb-50-mobile">
+      <h5 class="ob-heading-cta-md ob-text-primary ob-pt-50-mobile ob-pb-25-mobile ob-mb-50 ob-mb-25-mobile">Trending Gear</h5>
       {{> components/products/new products=products.new columns=theme_settings.homepage_new_products_column_count}}
     </div>
   </div>
@@ -19,8 +19,8 @@
 
 {{> components/ob-custom/homepage/cta-section-2}}
 
-<div class="ob-container">
-  <h5 class="ob-heading-cta-md ob-mb-25 text-center">Live the Lifestyle</h5>
+<div class="ob-container ob-mw-1400 ob-pt-50-mobile">
+  <h5 class="ob-heading-cta-md ob-mb-25 ob-text-primary text-center">Live the Lifestyle</h5>
   <div class="ob-blog-carousel">
     {{#each blog.recent_posts}}
     <div class="ob-blog-card" href="{{url}}">

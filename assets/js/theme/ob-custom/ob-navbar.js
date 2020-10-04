@@ -18,6 +18,12 @@ export default function(context) {
       $('.ob-dark-overlay').fadeOut()
     }
   })
+
+  $('.mobileMenu-toggle').on('click', (e) => {
+    if (!$(e.currentTarget).hasClass('is-open')) {
+      $('.ob-dark-overlay').fadeOut()
+    }
+  })
   
   //target DOM nodes 
   let $header = $(".header");

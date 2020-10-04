@@ -26,7 +26,7 @@
                       {{lang 'products.reviews.link_to_review' total=product.num_reviews}}
                   </a>
               {{else}}
-                  <span>{{lang 'products.reviews.link_to_review' total=product.num_reviews}}</span>
+                  <span>(0)</span>
               {{/if}}
           {{/if}}
           {{#if settings.show_product_reviews}}
@@ -35,7 +35,7 @@
                  {{#unless is_ajax}}data-reveal-id="modal-review-form"{{/unless}}
                  role="button"
               >
-                 {{lang 'products.reviews.new'}}
+                 Add Review
               </a>
               {{> components/products/modals/writeReview}}
           {{/if}}
@@ -192,8 +192,8 @@
   </div>
   {{> components/common/share}}
   <div class="f-grid ob-product-free-shipping">
-    <div class="col">
-      <svg><use xlink:href="#icon-ob-free-shipping" /></svg>
+    <div class="col-2">
+      <svg><use xlink:href="#icon-ob-free-shipping-product" /></svg>
     </div>
     <div class="col-10 col-grid">
       <h5 class="ob-text-primary ob-heading-cta-sm">
