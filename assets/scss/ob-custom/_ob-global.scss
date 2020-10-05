@@ -18,6 +18,13 @@
   font-style: normal;
 }
 @font-face {
+  font-family: 'VisbyCF Extra Bold';
+  src: url('https://store-pqywb1ijst.mybigcommerce.com/content/visby-cf-extra-bold/webfonts/visby-cf-extra-bold.woff2') format('woff2'),
+        url('https://store-pqywb1ijst.mybigcommerce.com/content/visby-cf-extra-bold/webfonts/visby-cf-extra-bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
   font-family: 'VisbyCF';
   src: url('https://store-pqywb1ijst.mybigcommerce.com/content/visby-cf-medium/webfonts/visby-cf-medium.woff') format('woff2'),
         url('https://store-pqywb1ijst.mybigcommerce.com/content/visby-cf-medium/webfonts/visby-cf-medium.woff2') format('woff');
@@ -36,7 +43,7 @@ html, body, p, span, a {
 h1,h2,h3,h4,h5,h6 {
   margin-top: 0;
   text-transform: unset;
-  font-family: "VisbyCF Bold";
+  font-family: "VisbyCF Extra Bold";
   letter-spacing: .025em;
 }
 
@@ -50,7 +57,7 @@ a {
 .body {
   margin-bottom: 0;
   margin-top: 0;
-  x-overflow: hidden;
+  overflow-x: hidden;
 }
 
 

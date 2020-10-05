@@ -92,6 +92,13 @@
   }
 }
 
+.form-option {
+  border: 2px solid $ob-light-gray;
+  border-radius: 6px;
+  padding: 10px;
+  margin: 10px 0px;
+}
+
 .productView-options {
   margin-bottom: 0;
   .form-field--increments {
@@ -148,6 +155,8 @@
 .form-wishlist, a[aria-controls="wishlist-dropdown"] {
   display: none;
 }
+
+
 
 .socialLinks {
   display: none;

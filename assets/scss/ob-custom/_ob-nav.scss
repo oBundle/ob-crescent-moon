@@ -9,6 +9,9 @@
 .navPages {
   padding: 0px;
   background-color: white;
+  a {
+    color: $ob-text-primary;
+  }
 }
 .header-logo {
   position: absolute;
@@ -48,6 +51,9 @@
     }
   }
 }
+.ob-top-level-navlink {
+  font-family: "VisbyCF Bold";
+}
 .navPages-action-moreIcon {
   margin-left: 7px !important;
 }
@@ -86,10 +92,6 @@
 }
 .navPage-subMenu-item {
   padding-left: 1rem;
-  &[data-cat-id='45'] {
-    margin-top: 25px;
-    margin-bottom: 25px;
-  }
 }
 .navPages-list + .navPages-list {
   border-top: none;
@@ -102,7 +104,9 @@
 .ob-cm-logo-white {
   display: none;
 }
-
+.navPage-subMenu-action  {
+  font-family: "VisbyCF Bold" !important;
+}
 @include breakpoint("medium") {
   .header {
     display: flex;

@@ -198,11 +198,10 @@
 .ob-home-bg {
   &-2 {
     background-image: url('../icons/bg-svg-6.svg');
-    background-position: bottom -10px left 50%;
+    background-position: bottom 0px left 50%;
     background-repeat: no-repeat;
     @include breakpoint("medium") {
-      background-position: bottom 150px center;
-      
+      background-position: bottom 125px center;
     }
   }
   &-3 {
