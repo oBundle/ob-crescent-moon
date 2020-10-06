@@ -63,7 +63,11 @@
 .ob-blog-card {
   margin: 0px 7px;
   padding: 0px 25px;
+  .ob-paragraph-md {
+    display: none;
+  }
   @include breakpoint("medium") {
     padding: 0px;
+    display: block;
   }
 }

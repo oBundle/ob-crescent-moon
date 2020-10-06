@@ -39,6 +39,7 @@ html {
 html, body, p, span, a {
   font-family: 'VisbyCF' !important;
   letter-spacing: .025em;
+  color: $ob-text-primary;
 }
 
 p {
@@ -50,6 +51,7 @@ h1,h2,h3,h4,h5,h6 {
   text-transform: unset;
   font-family: "VisbyCF Extra Bold";
   letter-spacing: .025em;
+  color: $ob-text-primary;
 }
 
 a {
