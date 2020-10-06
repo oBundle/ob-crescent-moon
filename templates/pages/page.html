@@ -4,33 +4,13 @@
 {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
 
 <main class="page">
-    <img class="ob-webpage-hero ob-mb-50 ob-mb-25-mobile" src="https://cdn11.bigcommerce.com/s-pqywb1ijst/product_images/uploaded_images/webpage-sample.png" />
-    
+    {{{region name="page_builder_content_1"}}}
+
     {{#unless theme_settings.hide_page_heading }}
         <h1 class="ob-text-primary ob-heading-cta-lg ob-mb-25">{{ page.title }}</h1>
     {{/unless}}
 
-    <div class="ob-webpage-paragraph-container">
-        <p class="ob-text-primary ob-paragraph-md">
-            Foam is to snowshoes as shaped skis are to that industry–a reinterpretation of an old design that results in a break through to make your outdoor experience more accessible, and more enjoyable. It’s positively transformational.
-        </p>
-        <p class="ob-text-primary ob-paragraph-md">
-            Crescent Moon’s patented all-foam snowshoes will change your notion about snowshoeing forever. Like a pair of your favorite running or walking shoes, foam bends and flexes in perfect synchronicity with your foot making it feel very much like a natural extension of the way you move. And for recreational snowshoeing, we promise there is no better solution.  They’re quiet, cushioned, lightweight, and now, with the addition of ICESPIKE traction points, they’re versatile and have great grip. So, step into something a little more comfortable....and prepare yourself to be very pleasantly surprised by the performance and feel of foam.
-        </p>
-
-        <p class="ob-text-primary ob-paragraph-md">
-            All snowshoes have bindings–and the binding is what connects you to the platform, whether its foam, or aluminum. The better the binding, the more secure and efficient the snowshoe.  Crescent Moon’s unique binding solutions have been recognized and mimicked for decades, but no one holds you closer or gives you a better fit than the bindings we put on both our foam and our aluminum shoes.
-        </p>
-    </div>
-
-    <div class="ob-newsletter-widget ob-mt-25">
-        <div class="ob-newsletter-input-container f-grid align-center justify-center">
-            <h5 class="col-xs-12 col-md-6 ob-text-white ob-heading-cta-md">Join Our Newsletter</h5>
-            <div class="col-xs-12 col-md-6">
-                {{> components/common/subscription-form}}
-            </div>
-        </div>
-    </div>
+    
     <!-- {{#if page.sub_pages}}
     <nav class="navBar navBar--sub">
         <ul class="navBar-section account-navigation">
@@ -43,7 +23,6 @@
 
     <!-- {{ page.title }} -->
 
-    {{{region name="page_builder_content_1"}}}
     {{{region name="page_builder_content_1"}}}
     {{{region name="page_builder_content_3"}}}
     {{{region name="page_builder_content_4"}}}
