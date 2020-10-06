@@ -241,6 +241,7 @@
 .ob-wizard-mainpanel-tip {
   display: none;
   max-width: 860px;
+  margin-top: -20px;
   @include breakpoint("medium") {
     display: flex;
     align-items: flex-start;
