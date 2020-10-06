@@ -14,6 +14,10 @@
   display: flex;
   flex: 1;
   width: 100%;
+  margin-bottom: 1rem;
+  @include breakpoint("medium") {
+    margin-bottom: 3rem;
+  }
 }
 
 .ob-product-main-image {
@@ -33,10 +37,25 @@
 .productView-thumbnail-link.is-active {
   border: 2px solid $ob-red;
 }
+.productView-thumbnail-link {
+  border: 2px solid transparent;
+  &:hover {
+    border: 2px solid $ob-red;
+  }
+  &:focus {
+    outline: none;
+  }
+}
 
 //***************************
 //Product Details
 //***************************
+.ob-product-title {
+  font-size: 24px;
+  @include breakpoint("medium") {
+    font-size: 40px;
+  }
+}
 .ob-productView-details {
   max-width: 525px;
   display: flex;
@@ -183,6 +202,7 @@
 .form-field[data-product-attribute="swatch"] {
   @media only screen and (max-width: 801px)  {
     display: flex;
+    flex-wrap:wrap;
     align-items: center;
     justify-content: flex-end;
     label#swatchGroup {
@@ -202,6 +222,10 @@
 //***************************
 .ob-product-subnav-content {
   padding: 2rem;
+  .ob-paragraph-lg {
+    font-size: 16px !important;
+    line-height: 30px;
+  }
 }
 .ob-subnav-content-item {
   display: none;
@@ -231,4 +255,5 @@
 //***************************
 .ob-cat-link-container {
   background-color: $ob-white !important;
+  padding-left: 0px !important;
 }

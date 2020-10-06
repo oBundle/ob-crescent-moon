@@ -1,6 +1,6 @@
 <section class="productView-details product-data">
   <div class="productView-product">
-      <h1 class="ob-heading-cta-lg ob-text-primary" {{#if schema}}itemprop="name"{{/if}}>{{product.title}}</h1>
+      <h1 class="ob-heading-cta-lg ob-text-primary ob-product-title" {{#if schema}}itemprop="name"{{/if}}>{{product.title}}</h1>
       {{#if product.brand}}
           <h2 class="productView-brand"{{#if schema}} itemprop="brand" itemscope itemtype="http://schema.org/Brand"{{/if}}>
               <a href="{{product.brand.url}}"{{#if schema}} itemprop="url"{{/if}}><span{{#if schema}} itemprop="name"{{/if}}>{{product.brand.name}}</span></a>
@@ -196,10 +196,10 @@
       <svg><use xlink:href="#icon-ob-free-shipping-product" /></svg>
     </div>
     <div class="col-10 col-grid">
-      <h5 class="ob-text-primary ob-heading-cta-sm">
+      <h5 class="ob-text-primary ob-heading-cta-xs">
         Free Shipping. Always.
       </h5>
-      <p class="ob-text-secondary ob-paragraph-sm">
+      <p class="ob-text-primary ob-paragraph-sm">
         No hidden fees. Ships fast and free for a seamless customer experience.
       </p>
     </div>
