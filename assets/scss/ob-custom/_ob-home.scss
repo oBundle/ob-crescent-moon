@@ -20,6 +20,15 @@
   }
 }
 
+.ob-dark-overlay {
+  @include position(absolute, 20, $top: 0, $left: 0);
+  height: 100%;
+  width: 100%;
+  background-color: $ob-text-primary;
+  opacity: .7;
+  display: none;
+}
+
 .ob-hero-img {
   &-bg {
     @include position(absolute, 2, $bottom: 0, $left: -100px);
@@ -48,7 +57,7 @@
   }
   
   &-3 {
-    @include position(absolute, 5, $bottom: 0, $left: 0);
+    @include position(absolute, 5, $bottom: 0, $right: -100px);
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -102,46 +111,87 @@
 .ob-home-cta-img {
   &-1 {
     position: relative;
+    max-width: 100%;
     @include breakpoint("medium") {
+      max-width: 100%;
+      padding-right: 50px;
       @include position(absolute, 3, $bottom: 0, $right: 0);
     }
   }
   &-2 {
     @include position(absolute, 4, $top: 20%, $right: -10%);
-    width: 250px;
+    width: 150px;
     @include breakpoint("medium") {
-      @include position(absolute, 4, $top: 20%, $left: -10%);
-      width: 275px;
+      @include position(absolute, 4, $top: 20%, $left: -50px);
+      width: 210px;
     }
     @include breakpoint("large") {
-      width: auto;
+      @include position(absolute, 4, $top: 20%, $left: 15%);
+      width: 240px;
     }
   }
   &-3 {
     position: relative;
     @include breakpoint("medium") {
-      @include position(absolute, 4, $bottom: -30px, $left: 0);      
+      @include position(absolute, 4, $top: 35px, $left: 0);      
     }
   }
   &-4 {
-    @include position(absolute, 4, $top: -150px, $left: 0);
+    @include position(absolute, 4, $top: 0px, $left: 0);
   }
   &-5 {
     @include position(absolute, 4, $bottom: -200px, $left: 0);
   }
 }
 
+//***************************
+//HOME CTA Sections
+//***************************
+.ob-cta-icons-container {
+  @include breakpoint("medium") {
+    .ob-flex-col {
+      padding-top: 0px;
+      padding-bottom: 0px;
+    }
+  }
+}
+.ob-icons-cta-block {
+  @include breakpoint("medium") {
+    max-width: 200px;
+    padding: 0px;
+    p {
+      margin-bottom: 0px;
+    }
+  }
+}
 .ob-cta-icon {
   width: 53px;
-  margin-bottom: 10px;
+  height: 53px;
+  margin-bottom: 20px;
+}
+
+.ob-cta-2-row-2 {
+  margin-top: 25px !important;
+  @include breakpoint("medium") {
+    margin-top: 150px !important;
+  }
 }
 
 .ob-cta-free-shipping {
-  margin-top: 250px;
-  margin-bottom: 50px;
+  margin-top: 150px;
+  display: flex;
+  justify-content: center;
+  .free-shipping-text-block {
+    max-width: 375px;
+    img {
+      margin-bottom: 10px;
+    }
+    h5 {
+      margin-bottom: 15px;
+    }
+  }
   @include breakpoint("medium") {
-    margin-top: 425px;
-    margin-bottom: 50px;
+    margin-top: 325px;
   }
 }
 
@@ -151,10 +201,10 @@
 .ob-home-bg {
   &-2 {
     background-image: url('../icons/bg-svg-6.svg');
-    background-position: bottom 50px right 50%;
+    background-position: bottom 0px left 50%;
     background-repeat: no-repeat;
     @include breakpoint("medium") {
-      background-position: bottom;
+      background-position: bottom 125px center;
     }
   }
   &-3 {
@@ -167,11 +217,29 @@
   }
   &-4 {
     background-image: url('../icons/bg-svg-5.svg');
-    background-position: bottom;
+    background-position: bottom center;
     background-repeat: no-repeat;
+    background-size: 1200px 500px;
     @include breakpoint("medium") {
-      background-position: bottom;
+      background-size: 1400px 650px;
     }
+    @include breakpoint("large") {
+      background-size: contain;
+      background-position: left bottom;
+    }
+  }
+  &-5 {
+    background-color: $ob-light-gray;
+  }
+  &-6 {
+    background-image: url('../icons/trending-gear-top.svg');
+    background-repeat: no-repeat;
+    background-position: bottom center;
+  }
+  &-7 {
+    background-image: url('../icons/trending-gear-top.svg');
+    background-repeat: no-repeat;
+    background-position: top center;
   }
 }
 
@@ -179,6 +247,18 @@
   @include position(absolute, 2, $bottom: 0, $left: 0);
 }
 
+//***************************
+//Product Carousels
+//***************************
+.productCarousel {
+  .slick-slide {
+    display: flex;
+    justify-content: center;
+  }
+  .ob-product-card {
+    width: 100%;
+  }
+}
 //***************************
 //HOME IG Section
 //***************************
@@ -190,6 +270,11 @@
   position: relative;
   width: 50%;
   overflow: hidden;
+  .ig-thumbnail-image {
+    width: 100%;
+    object-fit: cover;
+    font-family: "object-fit: cover;";
+  }
   img {
     transition: all ease-in-out .3s;
   }

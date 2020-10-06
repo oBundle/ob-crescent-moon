@@ -5,7 +5,7 @@ import MainPanelStepBtns from './MainPanelStepBtns'
 
 
 export default function Step4(props) {
-  const {userChoices, setUserChoices, step, setStep } = props
+  const {userChoices, setUserChoices, step, setStep, context } = props
   const [selectedChoice, setSelectedChoice] = useState('') 
 
   const btnChoices = ["Greater than 10.5", "Smaller than 10.5"]
@@ -26,8 +26,8 @@ export default function Step4(props) {
       <div className="ob-wizard-mainpanel-tip ob-mt-12">
         <img src="https://store-pqywb1ijst.mybigcommerce.com/content/ob-info-icon.svg" />
         <p className="ob-paragraph-sm ob-text-white">
-          Snowshoe Tip: Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-          sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
+          <span class="ob-visby-bold ob-text-white">Snowshoe Tip:</span> {context.theme_settings.wizard_tip_4} 
+
         </p>
       </div>
       <div className='ob-wizard-mainpanel-bottom'>

@@ -1,14 +1,17 @@
 {{#partial "page"}}
 
-<div class="ob-container">
+<div class="ob-container ob-pt-25-mobile ob-pb-25-mobile" data-page-type="{{page_type}}">
 {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
 
 <main class="page">
+    {{{region name="page_builder_content_1"}}}
+
     {{#unless theme_settings.hide_page_heading }}
-        <h1 class="page-heading">{{ page.title }}</h1>
+        <h1 class="ob-text-primary ob-heading-cta-lg ob-mb-25">{{ page.title }}</h1>
     {{/unless}}
 
-    {{#if page.sub_pages}}
+    
+    <!-- {{#if page.sub_pages}}
     <nav class="navBar navBar--sub">
         <ul class="navBar-section account-navigation">
         {{#each page.sub_pages}}
@@ -16,17 +19,46 @@
         {{/each}}
         </ul>
     </nav>
-    {{/if}}
+    {{/if}} -->
 
-    {{{region name="page_builder_content"}}}
+    <!-- {{ page.title }} -->
 
-    <div class="page-content page-content--centered">
+    {{{region name="page_builder_content_3"}}}
+    {{{region name="page_builder_content_4"}}}
+    {{{region name="page_builder_content_5"}}}
+    {{{region name="page_builder_content_6"}}}
+    {{{region name="page_builder_content_7"}}}
+    {{{region name="page_builder_content_8"}}}
+    {{{region name="page_builder_content_9"}}}
+    {{{region name="page_builder_content_10"}}}
+    {{{region name="page_builder_content_11"}}}
+    {{{region name="page_builder_content_12"}}}
+    {{{region name="page_builder_content_13"}}}
+    {{{region name="page_builder_content_14"}}}
+    {{{region name="page_builder_content_15"}}}
+    {{{region name="page_builder_content_16"}}}
+    {{{region name="page_builder_content_17"}}}
+    {{{region name="page_builder_content_18"}}}
+    {{{region name="page_builder_content_19"}}}
+    {{{region name="page_builder_content_20"}}}
+    {{{region name="page_builder_content_21"}}}
+    {{{region name="page_builder_content_22"}}}
+    {{{region name="page_builder_content_23"}}}
+    {{{region name="page_builder_content_24"}}}
+    {{{region name="page_builder_content_25"}}}
+    {{{region name="page_builder_content_26"}}}
+    {{{region name="page_builder_content_27"}}}
+    {{{region name="page_builder_content_28"}}}
+    {{{region name="page_builder_content_29"}}}
+    {{{region name="page_builder_content_30"}}}
+  
+    <!-- <div class="page-content page-content--centered">
         {{#replace '%%Syndicate%%' page.content}}
             {{> components/page/rss_feed}}
         {{else}}
             <p>{{{page.content}}}</p>
         {{/replace}}
-    </div>
+    </div> -->
 
     {{#if page.feed}}
         <ul>

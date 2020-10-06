@@ -15,18 +15,18 @@ category:
     {{/if}}
 {{/partial}}
 
-{{#partial "page"}}
-    
-    <div class="ob-container">
+{{#partial "page"}}        
 
+    <div class="ob-container ob-pb-0">
         {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
 
         {{> components/ob-custom/category/ob-category-top}}
 
-        {{> components/ob-custom/category/ob-cat-subnav}}
-        {{> components/ob-custom/category/ob-cat-subnav--mobile}}
-
-        <div class="page">
+        {{#if category.subcategories.length '>' 1}}
+            {{> components/ob-custom/category/ob-cat-subnav}}
+            {{> components/ob-custom/category/ob-cat-subnav--mobile}}
+        {{/if}}
+        <div class="page {{#if category.subcategories.length '===' 1}}ob-pt-50 ob-pt-25-mobile{{/if}}">
             <main class="page-content" id="product-listing-container">
                 {{> components/category/product-listing}}
                 {{{region name="category_below_content"}}}

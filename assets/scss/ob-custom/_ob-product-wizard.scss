@@ -1,7 +1,11 @@
 
+//***************************
+//toplevel footer page styles
+//***************************
 .ob-wizard-container {
   height: calc(100vh - 55px);
   padding-bottom: 0px;
+  max-width: 1440px;
 }
 
 //***************************
@@ -48,7 +52,7 @@
 //sidebar styles
 //***************************
 .ob-wizard-sidebar-container {
-  width: 97%;
+  width: calc(100% - 34px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -87,15 +91,19 @@
     justify-content: flex-start;
   }
 }
-.wizard-row-complete {
-  border-top: 2px solid $ob-red;
-  @include breakpoint("medium") {
-    border-left: 2px solid $ob-red;
-    border-top: 2px solid transparent;
-  }
-}
 .wizard-row-incomplete {
   opacity: .6;
+}
+.wizard-row-complete {
+  opacity: 1;
+}
+.wizard-row-current {
+  border-top: 3px solid $ob-red;
+  opacity: 1;
+  @include breakpoint("medium") {
+    border-left: 3px solid $ob-red;
+    border-top: 3px solid transparent;
+  }
 }
 .wizard-row-number {
   margin-left: 15px;
@@ -167,6 +175,21 @@
   }
   &-6 {
     background-color: #C41230;
+    animation-name: color;
+    animation-duration: 1.8s;
+    animation-iteration-count: infinite;
+
+    @keyframes color {
+      0% {
+        background-color: #C41230;
+      }
+      50% {
+        background-color: #db8d9a;
+      }
+      100% {
+        background-color: #C41230;
+      }
+    }
   }
 
 }
@@ -181,12 +204,13 @@
   background-color: $ob-light-gray;
 }
 .ob-wizard-mainpanel-container {
-  max-width: 100%;
+  max-width: 1040px;
   width:100%;
   border-radius: 6px;
   padding: 15px;
   background-image: url('../icons/bg-svg-product-wizard.svg');
-  background-position: bottom -30px left 0px;
+  background-position: bottom -100px right 50%;
+  background-size: 1240px 200px;
   background-repeat: no-repeat;
   height: 400px;
   min-height: 400px;
@@ -194,7 +218,7 @@
     min-height: 700px;
     height: 700px;
     padding: 30px;
-    background-position: bottom -1px left 0px;
+    background-position: bottom -50px left 0px;
   }
   @media only screen and (max-device-width: 330px) {
     height: 350px;
@@ -210,10 +234,14 @@
 }
 .ob-wizard-mainpanel-bottom {
   margin-top: auto;
-  margin-bottom: 30px;
+  @include breakpoint("medium") {
+    margin-bottom: 0px;
+  }
 }
 .ob-wizard-mainpanel-tip {
   display: none;
+  max-width: 860px;
+  margin-top: -20px;
   @include breakpoint("medium") {
     display: flex;
     align-items: flex-start;
@@ -225,8 +253,12 @@
 }
 .ob-wizard-step-btns-row {
   display: flex;
+  padding-top: 12px;
   .ob-cta-link {
     padding-left: 0;
+    &:hover {
+      background-color: transparent;
+    }
   }
   .ob-btn {
     margin-left: auto;
@@ -249,7 +281,8 @@
     color: $ob-red;
   }
   @include breakpoint("medium") {
-    width: 75%;
+    width: 525px;
+    max-width: 90%;
     margin: 8px auto;
   }
 }
@@ -280,6 +313,7 @@
   margin-right: 25px;
   flex-shrink: 1;
   text-align: center;
+  position: relative;
   img {
     width: 100%;
     max-width: 100%;
@@ -294,6 +328,40 @@
     margin-bottom: 15px;
     &:hover {
       transform: scale(1.1);
+    }
+  }
+  .ob-best-fit-tag {
+    @include position(absolute, 2, $top: 1px, $left: 0px);
+    background-color: $ob-red;
+    display: flex;
+    align-items: center;
+    padding: 3px 9px;
+    img {
+      max-width: 18px !important;
+      min-width: 15px;
+      max-height: 18px;
+      width: 15px !important;
+      height: 15px;
+      margin: 0px;
+      mix-blend-mode: normal;
+      margin-right: 7px;
+      @include breakpoint("medium") {
+        width: 18px;
+        height: 18px;
+        min-width: 15px;
+
+      }
+    }
+    p {
+      margin: 0px;
+      margin-top: 4px;
+      font-size: 12px;
+      @include breakpoint("medium") {
+        font-size: 14px;
+      }
+    }
+    @include breakpoint("medium") {
+      padding: 8px 12px;
     }
   }
   @include breakpoint("medium") {

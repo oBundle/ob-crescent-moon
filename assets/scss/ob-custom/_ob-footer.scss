@@ -1,42 +1,63 @@
 .ob-footer-container {
+  box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.08);
+  max-width: 100vw;
   h5 {
     margin-top: 1.3rem;
+    color: $ob-text-primary
   }
   .ob-support-mobile {
     margin-top: 6rem;
   }
   .ob-footer-link {
     width: 100%;
+    font-size: 13px;
     padding-bottom: 12px;
-  }
-  
-  .ob-subscription-input {
-    margin-bottom: 0 !important;
-    border-radius: 6px 0px 0px 6px !important;
-    border-right: none;
-    border: 1px solid transparent !important;
-    &:focus {
-      border: 1px solid $ob-red !important;
-    }
-  }
-  .ob-subscription-btn {
-    max-height: 100%;
-    border-radius: 0px 6px 6px 0px;
-    padding: 8px 25px 8px 20px;
+    line-height: 24px;
   }
   
   .ob-footer-icon {
     height: 15px;
     width: 15px;
     margin-right: 10px;
+    margin-bottom: 30px;
   }
 
 }
 
+.ob-subscription-form {
+  margin-bottom: 0px;
+}
+.ob-subscription-input {
+  margin-bottom: 0 !important;
+  border-radius: 6px 0px 0px 6px !important;
+  border-right: none;
+  border: 1px solid transparent !important;
+  height: 48px !important;
+  background-color: $ob-light-gray;
+  &:focus {
+    border: 2px solid $ob-red !important;
+  }
+}
+.ob-subscription-btn {
+  max-height: 100%;
+  max-width: 48px;
+  width: 48px;
+  border-radius: 0px 6px 6px 0px;
+  padding: 10px;
+  svg {
+    margin: 0px;
+  }
+}
+
+.ob-footer-newsletter-container-mobile {
+  padding-bottom: 0!important;
+}
 .ob-obundle-logo {
-  width: 80px;
-  height: 18px;
+  width: 100px;
+  height: 22px;
   margin: 0 auto;
+  fill: $ob-text-primary;
+  
   @include breakpoint("medium") {
     margin-left: 5px;
   }
@@ -44,6 +65,7 @@
 
 .footer-bottom-col {
   p, a {
+
     margin-bottom: 0;
   }
 }
@@ -64,7 +86,23 @@
 .ob-footer-bottom-row {
   margin-top: 30px;
   border-top: 2px solid $ob-text-primary;
-  @include breakpoint("medium") {
-    margin-top: 175px !important;
+  a, p {
+    font-size: 12px !important;
   }
+  .footer-payment-icon {
+    margin-right: 1rem;
+    fill: $ob-text-primary;
+  }
+  @include breakpoint("medium") {
+    margin-top: 40px !important;
+  }
+}
+
+.ob-logo-row {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 400px;
+  margin: 0 auto;
 }

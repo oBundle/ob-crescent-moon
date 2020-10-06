@@ -1,5 +1,5 @@
 {{#if children}}
-<a class="navPages-action has-subMenu{{#if is_active}} activePage{{/if}} ob-top-level-navlink"
+<a class="navPages-action has-subMenu{{#if is_active}} activePage{{/if}} ob-top-level-navlink ob-visby-bold"
    href="{{url}}"
    data-collapsible="navPages-{{id}}"
 >
@@ -19,7 +19,7 @@
             </a>
         </li> -->
         {{#each children}}
-            <li class="navPage-subMenu-item">
+            <li class="navPage-subMenu-item" data-cat-id={{id}}>
                 {{#if children}}
                     <a class="navPage-subMenu-action navPages-action has-subMenu{{#if is_active}} activePage{{/if}}"
                        href="{{url}}"
@@ -41,7 +41,7 @@
                         {{#each children}}
                         <li class="navPage-childList-item">
                             <a class="navPage-childList-action navPages-action{{#if is_active}} activePage{{/if}}"
-                               href={{../url}}/?subcat={{name}}
+                               href={{../url}}?subcat={{name}}
                                aria-label="{{name}}"
                             >
                                 {{name}} 

@@ -4,10 +4,14 @@
 //***************************
 .header {
   border-bottom: none;
+  font-family: 'VisbyCF' !important;
 }
 .navPages {
   padding: 0px;
   background-color: white;
+  a {
+    color: $ob-text-primary;
+  }
 }
 .header-logo {
   position: absolute;
@@ -47,6 +51,15 @@
     }
   }
 }
+.ob-top-level-navlink {
+  font-family: "VisbyCF Bold";
+}
+.navPages-action[href="/accessories/"] {
+  font-family: "VisbyCF Extra Bold" !important;
+}
+.navPages-action-moreIcon {
+  margin-left: 7px !important;
+}
 .mobileMenu-toggleIcon {
   width: 25% !important;
 }
@@ -56,11 +69,15 @@
 .navPages-item {
   border-bottom: 2px solid $ob-text-primary;
 }
-// .ob-top-level-navlink {
-//   svg {
-//     display: none;
-//   }
-// }
+.navPage-subMenu.is-open {
+  padding-bottom: 10px;
+  .ob-cta-link {
+    padding-bottom: 0px;
+  }
+  .col-md-6 {
+    padding-bottom: 0;
+  }
+}
 .navPage-subMenu-action {
   svg {
     display: none;
@@ -74,9 +91,15 @@
   display: flex;
   align-items: center;
   text-transform: capitalize;
+  font-size: 16px;
+  letter-spacing: .025em;
+  font-weight: 900;
   .ob-account-icon {
     margin-right: 10px;
   }
+}
+.navPages-action.is-open {
+    padding-bottom: .5rem;
 }
 .navPage-childList-action  {
   padding: .2rem 0rem;
@@ -92,7 +115,12 @@
 .ob-guidance-navitem {
   padding-left: 1.5rem !important;
 }
-
+.ob-cm-logo-white {
+  display: none;
+}
+.navPage-subMenu-action  {
+  font-family: "VisbyCF Bold" !important;
+}
 @include breakpoint("medium") {
   .header {
     display: flex;
@@ -126,15 +154,12 @@
   }
   .navPages-action {
     padding: 5px 0px;
-    margin: 0px 10px;
+    margin: 0px 20px;
   }
   .navPages-item {
     display: inline-block;
     font-size: 16px;
     border-bottom: 2px solid transparent;
-  }
-  .navPage-subMenu-action[aria-label="Blank"] {
-    opacity: 0;
   }
   .navUser {
     order: 3;
@@ -197,7 +222,18 @@
   .navPage-subMenu-item {
     width: 25%;
     padding-left: 0px;
+    &[data-cat-id='38'] {
+      width: 50%;
+      .navPage-childList {
+        display: flex !important;
+        flex-wrap: wrap;
+        max-height: 200px;
+        flex-direction: column;
+        width: 100%;
+      }
+    }
   }
+  
   .navPages-list--user {
     display: none;
   }
@@ -216,6 +252,9 @@
     color: $ob-text-primary;
     border-bottom: 2px solid $ob-red;
   }
+  .ob-search-icon {
+    width: 23px;
+  }
 }
 
 
@@ -226,8 +265,9 @@
   background-color: $ob-red;
   border-radius: 6px;
   padding: 6px 10px;
+  margin-bottom: 5px;
   @include breakpoint("medium") {
-    padding: 10px 12px;
+    padding: 10px 12px 6px 12px;
   }
 }
 .ob-cart-icon {
@@ -243,7 +283,7 @@
   stroke: none!important;
 }
 .ob-search-icon {
-  width: 23px;
+  width: 21px;
   max-height: 100%;
   stroke: none!important;
 }
@@ -275,6 +315,16 @@
 .ob-transparent {
   @include breakpoint("medium") {
     background-color: transparent !important;
+    .ob-cm-logo-black {
+      display: none;
+    }
+    .ob-cm-logo-white {
+      display: block;
+    }
+    .ob-account-icon, .ob-search-icon {
+      fill: white;
+      stroke: white;
+    }
     .navPages {
       background-color: transparent;
     }
@@ -290,14 +340,7 @@
         color: $ob-text-primary !important;
       }
     }
-    .ob-account-icon {
-      fill: white !important;
-      stroke: white !important;
-    }
-    .ob-search-icon {
-      fill: white !important;
-      stroke: white !important;
-    }
+
   }
 }
 

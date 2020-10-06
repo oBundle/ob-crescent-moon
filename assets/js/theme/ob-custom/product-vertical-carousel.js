@@ -1,5 +1,4 @@
 export default function() {
-
   $('.productView-thumbnails').slick({
     infinite: true,
     vertical: true,
@@ -27,4 +26,7 @@ export default function() {
     const $slickNext = $('.ob-carousel-vertical-next').parent().find('.slick-next')
     return $slickNext.click()
   })
+
+
+  
 }

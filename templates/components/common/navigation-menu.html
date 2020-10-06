@@ -26,7 +26,7 @@
              {{/each}}
         {{/unless}} -->
         <li class="navPages-item">
-            <a class="navPages-action"
+            <a class="navPages-action ob-visby-bold"
                 href="/blog/"
                 aria-label="Blog page"
             >
@@ -53,7 +53,7 @@
                 <div class="navPage-subMenu" id="navPages-currency" aria-hidden="true" tabindex="-1">
                     <ul class="navPage-subMenu-list">
                         {{#each currency_selector.currencies}}
-                        <li class="navPage-subMenu-item">
+                        <li class="navPage-subMenu-item" data-cat-id={{id}}>
                             <a class="navPage-subMenu-action navPages-action"
                                href="{{{switch_url}}}"
                                aria-label="{{name}}"

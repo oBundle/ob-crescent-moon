@@ -14,7 +14,7 @@ product:
 {{inject "productSize" theme_settings.product_size}}
 
 {{#partial "page"}}
-<div class="ob-container ob-pb-25 ob-pt-25-mobile">
+<div class="ob-container ob-pb-25 ob-pt-0-mobile ob-mw-1400">
     {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
 
     {{#each product.shipping_messages}}
@@ -30,7 +30,7 @@ product:
 {{#if product.related_products}}
     <div class="ob-wrapper ob-home-bg-3">
       <div class="ob-container text-center ob-pt-50-mobile">
-        <h5 class="ob-heading-cta-md ob-pt-100 ob-pt-25-mobile ob-mb-25">Related Products</h5>
+        <h5 class="ob-heading-cta-md ob-pt-100 ob-pt-25-mobile ob-mb-50">Related Products</h5>
         {{> components/products/new products=product.related_products columns=theme_settings.homepage_new_products_column_count}}
       </div>
     </div>

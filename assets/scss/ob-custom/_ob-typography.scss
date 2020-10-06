@@ -18,7 +18,7 @@
   &-cta-md {
     @include text($size: 24px, $lineHeight: 26px, $weight: 900);
     @include breakpoint("medium") {
-      @include text($size: 36px, $lineHeight: 30px, $weight: 900);
+      @include text($size: 36px, $lineHeight: 38px, $weight: 900);
     }
   }
   &-cta-sm {
@@ -56,18 +56,31 @@
 .ob-text {
   &-white {
     color: $ob-white;
+    &:hover {
+      color: $ob-white;
+    }
   }
   &-primary {
     color: $ob-text-primary;
-    &:visited {
+    &:visited, &:hover {
       color: $ob-text-primary;
     }
   }
   &-secondary {
     color: $ob-text-secondary;
+    &:hover {
+      color: $ob-text-secondary;
+    }
   }
   &-red {
     color: $ob-red;
+    &:hover {
+      color: $ob-red;
+    }
   }
 }
 
+.ob-visby-bold {
+  letter-spacing: .025em;
+  font-family: 'VisbyCF Extra Bold' !important;
+}

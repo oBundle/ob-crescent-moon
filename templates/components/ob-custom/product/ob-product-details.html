@@ -1,6 +1,6 @@
 <section class="productView-details product-data">
   <div class="productView-product">
-      <h1 class="ob-heading-cta-lg ob-text-primary" {{#if schema}}itemprop="name"{{/if}}>{{product.title}}</h1>
+      <h1 class="ob-heading-cta-lg ob-text-primary ob-product-title" {{#if schema}}itemprop="name"{{/if}}>{{product.title}}</h1>
       {{#if product.brand}}
           <h2 class="productView-brand"{{#if schema}} itemprop="brand" itemscope itemtype="http://schema.org/Brand"{{/if}}>
               <a href="{{product.brand.url}}"{{#if schema}} itemprop="url"{{/if}}><span{{#if schema}} itemprop="name"{{/if}}>{{product.brand.name}}</span></a>
@@ -26,7 +26,7 @@
                       {{lang 'products.reviews.link_to_review' total=product.num_reviews}}
                   </a>
               {{else}}
-                  <span>{{lang 'products.reviews.link_to_review' total=product.num_reviews}}</span>
+                  <span>(0)</span>
               {{/if}}
           {{/if}}
           {{#if settings.show_product_reviews}}
@@ -35,7 +35,7 @@
                  {{#unless is_ajax}}data-reveal-id="modal-review-form"{{/unless}}
                  role="button"
               >
-                 {{lang 'products.reviews.new'}}
+                 Add Review
               </a>
               {{> components/products/modals/writeReview}}
           {{/if}}
@@ -192,14 +192,14 @@
   </div>
   {{> components/common/share}}
   <div class="f-grid ob-product-free-shipping">
-    <div class="col">
-      <svg><use xlink:href="#icon-ob-free-shipping" /></svg>
+    <div class="col-2">
+      <svg><use xlink:href="#icon-ob-free-shipping-product" /></svg>
     </div>
     <div class="col-10 col-grid">
-      <h5 class="ob-text-primary ob-heading-cta-sm">
+      <h5 class="ob-text-primary ob-heading-cta-xs">
         Free Shipping. Always.
       </h5>
-      <p class="ob-text-secondary ob-paragraph-sm">
+      <p class="ob-text-primary ob-paragraph-sm">
         No hidden fees. Ships fast and free for a seamless customer experience.
       </p>
     </div>

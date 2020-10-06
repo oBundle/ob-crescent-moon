@@ -1,6 +1,6 @@
-<div class="ob-container ob-footer-container ob-mobile">
+<div class="ob-container ob-footer-container ob-mobile ob-pt-50 ob-pb-50">
   <div class="f-grid">
-    <div class="col-12">
+    <div class="col-12 ob-footer-newsletter-container-mobile">
       <h5 class="ob-heading-cta-xs">Sign Up For Our Newsletter</h5>
       <p>Submit a product review and learn how to get a free Crescent Moon T-shirt.</p>
       {{> components/common/subscription-form}}
@@ -42,7 +42,8 @@
   <div class="col-12 footer-bottom-col">
     {{> components/common/payment-icons}}
   </div>
-  <div class="col-12 footer-bottom-col">
-    <a href="https://obundle.com/" class="text-center">Designed and developed by <svg class="ob-obundle-logo"><use xlink:href="#icon-obundle-logo" /></svg></a>
-  </div>
+  <a class="col-12 footer-bottom-col ob-logo-row ob-mt-25-mobile" href="https://obundle.com/" >
+    <span class="text-center">Designed and developed by</span>
+    <svg class="ob-obundle-logo"><use xlink:href="#icon-obundle-logo" /></svg>
+  </a>
 </div>
