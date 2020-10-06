@@ -20,11 +20,14 @@ export default function ResultGrid(props) {
   
 
   console.log('best fit ids', bestFitIds)
+  console.log('product ids', productIds)
   let productCards
+  let sortedProductData = []
+  
   if (hasLoaded) {
-    console.log('productIds', productIds)
-    console.log('product data to render', productData)
-    productCards = productData.map((product, index) => <ProductResultCard key={name+index} bestFitIds={bestFitIds} url={product.url} name={product.name} price={product.price} imgUrl={product.imgUrl} id={product.id}/>)
+    productData.forEach(product => product.isBestFit ? sortedProductData.unshift(product) : sortedProductData.push(product))
+    console.log(sortedProductData)
+    productCards = sortedProductData.map((product, index) => <ProductResultCard key={name+index} bestFitIds={bestFitIds} url={product.url} name={product.name} price={product.price} imgUrl={product.imgUrl} id={product.id}/>)
   }
 
   return <div className="wizard-result-grid-container">{productCards ? productCards : <Loading />}</div>;
@@ -89,7 +92,6 @@ const getProductData = (token, productIds, sethasLoaded, sethasError, setProduct
       `,
     })
     .then(data => {
-      console.log('gql data', data)
       let { edges } = data.data.site.products
       let productDataArr = edges.map(edge => {
         let productObj = {
@@ -101,7 +103,6 @@ const getProductData = (token, productIds, sethasLoaded, sethasError, setProduct
         }
         return productObj
       })
-      console.log('productDataArr',productDataArr)
       setProductData(productDataArr)
       sethasLoaded(true)
      
