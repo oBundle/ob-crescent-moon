@@ -12,19 +12,19 @@ export default function ResultGrid(props) {
   const [productData, setProductData] = useState([]) 
 
   const productIds = getRecommendedProducts(userChoices, csvData)
-
+  const bestFitIds = getBestFits(userChoices, csvData)
   //fetch graphql data (async)
 	useEffect(() => {
     getProductData(context.storefrontAPIToken, productIds, sethasLoaded, sethasError, setProductData);
   }, []);
   
 
-  console.log('product Ids', productIds)
+  console.log('best fit ids', bestFitIds)
   let productCards
   if (hasLoaded) {
     console.log('productIds', productIds)
     console.log('product data to render', productData)
-    productCards = productData.map((product, index) => <ProductResultCard key={name+index} url={product.url} name={product.name} price={product.price} imgUrl={product.imgUrl} />)
+    productCards = productData.map((product, index) => <ProductResultCard key={name+index} bestFitIds={bestFitIds} url={product.url} name={product.name} price={product.price} imgUrl={product.imgUrl} id={product.id}/>)
   }
 
   return <div className="wizard-result-grid-container">{productCards ? productCards : <Loading />}</div>;
@@ -45,6 +45,15 @@ const getRecommendedProducts = (userChoices, csvData) => {
   return productIds
 }
 
+const getBestFits = (userChoices, csvData) => {
+  let recommendedRow = csvData.filter(row => {
+    let rowStr = row.join()
+    let userChoicesStr = userChoices.join()
+    if (rowStr.includes(userChoicesStr)) {return row}
+  }) 
+  let bestFitIds = recommendedRow[0] && recommendedRow[0][8].split(",").map(id => parseInt(id, 10))
+  return bestFitIds
+}
 //function that returns react components based off of getRecommendedProducts gql query
 
 const getProductData = (token, productIds, sethasLoaded, sethasError, setProductData) => {
@@ -61,6 +70,7 @@ const getProductData = (token, productIds, sethasLoaded, sethasError, setProduct
               edges {
                 node {
                   name
+                  entityId
                   path
                   defaultImage {
                     url(width: 640)
@@ -79,14 +89,15 @@ const getProductData = (token, productIds, sethasLoaded, sethasError, setProduct
       `,
     })
     .then(data => {
-      console.log(data)
+      console.log('gql data', data)
       let { edges } = data.data.site.products
       let productDataArr = edges.map(edge => {
         let productObj = {
           imgUrl: edge.node.defaultImage.url,
           price: edge.node.prices.price.value,
           name: edge.node.name,
-          url: edge.node.path
+          url: edge.node.path,
+          id: edge.node.entityId
         }
         return productObj
       })

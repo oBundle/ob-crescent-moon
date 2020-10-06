@@ -82,11 +82,5 @@
 
 .ob-visby-bold {
   letter-spacing: .025em;
-  @font-face {
-    font-family: 'VisbyCF Extra Bold' !important;
-    src: url('https://store-pqywb1ijst.mybigcommerce.com/content/visby-cf-bold/webfonts/visby-cf-bold.woff2') format('woff2'),
-          url('https://store-pqywb1ijst.mybigcommerce.com/content/visby-cf-bold/webfonts/visby-cf-bold.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-  }
+  font-family: 'VisbyCF Extra Bold' !important;
 }

@@ -89,6 +89,11 @@ a {
   max-width: 1600px;
   margin: 0 auto;
 }
+body[data-page-id='6'] {
+  .ob-footer-container, .ob-footer-bottom-row {
+    display: none;
+  }
+}
 
 //***************************
 //Pagination styles

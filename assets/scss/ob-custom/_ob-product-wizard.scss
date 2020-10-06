@@ -1,7 +1,11 @@
 
+//***************************
+//toplevel footer page styles
+//***************************
 .ob-wizard-container {
   height: calc(100vh - 55px);
   padding-bottom: 0px;
+  max-width: 1440px;
 }
 
 //***************************
@@ -87,15 +91,19 @@
     justify-content: flex-start;
   }
 }
-.wizard-row-complete {
-  border-top: 2px solid $ob-red;
-  @include breakpoint("medium") {
-    border-left: 2px solid $ob-red;
-    border-top: 2px solid transparent;
-  }
-}
 .wizard-row-incomplete {
   opacity: .6;
+}
+.wizard-row-complete {
+  opacity: 1;
+}
+.wizard-row-current {
+  border-top: 3px solid $ob-red;
+  opacity: 1;
+  @include breakpoint("medium") {
+    border-left: 3px solid $ob-red;
+    border-top: 3px solid transparent;
+  }
 }
 .wizard-row-number {
   margin-left: 15px;
@@ -167,6 +175,21 @@
   }
   &-6 {
     background-color: #C41230;
+    animation-name: color;
+    animation-duration: 1.8s;
+    animation-iteration-count: infinite;
+
+    @keyframes color {
+      0% {
+        background-color: #C41230;
+      }
+      50% {
+        background-color: #db8d9a;
+      }
+      100% {
+        background-color: #C41230;
+      }
+    }
   }
 
 }
@@ -181,12 +204,12 @@
   background-color: $ob-light-gray;
 }
 .ob-wizard-mainpanel-container {
-  max-width: 100%;
+  max-width: 1040px;
   width:100%;
   border-radius: 6px;
   padding: 15px;
   background-image: url('../icons/bg-svg-product-wizard.svg');
-  background-position: bottom 0px left 0px;
+  background-position: bottom -1px right 0px;
   background-size: 100%;
   background-repeat: no-repeat;
   height: 400px;
@@ -218,6 +241,7 @@
 }
 .ob-wizard-mainpanel-tip {
   display: none;
+  max-width: 860px;
   @include breakpoint("medium") {
     display: flex;
     align-items: flex-start;
@@ -254,7 +278,8 @@
     color: $ob-red;
   }
   @include breakpoint("medium") {
-    width: 75%;
+    width: 525px;
+    max-width: 90%;
     margin: 8px auto;
   }
 }
@@ -285,6 +310,7 @@
   margin-right: 25px;
   flex-shrink: 1;
   text-align: center;
+  position: relative;
   img {
     width: 100%;
     max-width: 100%;
@@ -299,6 +325,26 @@
     margin-bottom: 15px;
     &:hover {
       transform: scale(1.1);
+    }
+  }
+  .ob-best-fit-tag {
+    @include position(absolute, 2, $top: 0px, $left: 0px);
+    background-color: $ob-red;
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    img {
+      max-width: 18px !important;
+      min-width: 18px;
+      max-height: 18px;
+      width: 18px !important;
+      height: 18px;
+      margin: 0px;
+      mix-blend-mode: normal;
+      margin-right: 7px;
+    }
+    p {
+      margin: 0px;
     }
   }
   @include breakpoint("medium") {

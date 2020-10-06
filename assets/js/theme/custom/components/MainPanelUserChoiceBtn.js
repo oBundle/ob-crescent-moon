@@ -3,7 +3,11 @@ import React from 'react'
 export default function MainPanelUserChoiceBtn(props) {
   const {name, setSelectedChoice, selectedChoice} = props
   const clickHandler = () => {
-    setSelectedChoice(name)
+    if (selectedChoice === name) {
+      setSelectedChoice('')
+    } else {
+      setSelectedChoice(name)
+    }
   }
 
   let choiceIsSelected = false

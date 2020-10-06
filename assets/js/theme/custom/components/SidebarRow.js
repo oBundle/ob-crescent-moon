@@ -11,8 +11,14 @@ export default function SidebarRow(props) {
     stepIsComplete = true
   }
 
+  let isCurrentStep = false
+  if (step === number) {
+    isCurrentStep = true
+  }
+
   return (
-    <div className={`ob-wizard-sidebar-row ${stepIsComplete ? 'wizard-row-complete' : 'wizard-row-incomplete'}`}>
+    <div className={`ob-wizard-sidebar-row ${stepIsComplete ? 'wizard-row-complete' : 'wizard-row-incomplete'} ${isCurrentStep && 'wizard-row-current'}`}
+    >
       <img src={iconUrl} />
       <p className="ob-text-primary ob-paragraph-md wizard-row-number ob-desktop">{number}.</p>
       <p className="ob-text-primary ob-paragraph-md wizard-row-name">{name}</p>

@@ -15,12 +15,12 @@ export default function MainPanel(props) {
 
   return (
     <div className={`ob-wizard-mainpanel-container ${step >= 6 ? 'ob-bg-light' : 'ob-bg-dark'}`}>
-      <p className={`text-center ob-paragraph-md ${step < 6 ? 'ob-text-white' : 'ob-text-primary'}`}>{step < 6 ? `${step}/5` : "You're all set!"}</p>
-      {step === 1 && <Step1 step={step} setStep={setStep} userChoices={userChoices} setUserChoices={setUserChoices}/>}
-      {step === 2 && <Step2 step={step} setStep={setStep} userChoices={userChoices} setUserChoices={setUserChoices}/>}
-      {step === 3 && <Step3 step={step} setStep={setStep} userChoices={userChoices} setUserChoices={setUserChoices}/>}
-      {step === 4 && <Step4 step={step} setStep={setStep} userChoices={userChoices} setUserChoices={setUserChoices}/>}
-      {step === 5 && <Step5 step={step} setStep={setStep} userChoices={userChoices} setUserChoices={setUserChoices} />}
+      <h6 className={`text-center ob-paragraph-md ${step < 6 ? 'ob-text-white' : 'ob-text-primary'}`}>{step < 6 ? `${step}/5` : "You're all set!"}</h6>
+      {step === 1 && <Step1 step={step} setStep={setStep} userChoices={userChoices} setUserChoices={setUserChoices} context={context}/>}
+      {step === 2 && <Step2 step={step} setStep={setStep} userChoices={userChoices} setUserChoices={setUserChoices} context={context}/>}
+      {step === 3 && <Step3 step={step} setStep={setStep} userChoices={userChoices} setUserChoices={setUserChoices} context={context}/>}
+      {step === 4 && <Step4 step={step} setStep={setStep} userChoices={userChoices} setUserChoices={setUserChoices} context={context}/>}
+      {step === 5 && <Step5 step={step} setStep={setStep} userChoices={userChoices} setUserChoices={setUserChoices} context={context} />}
       {step === 6 && <Step6 step={step} setStep={setStep} context={context} csvData={csvData} userChoices={userChoices} setUserChoices={setUserChoices} />}
     </div>
   )
