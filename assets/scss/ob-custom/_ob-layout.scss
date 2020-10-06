@@ -61,6 +61,15 @@
   position: relative;
   width: 100%;
   height: auto;
+  img {
+    filter: drop-shadow(0px 30px 50px rgba(0, 0, 0, 0.12));
+  }
+  &-430 {
+    max-width: 430px;
+    @include breakpoint("medium") {
+      max-width: 100%;
+    }
+  }
   @include breakpoint("medium") {
     height: 650px;
     &-1 {
@@ -168,8 +177,17 @@
 }
 
 .ob-ml {
+  &-30 {
+    margin-left: 30px;
+  }
   &-12 {
     margin-left: 12px;
+  }
+}
+
+.ob-pl {
+  &-30 {
+    padding-left: 30px;
   }
 }
 

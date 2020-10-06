@@ -38,6 +38,11 @@ html {
 
 html, body, p, span, a {
   font-family: 'VisbyCF' !important;
+  letter-spacing: .025em;
+}
+
+p {
+  color: $ob-text-primary;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -123,6 +128,7 @@ a {
 }
 .container[data-page-type="category"], .container[data-page-type="product"] {
   .breadcrumbs {
+    margin-top: 80px;
     @include breakpoint("medium") {
       display: block !important;
       margin-bottom: 0px;

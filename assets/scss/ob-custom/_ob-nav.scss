@@ -66,7 +66,15 @@
 .navPages-item {
   border-bottom: 2px solid $ob-text-primary;
 }
-
+.navPage-subMenu.is-open {
+  padding-bottom: 10px;
+  .ob-cta-link {
+    padding-bottom: 0px;
+  }
+  .col-md-6 {
+    padding-bottom: 0;
+  }
+}
 .navPage-subMenu-action {
   svg {
     display: none;
@@ -86,6 +94,9 @@
   .ob-account-icon {
     margin-right: 10px;
   }
+}
+.navPages-action.is-open {
+    padding-bottom: .5rem;
 }
 .navPage-childList-action  {
   padding: .2rem 0rem;

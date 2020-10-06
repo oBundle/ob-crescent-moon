@@ -14,9 +14,9 @@
     mix-blend-mode: multiply;
   }
 }
-
 .ob-product-card {
   max-width: 300px;
+  margin-bottom: 1.8rem;
   .card-body {
     text-align: center;
     height: auto;
@@ -25,20 +25,25 @@
     @include text($size: 16px, $lineHeight: 22px, $weight: 900);
     text-decoration: none;
     height: 100px;
+    p, span, a {
+      letter-spacing: 0;
+    }
+    
   }
   .card-text {
     margin-top: 11px;
   }
-  .card-figure {
-    background-color:  #E5E5E5;
-  }
+  // .card-figure {
+  //   background-color:  #E5E5E5;
+  // }
   .card-img-container {
-    mix-blend-mode: multiply;
+    background-color: #f2f2f2;
     &:after {
       padding-bottom: 100%;
     }
     img {
       transition: all .3s ease-in-out;
+      mix-blend-mode: multiply;
       &:hover {
         opacity: .75;
       }
@@ -50,7 +55,9 @@
       display: none;
     }
   }
-  
+  @include breakpoint("medium") {
+    margin-bottom: 3rem;
+  }
 }
 
 .ob-blog-card {

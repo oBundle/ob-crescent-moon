@@ -111,9 +111,10 @@
 .ob-home-cta-img {
   &-1 {
     position: relative;
-    max-width: 90%;
+    max-width: 100%;
     @include breakpoint("medium") {
       max-width: 100%;
+      padding-right: 50px;
       @include position(absolute, 3, $bottom: 0, $right: 0);
     }
   }
@@ -121,17 +122,18 @@
     @include position(absolute, 4, $top: 20%, $right: -10%);
     width: 150px;
     @include breakpoint("medium") {
-      @include position(absolute, 4, $top: 20%, $left: -10%);
-      width: 275px;
+      @include position(absolute, 4, $top: 20%, $left: -50px);
+      width: 210px;
     }
     @include breakpoint("large") {
-      width: auto;
+      @include position(absolute, 4, $top: 20%, $left: 15%);
+      width: 240px;
     }
   }
   &-3 {
     position: relative;
     @include breakpoint("medium") {
-      @include position(absolute, 4, $bottom: 0px, $left: 0);      
+      @include position(absolute, 4, $top: 35px, $left: 0);      
     }
   }
   &-4 {
@@ -164,6 +166,7 @@
 }
 .ob-cta-icon {
   width: 53px;
+  height: 53px;
   margin-bottom: 20px;
 }
 
