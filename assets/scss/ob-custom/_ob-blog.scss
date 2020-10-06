@@ -60,6 +60,13 @@
   }
 }
 
+.ob-blog-newsletter {
+  padding: 15px 0px !important;
+  .ob-newsletter-input-container {
+    margin: auto 20px !important;
+  }
+}
+
 .ob-accordion-subtitle {
   @include text($size: 13px, $lineHeight: 30px, $weight: 500);
   color: $ob-text-primary !important;

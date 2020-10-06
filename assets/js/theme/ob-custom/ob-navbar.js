@@ -16,6 +16,12 @@ export default function (context) {
     if(vw > 800) {
       $(e.currentTarget).removeClass("is-open");
       $("body").trigger("click");
+      if (!$(e.currentTarget).closest('navPage-subMenu').hasClass('is-open')) {
+        $(".ob-dark-overlay").fadeOut();
+
+      }
+
+      
     }
 
     $(".ob-dark-overlay").fadeOut();
