@@ -972,45 +972,6 @@
     ]
   },
   {
-    "name": "i18n.Wizard",
-      "settings": [
-        {
-          "type": "heading",
-          "content": "i18n.Wizard"
-        },
-        {
-          "type": "paragraph",
-          "label": "i18n.TipOne",
-          "force_reload": true,
-          "id": "wizard_tip_1"
-        },
-        {
-          "type": "paragraph",
-          "label": "i18n.TipTwo",
-          "force_reload": true,
-          "id": "wizard_tip_2"
-        },
-        {
-          "type": "paragraph",
-          "label": "i18n.TipThree",
-          "force_reload": true,
-          "id": "wizard_tip_3"
-        },
-        {
-          "type": "paragraph",
-          "label": "i18n.Tip4",
-          "force_reload": true,
-          "id": "wizard_tip_4"
-        },
-        {
-          "type": "paragraph",
-          "label": "i18n.TipFive",
-          "force_reload": true,
-          "id": "wizard_tip_5"
-        }
-      ]
-  },
-  {
     "name": "i18n.HomePage",
     "settings": [
       {
