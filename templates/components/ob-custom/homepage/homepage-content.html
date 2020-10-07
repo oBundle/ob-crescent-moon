@@ -2,8 +2,9 @@
 
 {{> components/ob-custom/homepage/cta-section-1}}
 
-{{> components/ob-custom/homepage/shop-by-category}}
+<!-- {{> components/ob-custom/homepage/shop-by-category}} -->
 
+{{{region name="ob_feat_prods"}}}
 {{#if products.featured}}
   {{> components/products/featured products=products.featured columns=theme_settings.homepage_featured_products_column_count}}
 {{/if}}
