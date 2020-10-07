@@ -93,3 +93,15 @@
     top: 12px;
   }
 }
+
+
+article.blog {
+  padding-top: 70px;
+}
+.blog-post-figure, .blog-post-body {
+  width: 100% !important;
+  max-width: 1040px;
+  .blog-thumbnail {
+    display: none;
+  }
+}

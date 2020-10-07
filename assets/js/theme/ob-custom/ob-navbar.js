@@ -9,6 +9,7 @@ export default function (context) {
     if(vw > 800) {
       $(e.currentTarget).click();
       $(".ob-dark-overlay").fadeIn();
+      $(".header").removeClass("ob-transparent")
     }
   });
 

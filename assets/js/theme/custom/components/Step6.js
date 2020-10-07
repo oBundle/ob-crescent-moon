@@ -24,11 +24,7 @@ export default function Step6(props) {
       </div>
 
       <div className="ob-wizard-mainpanel-tip ob-mt-12">
-        <img src="https://store-pqywb1ijst.mybigcommerce.com/content/ob-info-icon.svg" />
-        <p className="ob-paragraph-sm ob-text-primary">
-          
-
-        </p>
+        
       </div>
       <div className='ob-wizard-mainpanel-bottom'>
         <MainPanelStepBtns 

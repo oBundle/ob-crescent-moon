@@ -29,6 +29,9 @@
         {{{stylesheet '/assets/css/theme.css'}}}
 
         {{{head.scripts}}}
+        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+        <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+
 
         {{~inject 'showAdminBar' theme_settings.show-admin-bar}}
         {{~inject 'genericError' (lang 'common.generic_error')}}
@@ -42,11 +45,12 @@
         {{~inject 'blog' blog}}
         {{~inject 'category' category}}
         {{~inject 'categories' categories}}
-        {{~inject 'blog' blog}}
+        {{~inject 'page' page}}
+        {{~inject 'product' product}}
         {{~inject 'storefrontAPIToken' settings.storefront_api.token}}
         {{~inject 'page_type' page_type}}
     </head>
-    <body data-page-id={{page.id}}>
+    <body data-page-id="{{{page.id}}}" data-cat-id="{{category.id}}">
         <svg data-src="{{cdn 'img/icon-sprite.svg'}}" class="icons-svg-sprite"></svg>
 
         {{> components/common/header }}

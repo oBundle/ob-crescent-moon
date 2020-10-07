@@ -3,6 +3,8 @@ export default function(context) {
   const $subnavLinks = $(".ob-cat-subnav-link")
   //target product grid
   let $productDescGrid = $(".ob-subnav-content-item")
+  $('#subnav-specs').append($('#ob-product-specs-description'))
+  $('#panel2a').append($('#ob-product-specs-description'))
 
   //add classes onload
   $subnavLinks.first().addClass('ob-cat-subnav-link--active')

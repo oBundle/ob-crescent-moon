@@ -62,7 +62,7 @@ export default class Product extends PageManager {
         //ob custom
         productVerticalCarousel()
         productSubnav()
-        productDescTruncate()
+        productDescTruncate(this.context)
         //click the product variant option in url param
         setTimeout(() => {
             const urlParams = new URLSearchParams(window.location.search);

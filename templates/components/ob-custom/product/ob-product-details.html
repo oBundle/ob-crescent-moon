@@ -54,11 +54,15 @@
           {{/or}}
       </div>
 
-      {{#if product.description}}
+      
         <article class="productView-description"{{#if schema}} itemprop="description"{{/if}}>
-          {{> components/products/description}}
+            <p class="productView-title">{{lang 'products.description'}}</p>
+            <div class="productView-description ob-product-detail-desc" {{#if settings.data_tag_enabled}} data-event-type="product" {{/if}}>
+                
+            </div>
+            
         </article>
-      {{/if}}
+      
       
       {{product.detail_messages}}
       <dl class="productView-info">
@@ -154,7 +158,7 @@
   </div>
 </section>
 
-<section class="productView-details">
+<section class="productView-details ob-swatch-description">
   <div class="productView-options">
       {{#if product.release_date }}
           <p>{{product.release_date}}</p>
@@ -170,6 +174,8 @@
           </div>
           {{#if product.can_purchase}}
               {{> components/ob-custom/product/ob-add-to-cart}}
+          {{else}}
+                <button class="ob-btn ob-btn-bg-disabled ob-text-secondary">Out of Stock</button>
           {{/if}}
           <div class="form-field form-field--stock{{#unless product.stock_level}} u-hiddenVisually{{/unless}}">
               <label class="form-label form-label--alternate">

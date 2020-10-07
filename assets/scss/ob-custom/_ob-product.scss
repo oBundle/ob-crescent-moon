@@ -56,13 +56,20 @@
     font-size: 40px;
   }
 }
+.ob-option-details {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
 .ob-productView-details {
   max-width: 525px;
   display: flex;
   flex-direction: column;
   flex-shrink: 1;
+  
   .productView-details {
     width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   .price {
     @include text($size: 18px, $lineHeight: 30px, $weight: 500);
@@ -80,11 +87,20 @@
     @include text($size: 16px, $lineHeight: 30px, $weight: 500);
   }
 }
+.alertBox.productAttributes-message {
+  padding: 10px;
+  padding-top: 7px;
+  margin-left: 20px;
+  background-color: transparent;
+}
 
 .productView-info {
   display: none;
 }
 
+.ob-swatch-description {
+  padding-left: 0px !important;
+}
 .productView-product {
   border-bottom: none;
 }
@@ -120,6 +136,9 @@
 
 .productView-options {
   margin-bottom: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 15px;
   .form-field--increments {
     overflow: visible;
     .form-label {
@@ -182,6 +201,8 @@
 }
 
 .ob-product-free-shipping {
+  padding-left: 20px !important;
+  padding-right: 20px !important;
   svg {
     fill: black;
     width: 50px;
@@ -256,4 +277,16 @@
 .ob-cat-link-container {
   background-color: $ob-white !important;
   padding-left: 0px !important;
+}
+
+#subnav-desc {
+  #ob-product-specs-description {
+    display: none;
+  }
+}
+
+#panel1a {
+  #ob-product-specs-description {
+    display: none;
+  }
 }

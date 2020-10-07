@@ -18,12 +18,25 @@
     {{/if}}
 
     <div id="contact-us-page" class="page-content page-content--centered">
-        {{#if forms.contact.success}}
-            <div id="contact-us-success">{{{lang 'forms.contact_us.successful' shopPath=urls.home}}}</div>
-        {{else}}
-            <p>{{{page.content}}}</p>
-            {{> components/page/contact-us-form}}
-        {{/if}}
+        <div class="f-grid">
+            <div class="col-xs-12 col-md-3">
+                <h5 class="ob-text-primary ob-heading-cta-md">
+                    Contact Us
+                </h5>
+                <h6 class="ob-text-primary ob-paragraph-md">Crescent Moon Snowshoes</h6>
+                <h6 class="ob-text-primary ob-paragraph-md">3067 S. Umatilla St.</h6>
+                <h6 class="ob-text-primary ob-paragraph-md">Englewood, CO 80110</h6>
+                <h6 class="ob-text-primary ob-paragraph-md">Phone <a href="tel:303-494-5506">303.494.5506</a></h6>
+            </div>
+            <div class="col-xs-12 col-md-8">
+                {{#if forms.contact.success}}
+                <div id="contact-us-success">{{{lang 'forms.contact_us.successful' shopPath=urls.home}}}</div>
+                {{else}}
+                    <p>{{{page.content}}}</p>
+                    {{> components/page/contact-us-form}}
+                {{/if}}
+            </div>
+        </div>
 
     </div>
 

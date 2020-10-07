@@ -18,6 +18,7 @@ import objectFitImages from './global/object-fit-polyfill';
 
 import obProductGqlSearch from "./ob-custom/obProductGqlSearch"
 import obNavbar from "./ob-custom/ob-navbar";
+import initMap from "./ob-custom/initMap"
 
 export default class Global extends PageManager {
     onReady() {
@@ -42,5 +43,8 @@ export default class Global extends PageManager {
         console.log(this.context)
         // obProductGqlSearch(this.context.storefrontAPIToken)
         obNavbar(this.context)
+        if(this.context.page.id === 18) {
+            initMap()
+        }
     }
 }
