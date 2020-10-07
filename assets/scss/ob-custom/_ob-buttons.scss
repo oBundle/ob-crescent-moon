@@ -12,6 +12,12 @@ button[disabled] {
   }
 }
 
+.button--primary {
+  background-color: $ob-red;
+  border: none;
+
+}
+
 .ob-btn {
   @include text($size: 15px, $lineHeight: 15px, $weight: 900);
   padding: 15px 38px;

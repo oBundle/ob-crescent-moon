@@ -1,4 +1,4 @@
-export default function() {
+export default function(context) {
   // $(".ob-product-detail-desc").hide()
   $(".ob-product-detail-desc").children().hide()
   $(".ob-product-detail-desc").children().first().show()
@@ -15,8 +15,16 @@ export default function() {
     })
   }
 
+  let descMsg
+  context.product.custom_fields.forEach(field => {
+    if(field.name === "short-description") {
+      descMsg = field.value
+    }
+  })
+  console.log(descMsg)
+  $('.ob-product-detail-desc').append(descMsg)
   //add color to product info on select
-  $('.form-option-variant--color').on('click touchstart', (event) => {
+  $(document).on('mousedown touchstart', '.form-option-variant--color', (event) => {
     console.log("color variant click")
     let $label = $('#swatchGroup').find("small")
     let title = $(event.currentTarget).attr('title')

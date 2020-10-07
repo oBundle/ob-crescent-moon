@@ -87,11 +87,20 @@
     @include text($size: 16px, $lineHeight: 30px, $weight: 500);
   }
 }
+.alertBox.productAttributes-message {
+  padding: 10px;
+  padding-top: 7px;
+  margin-left: 20px;
+  background-color: transparent;
+}
 
 .productView-info {
   display: none;
 }
 
+.ob-swatch-description {
+  padding-left: 0px !important;
+}
 .productView-product {
   border-bottom: none;
 }
@@ -271,6 +280,12 @@
 }
 
 #subnav-desc {
+  #ob-product-specs-description {
+    display: none;
+  }
+}
+
+#panel1a {
   #ob-product-specs-description {
     display: none;
   }
