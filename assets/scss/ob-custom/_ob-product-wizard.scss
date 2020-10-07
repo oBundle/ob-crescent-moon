@@ -215,8 +215,9 @@
   height: 400px;
   min-height: 400px;
   @include breakpoint("medium") {
-    min-height: 700px;
-    height: 700px;
+    min-height: 400px;
+    height: 70vh;
+    max-height: 700px;
     padding: 30px;
     background-position: bottom -50px left 0px;
   }

@@ -6,12 +6,16 @@
 </nav>
 <div class="ob-product-subnav-content">
   <div class="ob-text-primary ob-paragraph-lg ob-subnav-content-item ob-show" id="subnav-desc">{{{product.description}}}</div>
-  <div class="ob-text-primary ob-paragraph-lg ob-subnav-content-item" id="subnav-specs">TODO: Add specs (from custom fields?)</div>
+  <div class="ob-text-primary ob-paragraph-lg ob-subnav-content-item" id="subnav-specs">
+    <h5 class="ob-text-primary ob-heading-cta-sm ob-mb-25">Specifications</h5>
+  </div>
   <div class="ob-text-primary ob-paragraph-lg ob-subnav-content-item" id="subnav-videos">
     <h5 class="ob-text-primary ob-heading-cta-sm ob-mb-25">Video Gallery</h5>
     {{#if product.videos.list.length}}
       {{> components/ob-custom/product/ob-product-videos}}
+    {{else}}
+      <p class="ob-paragraph-md ob-text-primary">No videos for this product yet</p>
     {{/if}}
   </div>
-  <div class="ob-text-primary ob-paragraph-lg ob-subnav-content-item" id="subnav-reviews">TODO: Add Dummy review to test</div>
+  <div class="ob-text-primary ob-paragraph-lg ob-subnav-content-item" id="subnav-reviews"></div>
 </div>

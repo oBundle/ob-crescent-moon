@@ -43,6 +43,8 @@ export default class Global extends PageManager {
         console.log(this.context)
         // obProductGqlSearch(this.context.storefrontAPIToken)
         obNavbar(this.context)
-        initMap()
+        if(this.context.page.id === 18) {
+            initMap()
+        }
     }
 }

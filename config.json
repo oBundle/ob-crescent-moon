@@ -44,6 +44,11 @@
     "Firefox ESR"
   ],
   "settings": {
+    "wizard_tip_1": "Step 1 tip",
+    "wizard_tip_2": "Step 2 tip",
+    "wizard_tip_3": "Step 3 tip",
+    "wizard_tip_4": "Step 4 tip",
+    "wizard_tip_5": "Step 5 tip",
     "hide_breadcrumbs": false,
     "hide_page_heading": false,
     "hide_category_page_heading": false,

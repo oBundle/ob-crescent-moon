@@ -55,9 +55,10 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 a {
+  color: $ob-red;
   text-decoration: none;
   &:hover {
-    color: inherit;
+    color: $ob-red;
   }
 }
 
@@ -94,7 +95,24 @@ body[data-page-id='6'] {
     display: none;
   }
 }
-
+.page-content--centered {
+  width: 100% !important;
+}
+form[data-contact-form] {
+  .form-label {
+    font-family: "visbyCF Extra Bold";
+    color: $ob-text-primary;
+  }
+  .form-input {
+    background-color: $ob-light-gray;
+  }
+  .form-actions {
+    text-align: start;
+  }
+}
+.ob-hidden {
+  display:none;
+}
 //***************************
 //Pagination styles
 //***************************

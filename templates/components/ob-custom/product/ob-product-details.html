@@ -154,7 +154,7 @@
   </div>
 </section>
 
-<section class="productView-details">
+<section class="productView-details ob-option-details">
   <div class="productView-options">
       {{#if product.release_date }}
           <p>{{product.release_date}}</p>
@@ -170,6 +170,8 @@
           </div>
           {{#if product.can_purchase}}
               {{> components/ob-custom/product/ob-add-to-cart}}
+          {{else}}
+                <button disabled class="ob-btn ob-btn-bg-disabled ob-text-secondary">Out of Stock</button>
           {{/if}}
           <div class="form-field form-field--stock{{#unless product.stock_level}} u-hiddenVisually{{/unless}}">
               <label class="form-label form-label--alternate">

@@ -2,14 +2,17 @@
 //product / category card styles
 //***************************
 .ob-category-card {
-  max-width: 100%;
-  width: 300px;
+  max-width: 300px;
+  width: 100%;
+  margin: 0 auto;
   height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   text-decoration: none;
+  text-align: center;
+    text-align-last: center;
   &-mix-blend {
     mix-blend-mode: multiply;
   }
@@ -63,9 +66,6 @@
 .ob-blog-card {
   margin: 0px 7px;
   padding: 0px 25px;
-  .ob-paragraph-md {
-    display: none;
-  }
   @include breakpoint("medium") {
     padding: 0px;
     display: block;

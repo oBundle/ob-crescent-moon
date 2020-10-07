@@ -26,6 +26,12 @@ button[disabled] {
     box-shadow: 0px 15px 30px rgba(108, 43, 54, 0.25);
     height: 48px;
   }
+  &-bg-disabled {
+    background-color: $ob-light-gray;
+    box-shadow: 0px 15px 30px rgba(108, 43, 54, 0.25);
+    height: 48px;
+    cursor: not-allowed;
+  }
   &-transparent {
     background-color: transparent;
   }

@@ -16,6 +16,7 @@
 .header-logo {
   position: absolute;
   z-index: 6;
+  top: 0;
   svg {
     max-height: 50px;
     width: 150px;
@@ -52,7 +53,7 @@
   }
 }
 .ob-top-level-navlink {
-  font-family: "VisbyCF Bold";
+  font-family: "VisbyCF Extra Bold";
 }
 .navPages-action[href="/accessories/"] {
   font-family: "VisbyCF Extra Bold" !important;
@@ -62,6 +63,7 @@
 }
 .mobileMenu-toggleIcon {
   width: 25% !important;
+  top: 0;
 }
 .navPage-subMenu-action[aria-label="Blank"] {
   display: none!important;
@@ -98,11 +100,32 @@
     margin-right: 10px;
   }
 }
+.navPages-action.has-subMenu {
+  margin-top: 15px;
+  @include breakpoint("medium") {
+    margin-top: 0px;
+  }
+}
+.navPage-childList[id='navPages-45'] {
+  .navPage-childList-action {
+    margin-top: -10px;
+  }
+  @include breakpoint("medium") {
+    .navPage-childList-action {
+      margin-top: 0px;
+    }
+  }
+}
 .navPages-action.is-open {
     padding-bottom: .5rem;
 }
 .navPage-childList-action  {
   padding: .2rem 0rem;
+  font-weight: 500;
+  &:hover {
+    border-bottom: none;
+    color: $ob-red;
+  }
 }
 .navPage-subMenu-item {
   padding-left: 1rem;
@@ -115,11 +138,20 @@
 .ob-guidance-navitem {
   padding-left: 1.5rem !important;
 }
+.ob-guidance-img-container {
+  @include breakpoint("medium") {
+    display: flex!important;
+    justify-content: flex-end;
+  }
+}
 .ob-cm-logo-white {
   display: none;
 }
 .navPage-subMenu-action  {
-  font-family: "VisbyCF Bold" !important;
+  font-family: "VisbyCF Extra Bold" !important;
+  @include breakpoint("medium") {
+    line-height: inherit;
+  }
 }
 @include breakpoint("medium") {
   .header {
@@ -252,6 +284,12 @@
     color: $ob-text-primary;
     border-bottom: 2px solid $ob-red;
   }
+  .navPage-childList-action  {
+    &:hover {
+      border-bottom: 2px solid transparent;
+      color: $ob-red;
+    }
+  }
   .ob-search-icon {
     width: 23px;
   }
@@ -261,13 +299,19 @@
 //***************************
 //svg icons
 //***************************
+.ob-cm-logo-black {
+  padding-top: 2px;
+}
 .navUser-item-cartLabel {
   background-color: $ob-red;
   border-radius: 6px;
   padding: 6px 10px;
-  margin-bottom: 5px;
+  margin-bottom: 0px;
+  margin-top: 2px;
   @include breakpoint("medium") {
     padding: 10px 12px 6px 12px;
+    margin-bottom: 5px;
+    margin-top: 0px;
   }
 }
 .ob-cart-icon {
@@ -286,6 +330,10 @@
   width: 21px;
   max-height: 100%;
   stroke: none!important;
+  margin-top: 6px;
+  @include breakpoint("medium") {
+    margin-top: 0px;
+  }
 }
 .navPage-subMenu-action .collapsible-icon-wrapper {
   width: auto;
@@ -335,9 +383,6 @@
     .navPages-item {
       .navPages-action {
         color: white !important;
-      }
-      .navPage-subMenu-action, .navPage-childList-action {
-        color: $ob-text-primary !important;
       }
     }
 

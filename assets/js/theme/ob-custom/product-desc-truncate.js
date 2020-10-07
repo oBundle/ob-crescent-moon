@@ -16,7 +16,8 @@ export default function() {
   }
 
   //add color to product info on select
-  $('.form-option-variant--color').on('click', (event) => {
+  $('.form-option-variant--color').on('click touchstart', (event) => {
+    console.log("color variant click")
     let $label = $('#swatchGroup').find("small")
     let title = $(event.currentTarget).attr('title')
     $label.text(title)
