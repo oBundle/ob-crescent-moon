@@ -50,7 +50,7 @@
         {{~inject 'storefrontAPIToken' settings.storefront_api.token}}
         {{~inject 'page_type' page_type}}
     </head>
-    <body data-page-id={{page.id}}>
+    <body data-page-id="{{{page.id}}}" data-cat-id="{{category.id}}">
         <svg data-src="{{cdn 'img/icon-sprite.svg'}}" class="icons-svg-sprite"></svg>
 
         {{> components/common/header }}

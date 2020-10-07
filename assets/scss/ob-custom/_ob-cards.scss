@@ -17,7 +17,7 @@
     mix-blend-mode: multiply;
   }
 }
-.ob-product-card {
+.ob-product-card, li.product {
   max-width: 300px;
   margin-bottom: 1.8rem;
   .card-body {
@@ -62,7 +62,26 @@
     margin-bottom: 3rem;
   }
 }
+li.product {
+  .card--alternate:hover .card-body {
+    background-color: $ob-light-gray;
+    a {
+      color: $ob-text-primary;
 
+    }
+  }
+  .card--alternate {
+    border: none;
+    &:hover {
+      background-color: $ob-light-gray;
+    }
+  }
+  .card-body {
+    background-color: $ob-light-gray;
+    
+  }
+  
+}
 .ob-blog-card {
   margin: 0px 7px;
   padding: 0px 25px;
