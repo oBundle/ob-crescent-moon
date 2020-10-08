@@ -21,8 +21,6 @@ export default function (context) {
         $(".ob-dark-overlay").fadeOut();
 
       }
-
-      
     }
 
     $(".ob-dark-overlay").fadeOut();
@@ -39,6 +37,11 @@ export default function (context) {
       $(".ob-dark-overlay").fadeOut();
     }
   });
+
+  $(".navUser-action--quickSearch").on("click", (e) => {
+    $(".header").removeClass("ob-transparent")
+    $nav.removeClass("ob-transparent");
+  })
 
 
 	//target DOM nodes

@@ -23,6 +23,10 @@
   .card-body {
     text-align: center;
     height: auto;
+    background-color: white !important;
+    [data-test-info-type="productRating"] {
+      display: none;
+    }
   }
   .card-title {
     @include text($size: 16px, $lineHeight: 22px, $weight: 900);
