@@ -1,6 +1,21 @@
 //***************************
 //product / category card styles
 //***************************
+.quickSearchResults {
+  li.product {
+    .card-figure {
+      background-color: white;
+    }
+    .card-body {
+      text-align: center;
+      height: auto;
+      background-color: white;
+      [data-test-info-type="productRating"] {
+        display: none;
+      }
+    }
+  }
+}
 .ob-category-card {
   max-width: 300px;
   width: 100%;
@@ -17,13 +32,13 @@
     mix-blend-mode: multiply;
   }
 }
-.ob-product-card, li.product {
+.ob-product-card {
   max-width: 300px;
   margin-bottom: 1.8rem;
   .card-body {
+    background-color: transparent!important;
     text-align: center;
     height: auto;
-    background-color: white !important;
     [data-test-info-type="productRating"] {
       display: none;
     }
