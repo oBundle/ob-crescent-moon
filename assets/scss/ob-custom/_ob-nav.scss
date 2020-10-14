@@ -68,6 +68,9 @@
 .countPill {
   position: absolute;
   margin-left: -10px;
+  background-color: $ob-light-gray;
+  color: $ob-text-primary;
+  font-family: "VisbyCF Extra Bold";
 }
 .navUser-action--quickSearch {
   &:hover, &:focus {
