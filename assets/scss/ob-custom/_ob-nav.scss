@@ -65,7 +65,11 @@
   width: 25% !important;
   top: 0;
 }
-
+.navUser-action--quickSearch {
+  &:hover, &:focus {
+    background-color: transparent;
+  }
+}
 .navPage-subMenu-action[aria-label="Blank"] {
   display: none!important;
 }
