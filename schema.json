@@ -38,6 +38,28 @@
       },
       {
         "type": "heading",
+        "content": "Homepage Hero"
+      },
+      {
+        "type": "text",
+        "label": "Hero Heading",
+        "force_reload": true,
+        "id": "home_hero_heading"
+      },
+      {
+        "type": "text",
+        "label": "Hero Button URL",
+        "force_reload": true,
+        "id": "home_hero_btn_url"
+      },
+      {
+        "type": "text",
+        "label": "Hero Button Text",
+        "force_reload": true,
+        "id": "home_hero_btn_text"
+      },
+      {
+        "type": "heading",
         "content": "i18n.BackgroundAndLines"
       },
       {
