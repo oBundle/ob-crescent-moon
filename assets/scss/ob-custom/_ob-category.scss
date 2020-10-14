@@ -180,3 +180,26 @@ li.product {
     margin-top: 3px;
   }
 }
+
+
+//***************************
+//Search Page
+//***************************
+.container[data-page-type="search"] {
+  .navBar-section {
+    text-align: left;
+  }
+  .panel {
+    padding: 0px; 
+    border: none;
+    background-color: $ob-light-gray;
+  }
+  .panel-body {
+    background-color: $ob-light-gray;
+  }
+  .productGrid {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}
