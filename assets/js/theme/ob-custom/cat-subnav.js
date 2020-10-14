@@ -8,6 +8,7 @@ export default function(context) {
   $subnavLinks.first().addClass('ob-cat-subnav-link--active')
   $subnavLinks.first().toggleClass('ob-text-secondary ob-text-primary')
 
+
   //subnav link click handler
   $subnavLinks.on("click", (event) => {
     event.preventDefault()
