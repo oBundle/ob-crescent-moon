@@ -20,11 +20,18 @@ export default class Category extends CatalogPage {
 
         obcatSubnav(this.context)
         //handle click from mega menu
+        //if checks are necessary since url params cant contain spaces
         setTimeout(() => {
             const urlParams = new URLSearchParams(window.location.search);
             let urlSubcat = urlParams.get("subcat");
-            console.log('subcat', urlSubcat)
-            if(urlSubcat) { $(`.ob-cat-subnav-link[title="${urlSubcat}"]`).click() }
+            if(urlSubcat) { 
+                let $subnavLinks = $(".ob-cat-subnav-link")
+                $subnavLinks.each((index, link) => {
+                    if ($(link)[0].title.split(" ")[0] === urlSubcat) {
+                        $(link).click()
+                    }
+                })
+            }
         }, 300)
         
         obVariantHover(this.context)

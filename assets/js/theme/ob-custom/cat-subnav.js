@@ -8,6 +8,7 @@ export default function(context) {
   $subnavLinks.first().addClass('ob-cat-subnav-link--active')
   $subnavLinks.first().toggleClass('ob-text-secondary ob-text-primary')
 
+
   //subnav link click handler
   $subnavLinks.on("click", (event) => {
     event.preventDefault()
@@ -27,6 +28,7 @@ export default function(context) {
       //target data-product-cats (string with all cats / subcats this product is in)
       const categories = $(product).attr('data-product-cats')
       //if subnav link's title is not in data-product/cats as substr
+
       if (!categories.includes(subnavCat)) {
         //hide the product card
         $(product).hide()
@@ -52,7 +54,6 @@ export default function(context) {
       $(event.currentTarget).removeClass('ob-is-closed')
     } else {
       $(".ob-cat-subnav--mobile").children().first().siblings().slideUp()
-      console.log( $(".ob-cat-subnav--mobile").children().first())
       $(event.currentTarget).addClass('ob-is-closed')
     }
     

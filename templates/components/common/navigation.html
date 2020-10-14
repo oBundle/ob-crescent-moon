@@ -35,14 +35,14 @@
             <li class="navUser-item navUser-item--divider">|</li>
         {{/if}}
         <li class="navUser-item">
-            <a class="navUser-action navUser-action--quickSearch"
-               href="#" data-search="quickSearch"
+            <button class="navUser-action navUser-action--quickSearch"
+               data-search="quickSearch"
                aria-controls="quickSearch"
                aria-expanded="false"
                aria-label="{{lang 'common.search'}}"
             >
                 <svg class="ob-search-icon"><use xlink:href="#icon-ob-search" /></svg>
-            </a>
+        </button>
         </li>
         {{#if settings.gift_certificates_enabled}}
             <li class="navUser-item">

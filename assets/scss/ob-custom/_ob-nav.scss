@@ -55,7 +55,7 @@
 .ob-top-level-navlink {
   font-family: "VisbyCF Extra Bold";
 }
-.navPages-action[href="/accessories/"] {
+.navPages-action[aria-label="Accessories"] {
   font-family: "VisbyCF Extra Bold" !important;
 }
 .navPages-action-moreIcon {
@@ -65,7 +65,18 @@
   width: 25% !important;
   top: 0;
 }
-
+.countPill {
+  position: absolute;
+  margin-left: -10px;
+  background-color: $ob-light-gray;
+  color: $ob-text-primary;
+  font-family: "VisbyCF Extra Bold";
+}
+.navUser-action--quickSearch {
+  &:hover, &:focus {
+    background-color: transparent;
+  }
+}
 .navPage-subMenu-action[aria-label="Blank"] {
   display: none!important;
 }
