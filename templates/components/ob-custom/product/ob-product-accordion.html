@@ -28,7 +28,13 @@
       <span class="ob-accordion-expand-btn"></span>
     </a>
     <div id="panel4a" class="content ob-blog-link-container ob-cat-link-container">
-      No reviews at this time
+      {{#if product.reviews}}
+      {{#if settings.show_product_reviews}}
+        {{> components/products/reviews reviews=product.reviews product=product urls=urls}}
+      {{/if}}
+    {{else}}
+      <p class="ob-paragraph-md ob-text-primary">No product reviews at this time</p>
+    {{/if}}
     </div>
   </li>
 </ul>

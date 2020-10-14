@@ -290,3 +290,19 @@
     display: none;
   }
 }
+
+//***************************
+//Product Reviews
+//***************************
+.icon--ratingFull {
+  svg {
+    fill: $ob-red;
+
+  }
+}
+.productReviews {
+  border-top: none;
+  .toggleLink-text {
+    color: $ob-red;
+  }
+}
