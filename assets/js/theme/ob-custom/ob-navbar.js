@@ -47,7 +47,13 @@ export default function (context) {
 	//target DOM nodes
 	let $header = $(".header");
 	let $nav = $(".navUser");
-	let lastScrollTop = 0;
+  let lastScrollTop = 0;
+  
+  //if header is hovered, remove transparent
+  $header.on("mouseenter", (e) => {
+    $header.removeClass('ob-transparent')
+    $nav.removeClass("ob-transparent");
+  })
 
 	//if the page type is default (home), add transparent classes
 	if ( (context.page_type === "default") && $(window).scrollTop() === 0 ) {
