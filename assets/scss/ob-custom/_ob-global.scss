@@ -200,6 +200,13 @@ form[data-contact-form] {
   }
 }
 
+div[data-cart-status] {
+  .alertBox--info {
+    display: none;
+  }
+}
+
+
 //***************************
 //visibility helpers
 //***************************

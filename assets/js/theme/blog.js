@@ -1,5 +1,6 @@
 import PageManager from './page-manager';
 import foundation from './global/foundation';
+import utils from '@bigcommerce/stencil-utils';
 //ob custom
 // import blogAccordionDsInit from "./ob-custom/blog-accordion-ds-init"
 
@@ -51,7 +52,7 @@ export default class Blog extends PageManager {
     console.log(accordionStructure)
     //accordion markup snippets
     const obAccordion = `
-    <ul class="accordion ob-blog-accordion" data-accordion>
+    <ul class="accordion ob-blog-accordion" id="ob-blog-accordion" data-accordion>
       <li class="accordion-navigation">
         <a href="#panel1a" class="ob-heading-cta-sm ob-accordion-title">Snowshoe Lifestyle <br/> 
           <span class="ob-text-secondary ob-accordion-subtitle">Fun lifestyle moments</span>
