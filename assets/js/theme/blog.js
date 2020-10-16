@@ -1,6 +1,5 @@
 import PageManager from './page-manager';
 import foundation from './global/foundation';
-import utils from '@bigcommerce/stencil-utils';
 //ob custom
 // import blogAccordionDsInit from "./ob-custom/blog-accordion-ds-init"
 
@@ -96,5 +95,18 @@ export default class Blog extends PageManager {
     //have to call foundation on document again since
     //appending accordion stuff after init page load
     foundation($(document));
+
+
+    let $allBlogCards = $('.ob-blog-card-grid-container').children().slice(15, -1).hide()
+    $allBlogCards.hide()
+    let currentSlice = 15
+    //Infinite Scroll
+    $(window).on("scroll", function() {
+      if ($(window).scrollTop() + $(window).height() >= $(document).height() - 500) {
+        currentSlice += 15
+        $('.ob-blog-card-grid-container').children().slice(currentSlice, -1).hide()
+        $('.ob-blog-card-grid-container').children().slice(0, currentSlice).show()
+      }
+    });
   }
 }
