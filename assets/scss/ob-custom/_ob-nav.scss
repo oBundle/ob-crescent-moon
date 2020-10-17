@@ -245,6 +245,17 @@
   .navPages-list:not(.navPages-list-depth-max).navPages-action.has-subMenu {
     background-color: transparent;
   }
+  .navPage-subMenu[id="navPages-44"] {
+    .ob-guidance-navitem {
+      display: none;
+    }
+    .navPage-subMenu-item {
+      width: auto;
+    }
+    .navPage-subMenu-list {
+      justify-content: space-evenly;
+    }
+  }
   .navPages-action {
     border-bottom: 2px solid transparent;
   }

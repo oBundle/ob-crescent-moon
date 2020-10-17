@@ -41,10 +41,10 @@
                         {{#each children}}
                         <li class="navPage-childList-item">
                             <a class="navPage-childList-action navPages-action{{#if is_active}} activePage{{/if}}"
-                               href={{../url}}?subcat={{name}}
+                               href="{{#if ../../../id '==' '44'}}{{url}}{{else}}{{../url}}?subcat={{name}}{{/if}}"
                                aria-label="{{name}}"
                             >
-                                {{name}} 
+                                {{name}}
                             </a>
                         </li>
                         {{/each}}
