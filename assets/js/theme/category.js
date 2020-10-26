@@ -24,10 +24,12 @@ export default class Category extends CatalogPage {
         setTimeout(() => {
             const urlParams = new URLSearchParams(window.location.search);
             let urlSubcat = urlParams.get("subcat");
+            console.log("subnav param", urlSubcat)
             if(urlSubcat) { 
                 let $subnavLinks = $(".ob-cat-subnav-link")
                 $subnavLinks.each((index, link) => {
-                    if ($(link)[0].title.split(" ")[0] === urlSubcat) {
+                    console.log($(link).attr('title'))
+                    if ($(link).attr('title') === urlSubcat) {
                         $(link).click()
                     }
                 })
