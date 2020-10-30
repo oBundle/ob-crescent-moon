@@ -12,10 +12,13 @@ button[disabled] {
   }
 }
 
+.button {
+  font-family: "VisbyCF Bold";
+}
+
 .button--primary {
   background-color: $ob-red;
   border: none;
-
 }
 
 .ob-btn {

@@ -3,8 +3,11 @@
 //***************************
 .container[data-page-type="category"] {
   .ob-container {
-    padding-top: 50px;
+    padding-top: 25px;
     padding-bottom: 0px;
+    @include breakpoint("medium") {
+      padding-top: 50px;
+    }
   }
   .page {
     letter-spacing: 0px;
