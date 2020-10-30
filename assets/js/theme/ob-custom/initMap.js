@@ -16,68 +16,6 @@ let stores = {
    "type": "Feature",
    "geometry": {
       "type": "Point",
-      "coordinates":  [ -123.108384,49.262805 ]
-   },
-   "properties": {
-   "id":5977,
-   "name":"Mountain Equipment Co-op (MEC)",
-   "status":"publish",
-   "permalink":"mountain-equipment-co-op-mec-2",
-   "description":"",
-   "excerpt":"",
-   "author":"1",
-   "date":"2018-11-21 22:00:04",
-   "address":"130 West Broadway",
-   "address2":"",
-   "city":"Vancouver",
-   "state":"BC",
-   "zip":"V5Y 1P3",
-   "country":"Canada",
-   "country_iso":"CA",
-   "hours":"",
-   "phone":"",
-   "fax":"",
-   "email":"",
-   "url":"",
-   "image":"0",
-   "category":""
-   }
- },
- {
-   "type": "Feature",
-   "geometry": {
-      "type": "Point",
-      "coordinates":  [ -71.298922,46.83418 ]
-   },
-   "properties": {
-   "id":5975,
-   "name":"Mountain Equipment Co-op (MEC)",
-   "status":"publish",
-   "permalink":"mountain-equipment-co-op-mec",
-   "description":"",
-   "excerpt":"",
-   "author":"1",
-   "date":"2018-11-21 21:58:49",
-   "address":"1475 Boulevard Lebourgneuf",
-   "address2":"",
-   "city":"Quebec city",
-   "state":"QB",
-   "zip":"G2K 2G3",
-   "country":"Canada",
-   "country_iso":"CA",
-   "hours":"",
-   "phone":"",
-   "fax":"",
-   "email":"",
-   "url":"",
-   "image":"0",
-   "category":""
-   }
- },
- {
-   "type": "Feature",
-   "geometry": {
-      "type": "Point",
       "coordinates":  [ -119.453068,49.882434 ]
    },
    "properties": {

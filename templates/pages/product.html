@@ -14,17 +14,9 @@ product:
 {{inject "productSize" theme_settings.product_size}}
 
 {{#partial "page"}}
-<div class="ob-container ob-pb-25 ob-pt-0-mobile ob-mw-1400">
-    {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
 
-    {{#each product.shipping_messages}}
-        {{> components/common/alert/alert-info message}}
-    {{/each}}
-
-    <div itemscope itemtype="http://schema.org/Product">
-        {{> components/ob-custom/product/ob-product-page-content reviews=product.reviews product=product urls=urls}}
-    </div>
-
+<div itemscope itemtype="http://schema.org/Product">
+    {{> components/ob-custom/product/ob-product-page-content reviews=product.reviews product=product urls=urls}}
 </div>
 
 {{#if product.related_products}}

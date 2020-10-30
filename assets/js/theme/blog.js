@@ -57,7 +57,7 @@ export default class Blog extends PageManager {
           <span class="ob-text-secondary ob-accordion-subtitle">Fun lifestyle moments</span>
           <span class="ob-accordion-expand-btn"></span>
         </a>
-        <div id="panel1a" class="content active ob-blog-link-container">
+        <div id="panel1a" class="content ob-blog-link-container">
           ${accordionStructure[0].posts.map(post => `<a class='ob-accordion-link' href='${post.url}'>${post.title}</a>`).join('')}
         </div>
       </li>
