@@ -1,11 +1,15 @@
 <section class="productView-details product-data">
   <div class="productView-product">
       <h1 class="ob-heading-cta-lg ob-text-primary ob-product-title" {{#if schema}}itemprop="name"{{/if}}>{{product.title}}</h1>
-      {{#if product.brand}}
-          <h2 class="productView-brand"{{#if schema}} itemprop="brand" itemscope itemtype="http://schema.org/Brand"{{/if}}>
-              <a href="{{product.brand.url}}"{{#if schema}} itemprop="url"{{/if}}><span{{#if schema}} itemprop="name"{{/if}}>{{product.brand.name}}</span></a>
-          </h2>
-      {{/if}}
+      <dt class="productView-info-name sku-label"{{#unless product.sku}} style="display: none;"{{/unless}}></dt>
+        <dd class="productView-info-value ob-paragraph-lg ob-text-primary" data-product-sku{{#if schema}} itemprop="sku"{{/if}}>{{product.sku}}</dd>
+        <dt class="productView-info-name upc-label"{{#unless product.upc}} style="display: none;"{{/unless}}>{{lang 'products.upc'}}</dt>
+        <dd class="productView-info-value" data-product-upc>{{product.upc}}</dd>
+          {{#if schema}}
+              {{#if product.mpn}}<meta itemprop="mpn" content="{{product.mpn}}" />{{/if}}
+              {{#if product.gtin}}<meta itemprop="gtin" content="{{product.gtin}}" />{{/if}}
+          {{/if}}
+     
   
       <div class="productView-rating"{{#if product.num_reviews '>' 0}}{{#if schema}} itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating"{{/if}}{{/if}}>
           {{#if settings.show_product_rating}}
