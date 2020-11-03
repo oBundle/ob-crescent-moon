@@ -26,6 +26,16 @@
 .container[data-page-type="blog"] {
   .ob-blog-card {
     margin-bottom: 35px;
+    width: 100%;
+    max-width: 330px;
+    @include breakpoint("medium") {
+      width: 45%;
+      max-width: 45%;
+    }
+    @include breakpoint("large") {
+      width: 30%;
+      max-width: 30%;
+    }
   }
 }
 //***************************

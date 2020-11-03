@@ -6,6 +6,7 @@ import FacetedSearch from './common/faceted-search';
 //ob custom
 import obcatSubnav from "./ob-custom/cat-subnav"
 import obVariantHover from "./ob-custom/ob-variant-hover"
+import obCatHighlights from "./ob-custom/cat-highlights"
 
 export default class Category extends CatalogPage {
     onReady() {
@@ -18,6 +19,7 @@ export default class Category extends CatalogPage {
             hooks.on('sortBy-submitted', this.onSortBySubmit);
         }
 
+        obCatHighlights()
         obcatSubnav(this.context)
         //handle click from mega menu
         //if checks are necessary since url params cant contain spaces
