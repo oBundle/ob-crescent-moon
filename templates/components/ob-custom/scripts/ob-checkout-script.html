@@ -66,11 +66,10 @@
     'POBOXES',
   ];
 
-  const POBoxDisclaimerHTML = `
-    <h1 class="po-box-disclaimer"> 
-      We are unable to fulfill orders addressed to a PO Box. 
-    </h1>
-  `;
+  const POBoxDisclaimerText = "We Do Not Ship To PO Boxes"
+  const POBoxDisclaimerHTML = `<h1 class="po-box-disclaimer"> 
+    ${POBoxDisclaimerText}
+  </h1>`;
 
   const shippingAddressComponentSelector = '#checkoutShippingAddress';
   const billingAddressComponentSelector = '#checkoutBillingAddress';
