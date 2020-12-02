@@ -1,0 +1,149 @@
+<script>
+  (function (win) {
+    'use strict';
+
+    var listeners = [],
+      doc = win.document,
+      MutationObserver = win.MutationObserver || win.WebKitMutationObserver,
+      observer;
+
+    function ready(selector, fn) {
+      // Store the selector and callback to be monitored
+      listeners.push({
+        selector: selector,
+        fn: fn,
+      });
+      if (!observer) {
+        // Watch for changes in the document
+        observer = new MutationObserver(check);
+        observer.observe(doc.documentElement, {
+          childList: true,
+          subtree: true,
+        });
+      }
+      // Check if the element is currently in the DOM
+      check();
+    }
+
+    function check() {
+      // Check the DOM for elements matching a stored selector
+      for (
+        var i = 0, len = listeners.length, listener, elements;
+        i < len;
+        i++
+      ) {
+        listener = listeners[i];
+        // Query for elements matching the specified selector
+        elements = doc.querySelectorAll(listener.selector);
+        for (var j = 0, jLen = elements.length, element; j < jLen; j++) {
+          element = elements[j];
+          // Make sure the callback isn't invoked with the
+          // same element more than once
+          if (!element.ready) {
+            element.ready = true;
+            // Invoke the callback with the element
+            listener.fn.call(element, element);
+          }
+        }
+      }
+    }
+    // Expose `ready`
+    win.ready = ready;
+  })(this);
+
+  const invalidAddressValues = [
+    'PO BOX',
+    'PO BOXES',
+    'P.O BOX',
+    'P.O. BOX',
+    'P.O. BOXES',
+    'POST OFFICE',
+    'POST OFFICES',
+    'POST OFFICE BOX',
+    'POST OFFICE BOXES',
+    'POST BOX',
+    'POBOX',
+    'POBOXES',
+  ];
+
+  const POBoxDisclaimerText = "We Do Not Ship To PO Boxes"
+  const POBoxDisclaimerHTML = `<h1 class="po-box-disclaimer"> 
+    ${POBoxDisclaimerText}
+  </h1>`;
+
+  const shippingAddressComponentSelector = '#checkoutShippingAddress';
+  const billingAddressComponentSelector = '#checkoutBillingAddress';
+
+  function getFormSubmitButton() {
+    return $('.checkout-form').find('button[type="submit"]');
+  }
+
+  function getCheckoutForm() {
+    return $('.checkout-form');
+  }
+
+  function bindValidation() {
+    const $button = getFormSubmitButton();
+
+    $button.on('click', validateAddress);
+  }
+
+  function unbindValidationAndContinue() {
+    const $button = getFormSubmitButton();
+
+    $button.off('click', validateAddress);
+    $button.click();
+  }
+
+  function notifyOfAddressRestrictions() {
+    const $target = getCheckoutForm().find('.form-legend-container');
+    $(POBoxDisclaimerHTML).insertBefore($target);
+  }
+
+  function watchAddressValidation(element) {
+    notifyOfAddressRestrictions();
+    bindValidation();
+  }
+
+  function validateAddress(event) {
+    event.preventDefault();
+
+    let invalidAddressFound;
+
+    const $addressBookValues = getCheckoutForm().find('.vcard.checkout-address--static');
+    const hasPreFilledAddress = $addressBookValues.length > 0;
+
+    if (hasPreFilledAddress) {
+      const addressValue = $addressBookValues.find('.adr')
+        .text()
+        .toUpperCase();
+
+      invalidAddressFound = validateAddressValue(addressValue, invalidAddressValues);
+    
+    } else {
+
+      const $addressLineInputs = $('#addressLine1Input, #addressLine2Input');
+
+      $addressLineInputs.each((index, el) => {
+        const addressValue = el.value.toUpperCase();
+        invalidAddressFound = validateAddressValue(addressValue, invalidAddressValues);
+      });
+
+    }
+
+    if (invalidAddressFound) {
+      alert('Sorry, we are unable to fulfill orders addressed to a PO Box.');
+    } else {
+      unbindValidationAndContinue();
+    }
+  }
+
+  function validateAddressValue(addressValue, invalidAddressValues) {
+    return invalidAddressValues.filter((str) => {
+      return addressValue.includes(str);
+    }).length > 0;
+  }
+
+  ready(shippingAddressComponentSelector, watchAddressValidation);
+  ready(billingAddressComponentSelector, watchAddressValidation);
+</script>
