@@ -126,7 +126,9 @@
 
       $addressLineInputs.each((index, el) => {
         const addressValue = el.value.toUpperCase();
-        invalidAddressFound = validateAddressValue(addressValue, invalidAddressValues);
+        if (validateAddressValue(addressValue, invalidAddressValues)) {
+          invalidAddressFound = true;
+        }
       });
 
     }
@@ -139,9 +141,10 @@
   }
 
   function validateAddressValue(addressValue, invalidAddressValues) {
-    return invalidAddressValues.filter((str) => {
+    const filtered = invalidAddressValues.filter((str) => {
       return addressValue.includes(str);
-    }).length > 0;
+    })
+    return (filtered.length > 0);
   }
 
   ready(shippingAddressComponentSelector, watchAddressValidation);
