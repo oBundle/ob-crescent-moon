@@ -1,0 +1,53 @@
+<div class="ob-container ob-footer-container ob-mobile ob-pt-50 ob-pb-50">
+  <div class="f-grid">
+    <div class="col-12 ob-footer-newsletter-container-mobile">
+      <h5 class="ob-heading-cta-xs">Sign Up For Our Newsletter</h5>
+      <p>Submit a product review and learn how to get a free Crescent Moon T-shirt.</p>
+      {{> components/common/subscription-form}}
+    </div>
+
+    <div class="col-6">
+      <h5 class="ob-heading-cta-xs">Shop</h5>
+      {{#each categories}}
+      <a class="ob-text-primary ob-paragraph-md ob-footer-link" href={{url}}>{{name}}</a><br/>
+      {{/each}}
+      <h5 class="ob-heading-cta-xs ob-support-mobile">Support</h5>
+      {{#each pages.[0].children}}
+      <a class="ob-text-primary ob-paragraph-md ob-footer-link" href={{url}}>{{name}}</a><br/>
+      {{/each}}
+    </div>
+    <div class="col-6">
+      <h5 class="ob-heading-cta-xs">Learn</h5>
+      {{#each pages.[1].children}}
+      <a class="ob-text-primary ob-paragraph-md ob-footer-link" href={{url}}>{{name}}</a><br/>
+      {{/each}}
+      <h5 class="ob-heading-cta-xs">Follow Us</h5>
+      <a href="" class="ob-footer-social-icon"><svg class="ob-footer-icon"><use xlink:href="#icon-facebook-footer" /></svg></a>
+      <a href="" class="ob-footer-social-icon"><svg class="ob-footer-icon"><use xlink:href="#icon-twitter-footer" /></svg></a>
+      <a href="" class="ob-footer-social-icon"><svg class="ob-footer-icon"><use xlink:href="#icon-instagram-footer" /></svg></a>
+      <a href="https://www.linkedin.com/company/crescent-moon-snowshoes/" class="ob-footer-social-icon"><svg class="ob-footer-icon"><use xlink:href="#icon-linkedin-footer" /></svg></a>
+      <a href="https://www.youtube.com/channel/UCWnq0kf6nkCxpmpj8W93EHw/" class="ob-footer-social-icon"><svg class="ob-footer-icon"><use xlink:href="#icon-youtube-footer" /></svg></a>
+      <a href="https://www.pinterest.com/CMSnowshoes/" class="ob-footer-social-icon"><svg class="ob-footer-icon"><use xlink:href="#icon-pinterest-footer" /></svg></a>
+
+    </div>
+    
+    <div class="col-12 ob-footer-address-col ob-mobile text-center ob-mt-25">
+      <h6 class="ob-heading-cta-xs">Crescent Moon Snowshoes</h6>
+      <p class="ob-paragraph-md">3067 S. Umatilla St.</p>
+      <p class="ob-paragraph-md">Englewood, Colorado 80110</p>
+      <p class="ob-paragraph-md ob-mt-25">720-535-6841</p>
+    </div>
+  </div>
+</div>
+<div class="f-grid align-center ob-footer-bottom-row ob-mobile">
+  <div class="col-12 footer-bottom-col text-center">
+    <p class="ob-paragraph-md text-center">&copy; 2020 Crescent Moon Snowshoes | <a href="/sitemap.php" class="ob-paragraph-md">Sitemap</a></p>
+  </div>
+  <div class="col-12 footer-bottom-col">
+    {{> components/common/payment-icons}}
+  </div>
+  <a class="col-12 footer-bottom-col ob-logo-row ob-mt-25-mobile" href="https://obundle.com/" >
+    <span class="text-center">Designed and developed by</span>
+    <svg class="ob-obundle-logo"><use xlink:href="#icon-obundle-logo" /></svg>
+  </a>
+</div>

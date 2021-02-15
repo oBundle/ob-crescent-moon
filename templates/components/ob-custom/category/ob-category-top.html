@@ -1,0 +1,25 @@
+<div class="f-grid align-center justify-center ob-cat-top-container">
+  <div class="col-12 col-md-6 ob-top-col-1">
+    <h2 class="ob-heading-cta-lg ob-mobile ob-cat-heading-mobile">{{category.name}}</h1>
+
+    {{#if category.image}}
+      {{> components/common/responsive-img
+          image=category.image
+          fallback_size=theme_settings.zoom_size
+          lazyload=theme_settings.lazyload_mode
+          class="category-header-image"
+      }}
+    {{/if}}
+  </div>
+  <div class="col-12 col-md-6 ob-desktop ob-cat-desc-container">
+    <div class="ob-cta-container-lg">
+      {{#unless theme_settings.hide_category_page_heading }}
+      <h2 class="ob-heading-cta-lg">{{category.name}}</h1>
+      {{{region name="category_below_header"}}}
+    {{/unless}}
+    <p class="ob-paragraph-md">{{{category.description}}}</p> 
+    {{{region name="ob_feat_prods"}}}
+    </div>
+  </div>
+</div>
+

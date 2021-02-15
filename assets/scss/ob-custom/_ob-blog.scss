@@ -1,0 +1,124 @@
+//***************************
+//Blog Cards
+//***************************
+.ob-blog-card {
+  max-width: 330px;
+  img {
+    object-fit: cover;
+    font-family: 'object-fit: cover;'; //for ie11
+    max-height: 142px;
+    height: 142px;
+    margin-bottom: 15px;
+    @include breakpoint("medium") {
+      max-height: 165px;
+      height: 165px;
+    }
+  }
+}
+
+.ob-blog-card-img {
+  width: 330px;
+  height: 165px;
+  margin-bottom: 18px;
+  object-fit: cover;
+}
+
+.container[data-page-type="blog"] {
+  .ob-blog-card {
+    margin-bottom: 35px;
+    width: 100%;
+    max-width: 330px;
+    @include breakpoint("medium") {
+      width: 45%;
+      max-width: 45%;
+    }
+    @include breakpoint("large") {
+      width: 30%;
+      max-width: 30%;
+    }
+  }
+}
+//***************************
+//Blog Accordion
+//***************************
+.accordion {
+  border: none;
+}
+
+
+
+.ob-blog-link-container {
+  background-color: $ob-light-gray !important;
+  border-radius: 6px;
+  flex-wrap: wrap;
+}
+.ob-blog-link-container.active {
+  margin-bottom: 22px;
+}
+
+.ob-accordion-link {
+  width: 100%;
+  padding: 8px 0px;
+  display: flex;
+}
+
+.ob-accordion-title {
+  position: relative;
+  font-family: "VisbyCF Extra Bold" !important;
+  padding: 10px 0 !important;
+  color: $ob-text-primary !important;
+  &:hover {
+    background: white!important;
+  }
+}
+
+.ob-blog-newsletter {
+  padding: 15px 0px !important;
+  .ob-newsletter-input-container {
+    margin: auto 20px !important;
+  }
+}
+
+.ob-accordion-subtitle {
+  @include text($size: 13px, $lineHeight: 30px, $weight: 500);
+  color: $ob-text-primary !important;
+}
+
+.accordion-navigation {
+  .ob-accordion-expand-btn {
+    background-image: url('../icons/ob-accordion-plus.svg');
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 0;
+    top: 12px;
+  }
+}
+
+.accordion-navigation.active {
+  .ob-accordion-expand-btn {
+    background-image: url('../icons/ob-accordion-minus.svg');
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 0;
+    top: 12px;
+  }
+}
+
+
+article.blog {
+  padding-top: 70px;
+}
+.blog-post-figure, .blog-post-body {
+  width: 100% !important;
+  max-width: 1040px;
+  .blog-thumbnail {
+    max-width: 100%;
+    img {
+      width: 100%;
+      object-fit: cover;
+      font-family: "object-fit: cover;";
+    }
+  }
+}

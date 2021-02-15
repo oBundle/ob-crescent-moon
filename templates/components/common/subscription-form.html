@@ -1,0 +1,18 @@
+<form class="form ob-subscription-form" action="/subscribe.php" method="post">
+    <fieldset class="form-fieldset">
+        <input type="hidden" name="action" value="subscribe">
+        <input type="hidden" name="nl_first_name" value="bc">
+        <input type="hidden" name="check" value="1">
+        <div class="form-field">
+            <label class="form-label is-srOnly" for="nl_email">{{lang 'common.email_address'}}</label>
+            <div class="form-prefixPostfix wrap">
+                <input class="form-input ob-subscription-input" id="nl_email" name="nl_email" type="email" value="{{customer.email}}" placeholder="{{lang 'newsletter.email_placeholder'}}">
+                <button class="ob-btn ob-subscription-btn ob-btn-bg-red" type="submit"><svg class="ob-arrow-right-white"><use xlink:href="#icon-ob-arrow-right" /></svg></button>
+            </div>
+            {{#if settings.show_newsletter_summary }}
+                <div class="footer-newsletter-summary">{{settings.newsletter_summary}}</div>
+            {{/if}}
+        </div>
+    </fieldset>
+</form>
+

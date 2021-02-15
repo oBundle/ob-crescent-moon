@@ -1,0 +1,51 @@
+<div class="f-grid ob-blog-card-grid-container" style="justify-content: center;">
+	{{#each blog.posts}} {{#if @index '===' 9}}
+	<div class="col-12 ob-blog-newsletter">
+		<div class="ob-newsletter-widget ob-mt-12 ob-mb-50">
+			<div class="ob-newsletter-input-container f-grid align-center justify-center">
+				<h5 class="col-xs-12 col-md-6 ob-text-white ob-heading-cta-md">
+					Join Our Newsletter
+				</h5>
+				<div class="col-xs-12 col-md-6">
+              {{> components/common/subscription-form}}
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="ob-blog-card ob-mb-25" href="{{url}}">
+		<a href="{{url}}">
+			<img
+				src="{{cdn 'img/loading.svg'}}"
+				data-src='{{getImage thumbnail "blog_thumbnail_size" }}'
+				class="lazyload ob-blog-card-img"
+			/>
+		</a>
+		<h6 class="ob-heading-cta-sm">{{title}}</h6>
+		<p class="ob-paragraph-md">{{summary}}...</p>
+		<a class="ob-cta-link ob-text-red" href="{{url}}">
+			Read Blog
+			<svg class="ob-arrow-right-red">
+				<use xlink:href="#icon-ob-arrow-right" />
+			</svg>
+		</a>
+	</div>
+	{{else}}
+	<div class="ob-blog-card ob-mb-25" href="{{url}}">
+		<a href="{{url}}">
+			<img
+				src="{{cdn 'img/loading.svg'}}"
+				data-src='{{getImage thumbnail "blog_thumbnail_size" }}'
+				class="lazyload ob-blog-card-img"
+			/>
+		</a>
+		<h6 class="ob-heading-cta-sm">{{title}}</h6>
+		<p class="ob-paragraph-md">{{summary}}...</p>
+		<a class="ob-cta-link ob-text-red" href="{{url}}">
+			Read Blog
+			<svg class="ob-arrow-right-red">
+				<use xlink:href="#icon-ob-arrow-right" />
+			</svg>
+		</a>
+	</div>
+	{{/if}} {{/each}}
+</div>

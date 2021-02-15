@@ -1,0 +1,130 @@
+//***************************
+//product / category card styles
+//***************************
+.quickSearchResults {
+  .productGrid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    
+  }
+  li.product {
+    
+    .card-figure {
+      background-color: white;
+    }
+    .card-body {
+      text-align: center;
+      height: auto;
+      background-color: white;
+      [data-test-info-type="productRating"] {
+        display: none;
+      }
+    }
+    .card-title {
+      @include text($size: 16px, $lineHeight: 22px, $weight: 900);
+      text-decoration: none;
+      height: 100px;
+      p, span, a {
+        letter-spacing: 0px !important;
+      }
+    }
+  }
+}
+
+.card-figcaption {
+  display: none;
+}
+.ob-category-card {
+  max-width: 300px;
+  width: 100%;
+  margin: 0 auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  text-align: center;
+    text-align-last: center;
+  &-mix-blend {
+    mix-blend-mode: multiply;
+  }
+}
+.ob-product-card{
+  max-width: 300px;
+  margin-bottom: 1.8rem;
+  .card-body {
+    background-color: transparent!important;
+    text-align: center;
+    height: auto;
+    [data-test-info-type="productRating"] {
+      display: none;
+    }
+  }
+  .card-title {
+    @include text($size: 16px, $lineHeight: 22px, $weight: 900);
+    text-decoration: none;
+    height: 100px;
+    p, span, a {
+      letter-spacing: 0;
+    }
+    
+  }
+  .card-text {
+    margin-top: 11px;
+  }
+  // .card-figure {
+  //   background-color:  #E5E5E5;
+  // }
+  .card-img-container {
+    background-color: #f2f2f2;
+    &:after {
+      padding-bottom: 100%;
+    }
+    img {
+      transition: all .3s ease-in-out;
+      mix-blend-mode: multiply;
+      &:hover {
+        opacity: .75;
+      }
+    }
+  }
+  .card-figcaption {
+    display: none;
+    &:hover {
+      display: none;
+    }
+  }
+  @include breakpoint("medium") {
+    margin-bottom: 3rem;
+  }
+}
+li.product {
+  .card--alternate:hover .card-body {
+    background-color: $ob-light-gray;
+    a {
+      color: $ob-text-primary;
+
+    }
+  }
+  .card--alternate {
+    border: none;
+    &:hover {
+      background-color: $ob-light-gray;
+    }
+  }
+  .card-body {
+    background-color: $ob-light-gray;
+    
+  }
+  
+}
+.ob-blog-card {
+  margin: 0px 7px;
+  padding: 0px 25px;
+  @include breakpoint("medium") {
+    padding: 0px;
+    display: block;
+  }
+}

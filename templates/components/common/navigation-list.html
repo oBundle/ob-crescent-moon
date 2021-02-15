@@ -1,0 +1,81 @@
+{{#if children}}
+<a class="navPages-action has-subMenu{{#if is_active}} activePage{{/if}} ob-top-level-navlink ob-visby-bold"
+   href="{{url}}"
+   data-collapsible="navPages-{{id}}"
+>
+    {{name}}
+    <i class="icon navPages-action-moreIcon" aria-hidden="true">
+        <svg><use xlink:href="#icon-chevron-down" /></svg>
+    </i>
+</a>
+<div class="navPage-subMenu" id="navPages-{{id}}" aria-hidden="true" tabindex="-1">
+    <ul class="navPage-subMenu-list">
+        <!-- <li class="navPage-subMenu-item">
+            <a class="navPage-subMenu-action navPages-action"
+               href="{{url}}"
+               aria-label="{{lang 'category.view_all.name' category=name}}"
+            >
+                Shop All
+            </a>
+        </li> -->
+        {{#each children}}
+            <li class="navPage-subMenu-item" data-cat-id={{id}}>
+                {{#if children}}
+                    <a class="navPage-subMenu-action navPages-action has-subMenu{{#if is_active}} activePage{{/if}}"
+                       href="{{url}}"
+                       aria-label="{{name}}"
+                    >
+                        {{name}}
+                        <span class="collapsible-icon-wrapper"
+                            data-collapsible="navPages-{{id}}"
+                            data-collapsible-disabled-breakpoint="medium"
+                            data-collapsible-disabled-state="open"
+                            data-collapsible-enabled-state="closed"
+                        >
+                            <i class="icon navPages-action-moreIcon" aria-hidden="true">
+                                <svg><use xlink:href="#icon-chevron-down" /></svg>
+                            </i>
+                        </span>
+                    </a>
+                    <ul class="navPage-childList" id="navPages-{{id}}">
+                        {{#each children}}
+                        <li class="navPage-childList-item">
+                            <a class="navPage-childList-action navPages-action{{#if is_active}} activePage{{/if}}"
+                               href="{{#if ../../../id '==' '44'}}{{url}}{{else}}{{../../url}}?subcat={{name}}{{/if}}"
+                               aria-label="{{name}}"
+                            >
+                                {{name}}
+                            </a>
+                        </li>
+                        {{/each}}
+                    </ul>
+                {{else}}
+                    <a class="navPage-subMenu-action navPages-action{{#if is_active}} activePage{{/if}}"
+                       href="{{url}}"
+                       aria-label="{{name}}"
+                    >
+                        {{name}}
+                    </a>
+                {{/if}}
+            </li>
+        {{/each}}
+        <li class="ob-guidance-navitem f-grid align-center justify-end">
+            <div class="col-6 ob-desktop ob-guidance-img-container">
+                <img src="https://cdn11.bigcommerce.com/s-pqywb1ijst/product_images/uploaded_images/ob-navbar-guidance.png"/>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <h5 class="ob-heading-cta-md">Need Some Guidance?</h5>
+                <p class="ob-paragraph-md">Take our short quiz and find out which snowshoe is best for you</p>
+                <a class="ob-cta-link" href="/product-wizard/">Start Quiz <svg class="ob-arrow-right-red"><use xlink:href="#icon-ob-arrow-right" /></svg></a>
+            </div>
+        </li>
+    </ul>
+</div>
+{{else}}
+<a class="navPages-action{{#if is_active}} activePage{{/if}}"
+   href="{{url}}"
+   aria-label="{{name}}"
+>
+    {{name}}
+</a>
+{{/if}}

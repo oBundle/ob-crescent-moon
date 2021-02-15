@@ -1,0 +1,26 @@
+<div class="ob-product-mtn-bg">
+  <div class="ob-container ob-pb-25 ob-pt-0-mobile ob-mw-1400">
+    
+      {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+  
+      {{#each product.shipping_messages}}
+          {{> components/common/alert/alert-info message}}
+      {{/each}}
+
+  <div class="productView ob-productView" {{#if settings.data_tag_enabled}} data-event-type="product" data-entity-id="{{product.id}}" data-name="{{product.title}}" data-product-category="{{#each product.category}}{{#if @last}}{{this}}{{else}}{{this}}, {{/if}}{{/each}}" data-product-brand="{{product.brand.name}}" data-product-price="{{#if product.price.with_tax}}{{product.price.with_tax.value}}{{else}}{{product.price.without_tax.value}}{{/if}}" data-product-variant="single-product-option"{{/if}}>
+    
+    <section class="productView-images" data-image-gallery>
+      
+        {{> components/ob-custom/product/ob-product-image-carousel}}
+
+        {{>components/ob-custom/product/ob-product-image-carousel--mobile}}
+    
+        {{> components/ob-custom/product/ob-product-image}}
+    </section>
+    
+    <div class="ob-productView-details">
+      {{> components/ob-custom/product/ob-product-details schema=true}}
+    </div>
+  </div>
+  </div>
+</div>

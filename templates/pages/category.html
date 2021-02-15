@@ -1,0 +1,41 @@
+---
+category:
+    shop_by_price: true
+    products:
+        limit: {{theme_settings.categorypage_products_per_page}}
+---
+{{inject "categoryProductsPerPage" theme_settings.categorypage_products_per_page}}
+{{inject "categoryId" category.id}}
+{{#partial "head"}}
+    {{#if pagination.category.previous}}
+        <link rel="prev" href="{{pagination.category.previous}}">
+    {{/if}}
+    {{#if pagination.category.next}}
+        <link rel="next" href="{{pagination.category.next}}">
+    {{/if}}
+{{/partial}}
+
+{{#partial "page"}}        
+
+    <div class="ob-container ob-pb-0">
+        {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+
+        {{> components/ob-custom/category/ob-category-top}}
+
+        {{#if category.subcategories.length '>' 1}}
+            {{> components/ob-custom/category/ob-cat-subnav}}
+            {{> components/ob-custom/category/ob-cat-subnav--mobile}}
+        {{/if}}
+        <div class="page {{#if category.subcategories.length '===' 1}}ob-pt-50 ob-pt-25-mobile{{/if}}">
+            <main class="page-content" id="product-listing-container">
+                {{> components/category/product-listing}}
+                {{{region name="category_below_content"}}}
+            </main>
+        </div>
+
+    </div>
+
+    {{> components/ob-custom/category/ob-cat-highlights}}
+
+{{/partial}}
+{{> layout/base}}

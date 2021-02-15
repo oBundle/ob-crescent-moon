@@ -1,0 +1,32 @@
+---
+product:
+    videos:
+        limit: {{theme_settings.productpage_videos_count}}
+    reviews:
+        limit: {{theme_settings.productpage_reviews_count}}
+    related_products:
+        limit: {{theme_settings.productpage_related_products_count}}
+    similar_by_views:
+        limit: {{theme_settings.productpage_similar_by_views_count}}
+---
+{{inject "productId" product.id}}
+{{inject "zoomSize" theme_settings.zoom_size}}
+{{inject "productSize" theme_settings.product_size}}
+
+{{#partial "page"}}
+
+<div itemscope itemtype="http://schema.org/Product">
+    {{> components/ob-custom/product/ob-product-page-content reviews=product.reviews product=product urls=urls}}
+</div>
+
+{{#if product.related_products}}
+    <div class="ob-wrapper ob-home-bg-3">
+      <div class="ob-container text-center ob-pt-50-mobile">
+        <h5 class="ob-heading-cta-md ob-pt-100 ob-pt-25-mobile ob-mb-50">Related Products</h5>
+        {{> components/products/new products=product.related_products columns=theme_settings.homepage_new_products_column_count}}
+      </div>
+    </div>
+  {{/if}}
+
+{{/partial}}
+{{> layout/base}}

@@ -1,0 +1,26 @@
+---
+blog:
+    posts:
+        limit: 400
+        pages: 3
+        summary: 200
+---
+{{#partial "page"}}
+<div class="ob-container ob-pt-25-mobile">
+
+    {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+
+    <div class="f-grid">
+        <div class="col-xs-12 col-md-4 col-lg-3">
+            <h5 class="ob-heading-cta-md">Blog Categories</h5>
+            <div class="ob-blog-accordion"></div>
+        </div>
+        <div class="col-xs-12 col-md-8">
+            {{> components/ob-custom/blog/ob-blog-card-grid}}
+        </div>
+    </div>
+
+</div>
+
+{{/partial}}
+{{> layout/base}}

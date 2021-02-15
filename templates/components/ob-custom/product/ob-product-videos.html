@@ -1,0 +1,24 @@
+<div class="ob-product-videos-grid f-grid justify-space-between">
+  {{#each product.videos.list}}
+  <div class="ob-video-card col-grid">
+    <div class="ob-video-figure">
+      <iframe
+        id="player"
+        class="lazyload"
+        type="text/html"
+        width="430"
+        height="243"
+        frameborder="0"
+        webkitAllowFullScreen
+        mozallowfullscreen
+        allowFullScreen
+        data-src="//www.youtube.com/embed/{{id}}?rel=0"
+        data-video-player>
+      </iframe>    
+    </div>
+    <div class="ob-video-body">
+        <h5 class="video-title ob-heading-cta-xs">{{title_long}}</h5>
+    </div>
+  </div>
+  {{/each}}
+</div>

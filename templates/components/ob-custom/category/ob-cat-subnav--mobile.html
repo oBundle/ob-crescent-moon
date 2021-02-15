@@ -1,0 +1,12 @@
+{{#if category}}
+<div class="ob-relative">
+  <nav class="ob-cat-subnav ob-cat-subnav--mobile ob-mb-25 ob-mobile">
+    {{#each category.subcategories}}
+      <a class="ob-cat-subnav-link ob-text-secondary ob-paragraph-md" href="#" title="{{name}}">{{name}}</a>
+    {{/each}}
+  </nav>
+  <button class="ob-toggle-subcat ob-mobile">
+    <svg><use xlink:href="#icon-keyboard-arrow-up" /></svg>
+  </button>
+</div>
+{{/if}}

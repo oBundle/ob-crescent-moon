@@ -1,0 +1,87 @@
+{{#partial "page"}}
+
+<div class="ob-container ob-pt-25-mobile ob-pb-25-mobile" data-page-type="{{page_type}}">
+{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+
+<main class="page">
+    {{{region name="page_builder_content_1"}}}
+
+    {{#unless theme_settings.hide_page_heading }}
+        <h1 class="ob-text-primary ob-heading-cta-lg ob-mb-25">{{ page.title }}</h1>
+    {{/unless}}
+
+    {{#if page.id '===' 18}}
+    <div class="ob-map-container">
+        <div class="powr-map" id="67503b96_1604505579"></div><script src="https://www.powr.io/powr.js?platform=bigcommerce"></script>
+ <!---       <div id="ob-map-sidebar" class='ob-map-sidebar'><h5 class="ob-heading-cta-sm">Locations</h5></div>
+        <div id='ob-map' class='map pad2'>Map</div> --->
+    </div>
+    {{/if}}
+
+    {{#if page.id '===' 19}}
+        {{> components/ob-custom/webpage/warranty}}
+    {{/if}}
+    <!-- {{#if page.sub_pages}}
+    <nav class="navBar navBar--sub">
+        <ul class="navBar-section account-navigation">
+        {{#each page.sub_pages}}
+            <li class="navBar-item"><a class="navBar-action" href="{{url}}">{{title}}</a></li>
+        {{/each}}
+        </ul>
+    </nav>
+    {{/if}} -->
+
+    <!-- {{ page.title }} -->
+
+    {{{region name="page_builder_content_3"}}}
+    {{{region name="page_builder_content_4"}}}
+    {{{region name="page_builder_content_5"}}}
+    {{{region name="page_builder_content_6"}}}
+    {{{region name="page_builder_content_7"}}}
+    {{{region name="page_builder_content_8"}}}
+    {{{region name="page_builder_content_9"}}}
+    {{{region name="page_builder_content_10"}}}
+    {{{region name="page_builder_content_11"}}}
+    {{{region name="page_builder_content_12"}}}
+    {{{region name="page_builder_content_13"}}}
+    {{{region name="page_builder_content_14"}}}
+    {{{region name="page_builder_content_15"}}}
+    {{{region name="page_builder_content_16"}}}
+    {{{region name="page_builder_content_17"}}}
+    {{{region name="page_builder_content_18"}}}
+    {{{region name="page_builder_content_19"}}}
+    {{{region name="page_builder_content_20"}}}
+    {{{region name="page_builder_content_21"}}}
+    {{{region name="page_builder_content_22"}}}
+    {{{region name="page_builder_content_23"}}}
+    {{{region name="page_builder_content_24"}}}
+    {{{region name="page_builder_content_25"}}}
+    {{{region name="page_builder_content_26"}}}
+    {{{region name="page_builder_content_27"}}}
+    {{{region name="page_builder_content_28"}}}
+    {{{region name="page_builder_content_29"}}}
+    {{{region name="page_builder_content_30"}}}
+  
+    <!-- <div class="page-content page-content--centered">
+        {{#replace '%%Syndicate%%' page.content}}
+            {{> components/page/rss_feed}}
+        {{else}}
+            <p>{{{page.content}}}</p>
+        {{/replace}}
+    </div> -->
+
+    {{#if page.feed}}
+        <ul>
+            {{#each page.feed}}
+                <li>
+                    <h6><a href="{{url}}" target="_blank">{{title}}</a></h6>
+                    <p>{{content}}</p>
+                </li>
+            {{/each}}
+        </ul>
+    {{/if}}
+</main>
+</div>
+{{/partial}}
+
+{{> layout/base}}

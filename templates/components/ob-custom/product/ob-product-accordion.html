@@ -1,0 +1,40 @@
+<ul class="accordion ob-blog-accordion" data-accordion>
+  <li class="accordion-navigation">
+    <a href="#panel1a" class="ob-heading-cta-sm ob-accordion-title">Description <br/> 
+      <span class="ob-accordion-expand-btn"></span>
+    </a>
+    <div id="panel1a" class="content active ob-blog-link-container ob-cat-link-container">
+      {{{product.description}}}
+    </div>
+  </li>
+  <li class="accordion-navigation">
+    <a href="#panel2a" class="ob-heading-cta-sm ob-accordion-title">Specifications <br/> 
+      <span class="ob-accordion-expand-btn"></span>
+    </a>
+    <div id="panel2a" class="content ob-blog-link-container ob-cat-link-container">
+      
+    </div>
+  </li>
+  <li class="accordion-navigation">
+    <a href="#panel3a" class="ob-heading-cta-sm ob-accordion-title">Videos<br/> 
+      <span class="ob-accordion-expand-btn"></span>
+    </a>
+    <div id="panel3a" class="content ob-blog-link-container ob-cat-link-container">
+      {{> components/ob-custom/product/ob-product-videos}}
+    </div>
+  </li>
+  <li class="accordion-navigation">
+    <a href="#panel4a" class="ob-heading-cta-sm ob-accordion-title">Reviews <br/> 
+      <span class="ob-accordion-expand-btn"></span>
+    </a>
+    <div id="panel4a" class="content ob-blog-link-container ob-cat-link-container">
+      {{#if product.reviews}}
+      {{#if settings.show_product_reviews}}
+        {{> components/products/reviews reviews=product.reviews product=product urls=urls}}
+      {{/if}}
+    {{else}}
+      <p class="ob-paragraph-md ob-text-primary">No product reviews at this time</p>
+    {{/if}}
+    </div>
+  </li>
+</ul>

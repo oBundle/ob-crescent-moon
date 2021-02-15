@@ -1,0 +1,47 @@
+{{#partial "page"}}
+
+{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+
+<main class="page">
+    {{#unless theme_settings.hide_contact_us_page_heading }}
+        <h1 class="page-heading">{{page.title}}</h1>
+    {{/unless}}
+
+    {{#if page.sub_pages}}
+        <nav class="navBar navBar--sub">
+            <ul class="navBar-section account-navigation">
+                {{#each page.sub_pages}}
+                    <li class="navBar-item"><a class="navBar-action" href="{{url}}">{{title}}</a></li>
+                {{/each}}
+            </ul>
+        </nav>
+    {{/if}}
+
+    <div id="contact-us-page" class="page-content page-content--centered">
+        <div class="f-grid">
+            <div class="col-xs-12 col-md-3">
+                <h5 class="ob-text-primary ob-heading-cta-md">
+                    Contact Us
+                </h5>
+                <h6 class="ob-text-primary ob-paragraph-md">Crescent Moon Snowshoes</h6>
+                <h6 class="ob-text-primary ob-paragraph-md">3067 S. Umatilla St.</h6>
+                <h6 class="ob-text-primary ob-paragraph-md">Englewood, CO 80110</h6>
+                <h6 class="ob-text-primary ob-paragraph-md">Phone <a href="tel:303-494-5506">303.494.5506</a></h6>
+            </div>
+            <div class="col-xs-12 col-md-8">
+                {{#if forms.contact.success}}
+                <div id="contact-us-success">{{{lang 'forms.contact_us.successful' shopPath=urls.home}}}</div>
+                {{else}}
+                    <p>{{{page.content}}}</p>
+                    {{> components/page/contact-us-form}}
+                {{/if}}
+            </div>
+        </div>
+
+    </div>
+
+</main>
+
+{{/partial}}
+
+{{> layout/base}}

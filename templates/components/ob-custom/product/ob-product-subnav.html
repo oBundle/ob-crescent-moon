@@ -1,0 +1,33 @@
+
+<nav class="ob-cat-subnav">
+  <a class="ob-cat-subnav-link ob-text-secondary ob-paragraph-md" href="#ob-cat-subnav" title='subnav-desc'>Description</a>
+  <a class="ob-cat-subnav-link ob-text-secondary ob-paragraph-md" href="#ob-cat-subnav" title='subnav-specs'>Specifications</a>
+  <a class="ob-cat-subnav-link ob-text-secondary ob-paragraph-md" href="#ob-cat-subnav" title='subnav-videos'>Videos</a>
+  <a class="ob-cat-subnav-link ob-text-secondary ob-paragraph-md" href="#ob-cat-subnav" title='subnav-reviews'>Reviews</a>
+</nav>
+<div class="ob-product-subnav-content">
+  <div class="ob-text-primary ob-paragraph-lg ob-subnav-content-item ob-show" id="subnav-desc">
+    <h5 class="ob-text-primary ob-heading-cta-sm ob-mb-25">Description</h5>
+    {{{product.description}}}
+  </div>
+  <div class="ob-text-primary ob-paragraph-lg ob-subnav-content-item" id="subnav-specs">
+    <h5 class="ob-text-primary ob-heading-cta-sm ob-mb-25">Specifications</h5>
+  </div>
+  <div class="ob-text-primary ob-paragraph-lg ob-subnav-content-item" id="subnav-videos">
+    <h5 class="ob-text-primary ob-heading-cta-sm ob-mb-25">Video Gallery</h5>
+    {{#if product.videos.list.length}}
+      {{> components/ob-custom/product/ob-product-videos}}
+    {{else}}
+      <p class="ob-paragraph-md ob-text-primary">No videos for this product yet</p>
+    {{/if}}
+  </div>
+  <div class="ob-text-primary ob-paragraph-lg ob-subnav-content-item" id="subnav-reviews">
+    {{#if product.reviews}}
+      {{#if settings.show_product_reviews}}
+        {{> components/products/reviews reviews=product.reviews product=product urls=urls}}
+      {{/if}}
+    {{else}}
+      <p class="ob-paragraph-md ob-text-primary">No product reviews at this time</p>
+    {{/if}}
+  </div>
+</div>

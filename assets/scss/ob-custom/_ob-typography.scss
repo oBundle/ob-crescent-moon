@@ -1,0 +1,86 @@
+//***************************
+//Typography util classes
+//***************************
+
+.ob-heading {
+  &-cta-xl {
+    @include text($size: 58px, $lineHeight: 57px, $weight: 900);
+    @include breakpoint("medium") {
+      @include text($size: 80px, $lineHeight: 80px, $weight: 900);
+    }
+  }
+  &-cta-lg {
+    @include text($size: 36px, $lineHeight: 42px, $weight: 900);
+    @include breakpoint("medium") {
+      @include text($size: 50px, $lineHeight: 52px, $weight: 900);
+    }
+  }
+  &-cta-md {
+    @include text($size: 24px, $lineHeight: 26px, $weight: 900);
+    @include breakpoint("medium") {
+      @include text($size: 36px, $lineHeight: 38px, $weight: 900);
+    }
+  }
+  &-cta-sm {
+    @include text($size: 16px, $lineHeight: 20px, $weight: 900);
+    @include breakpoint("medium") {
+      @include text($size: 20px, $lineHeight: 24px, $weight: 900);
+    }
+  }
+  &-cta-xs {
+    @include text($size: 14px, $lineHeight: 20px, $weight: 900);
+    @include breakpoint("medium") {
+      @include text($size: 16px, $lineHeight: 22px, $weight: 900);
+    }
+  }
+}
+
+.ob-paragraph {
+  &-lg {
+    @include text($size: 16px, $lineHeight: 26px, $weight: 500);
+    @include breakpoint("medium") {
+      @include text($size: 18px, $lineHeight: 30px, $weight: 500);
+    }
+  }
+  &-md {
+    @include text($size: 14px, $lineHeight: 20px, $weight: 500);
+    @include breakpoint("medium") {
+      @include text($size: 16px, $lineHeight: 22px, $weight: 500);
+    }
+  }
+  &-sm {
+    @include text($size: 12px, $lineHeight: 22px, $weight: 500);
+  }
+}
+
+.ob-text {
+  &-white {
+    color: $ob-white;
+    &:hover {
+      color: $ob-white;
+    }
+  }
+  &-primary {
+    color: $ob-text-primary;
+    &:visited, &:hover {
+      color: $ob-text-primary;
+    }
+  }
+  &-secondary {
+    color: $ob-text-secondary;
+    &:hover {
+      color: $ob-text-secondary;
+    }
+  }
+  &-red {
+    color: $ob-red;
+    &:hover {
+      color: $ob-red;
+    }
+  }
+}
+
+.ob-visby-bold {
+  letter-spacing: .025em;
+  font-family: 'VisbyCF Extra Bold' !important;
+}

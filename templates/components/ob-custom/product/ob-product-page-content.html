@@ -1,0 +1,11 @@
+<div class="ob-product-page-content">
+  {{> components/ob-custom/product/ob-product-view schema=true}}
+  
+  <div class="ob-desktop ob-container ob-pt-0 ob-pb-0">
+    {{> components/ob-custom/product/ob-product-subnav reviews=product.reviews product=product urls=urls}}
+  </div>
+
+  <div class="ob-mobile ob-container ob-pt-0 ob-pb-0">
+    {{> components/ob-custom/product/ob-product-accordion reviews=product.reviews product=product urls=urls}}
+  </div>
+</div>

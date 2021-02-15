@@ -1,0 +1,228 @@
+
+//***************************
+//Fonts
+//***************************
+
+@font-face {
+  font-family: 'VisbyCF';
+  src: url('https://store-pqywb1ijst.mybigcommerce.com/content/visby-cf/webfonts/visby-cf.woff2') format('woff2'),
+        url('https://store-pqywb1ijst.mybigcommerce.com/content/visby-cf/webfonts/visby-cf.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'VisbyCF Bold';
+  src: url('https://store-pqywb1ijst.mybigcommerce.com/content/visby-cf-bold/webfonts/visby-cf-bold.woff2') format('woff2'),
+        url('https://store-pqywb1ijst.mybigcommerce.com/content/visby-cf-bold/webfonts/visby-cf-bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'VisbyCF Extra Bold';
+  src: url('https://store-pqywb1ijst.mybigcommerce.com/content/visby-cf-extra-bold/webfonts/visby-cf-extra-bold.woff2') format('woff2'),
+        url('https://store-pqywb1ijst.mybigcommerce.com/content/visby-cf-extra-bold/webfonts/visby-cf-extra-bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'VisbyCF';
+  src: url('https://store-pqywb1ijst.mybigcommerce.com/content/visby-cf-medium/webfonts/visby-cf-medium.woff') format('woff2'),
+        url('https://store-pqywb1ijst.mybigcommerce.com/content/visby-cf-medium/webfonts/visby-cf-medium.woff2') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html, body, p, span, a {
+  font-family: 'VisbyCF' !important;
+  letter-spacing: .025em;
+  color: $ob-text-primary;
+}
+
+p {
+  color: $ob-text-primary;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin-top: 0;
+  text-transform: unset;
+  font-family: "VisbyCF Extra Bold";
+  letter-spacing: .025em;
+  color: $ob-text-primary;
+}
+
+a {
+  color: $ob-red;
+  text-decoration: none;
+  &:hover {
+    color: $ob-red;
+  }
+}
+
+.body {
+  margin-bottom: 0;
+  margin-top: 0;
+  overflow-x: hidden;
+}
+
+
+//***************************
+//Remove container styling from certain pages
+//***************************
+//layouts based on data page type for certain pages
+.ob-dark-overlay {
+  display:none!important;
+}
+body[data-cat-id="44"] {
+  #ob-cat-highlights {
+    display:none;
+  }
+}
+.dropdown--quickSearch {
+  background-color: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.08);
+  .form-input {
+    border-radius: 6px;
+    border: 2px solid transparent;
+    background-color: $ob-light-gray;
+
+    &:hover, &:focus {
+      border: 2px solid $ob-red;
+    }
+  }
+}
+.container {
+  overflow: hidden;
+}
+.container[data-page-type="default"] {
+  max-width: 100vw;
+  padding: 0;
+}
+.container[data-page-type="category"], .container[data-page-type="blog"], .container[data-page-type="product"], .container[data-page-type="page"] {
+  margin: 0;
+  padding: 0;
+  max-width: 100vw;
+}
+.container[data-page-type='newsletter_subscribe'] {
+  min-height: 30vh;
+  .page {
+    margin-top: 120px;
+  }
+}
+
+.page {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+body[data-page-id='6'] {
+  .ob-footer-container, .ob-footer-bottom-row {
+    display: none;
+  }
+}
+.page-content--centered {
+  width: 100% !important;
+}
+form[data-contact-form] {
+  .form-label {
+    font-family: "visbyCF Extra Bold";
+    color: $ob-text-primary;
+  }
+  .form-input {
+    background-color: $ob-light-gray;
+  }
+  .form-actions {
+    text-align: start;
+  }
+}
+.ob-hidden {
+  display:none;
+}
+//***************************
+//Pagination styles
+//***************************
+.pagination-list {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.pagination-item {
+  width: 30px;
+  height: 30px;
+  margin-right: 6px;
+  margin-left: 6;
+  &--current {
+    border-radius: 50% !important;
+    border: 2px solid $ob-text-primary !important;
+  }
+}
+
+.pagination-link {
+  padding: .5rem !important;
+  font-weight: 900 !important;
+}
+
+.ob-pagination-arrow {
+  svg {
+    fill: $ob-text-primary;
+  }
+}
+
+//***************************
+//Breadcrumb styles
+//***************************
+.breadcrumbs {
+  text-align: left;
+  padding-left: 1rem;
+}
+.container[data-page-type="category"]{
+  .breadcrumbs {
+    margin-top: 80px;
+    @include breakpoint("medium") {
+      display: block !important;
+      margin-bottom: 0px;
+    }
+  }
+}
+
+//***************************
+//Misc styles
+//***************************
+.u-hiddenVisually {
+  margin: 0 !important;
+  display: none;
+  .form-label {
+    margin: 0!important;
+    height: 0!important;
+  }
+}
+
+div[data-cart-status] {
+  .alertBox--info {
+    display: none;
+  }
+}
+
+
+//***************************
+//visibility helpers
+//***************************
+.ob-desktop {
+  @media only screen and (max-width: 801px)  {
+    display: none !important;
+  }
+}
+
+.ob-mobile {
+  @media only screen and (min-width: 801px)  {
+    display: none !important;
+  }
+}
+
+.productView-description--truncate {
+  height: 300px;
+  overflow: hidden;
+}

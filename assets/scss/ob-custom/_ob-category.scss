@@ -1,0 +1,214 @@
+//***************************
+//Category Container
+//***************************
+.container[data-page-type="category"] {
+  .ob-container {
+    padding-top: 25px;
+    padding-bottom: 0px;
+    @include breakpoint("medium") {
+      padding-top: 50px;
+    }
+  }
+  .page {
+    letter-spacing: 0px;
+  }
+  .productGrid {
+    margin-bottom: 0px;
+  }
+  .breadcrumbs {
+    margin-top: 100px;
+  }
+}
+
+//***************************
+//Category descriptions
+//***************************
+.ob-cat-top-container {
+  margin-bottom: 25px !important;
+  img {
+    filter: drop-shadow(0px 30px 50px rgba(0, 0, 0, 0.12)); 
+  }
+  @include breakpoint("medium") {
+    margin-bottom: 50px !important;
+  }
+}
+
+.ob-cat-heading-mobile {
+  font-size: 24px !important;
+}
+.ob-cat-desc-container {
+  padding-left: 50px !important;
+}
+
+//***************************
+//Category Subnav
+//***************************
+.ob-cat-subnav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top:1px solid #D2D2D2;
+  border-bottom:1px solid #D2D2D2;
+  position: relative;
+  a {
+    padding: 1rem;
+    font-weight: 900;
+  }
+  &--mobile {
+    flex-direction: column;
+    align-items: flex-start;
+    border-bottom: none;
+
+    a {
+      border-bottom: 1px solid #D2D2D2;
+      width: 100%;
+      &:hover {
+        border-bottom: 1px solid #D2D2D2;
+      }
+    }
+  }
+}
+
+#panel1a {
+  #ob-product-specs-description {
+    display: none!important;
+  }
+}
+
+.ob-toggle-subcat {
+  position: absolute;
+  top: 0;
+  right: 0;
+  svg {
+    width: 20px;
+    height: 20px;
+    fill: $ob-text-secondary;
+    stroke:$ob-text-secondary;
+  }
+  
+}
+
+.ob-cat-subnav-link {
+  border-bottom: 3px solid transparent;
+  font-family: "VisbyCF Extra Bold" !important;
+  &:hover {
+    border-bottom: 3px solid $ob-red;
+  }
+}
+.ob-cat-subnav-link--active {
+  border-bottom: 3px solid $ob-red;
+}
+
+
+//***************************
+//Product Grid Styles
+//***************************
+#product-listing-container {
+  .actionBar {
+    display: none;
+  }
+}
+li.product {
+  &:hover {
+    .ob-cat-product-card-swatch {
+      opacity: 1;
+    }
+  }
+}
+.ob-swatch-hover-container {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  align-items: center;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.ob-cat-product-card-swatch {
+  height: 19px;
+  width: 19px;
+  border-radius: 50%;
+  margin-right: 5px;
+  transition: all .2s ease-in-out;
+  @include breakpoint("medium") {
+    opacity: 0;
+    height: 22px;
+    width: 22px;
+  }
+}
+
+//***************************
+//Highlights section
+//***************************
+.ob-cat-highlights {
+  background-image: url('../icons/ob-cat-highlights-bg.svg');
+  background-position: top -50px left 0;
+  background-size: cover;
+  .ob-heading-cta-md {
+    padding-top: 100px;
+    @include breakpoint("medium") {
+      padding-top: 200px;
+    }
+  }
+  @include breakpoint("medium") {
+    background-position: top;
+  }
+}
+.ob-cat-highlights-img {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $ob-light-gray;
+  img {
+    mix-blend-mode: multiply;
+  }
+}
+.ob-cat-highlights-pb {
+  padding-bottom: 80px !important;
+  @include breakpoint("medium") {
+    padding-bottom: 70px !important;
+  } 
+  
+}
+.ob-cat-hightlights-list-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-bottom: 15px;
+  font-size: 16px;
+  svg {
+    width: 16px;
+    height: 16px;
+    min-width: 16px;
+    min-height: 16px;
+    max-width: 16px;
+    max-height: 16px;
+    margin-right: 10px;
+    margin-top: 3px;
+  }
+}
+
+
+//***************************
+//Search Page
+//***************************
+.container[data-page-type="search"] {
+  .navBar-section {
+    text-align: left;
+  }
+  .panel {
+    padding: 0px; 
+    border: none;
+    background-color: $ob-light-gray;
+  }
+  .panel-body {
+    background-color: $ob-light-gray;
+  }
+  .productGrid {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}
