@@ -1,5 +1,5 @@
 {
-  "name": "oBundle-CrescentMoon-2-15-2020",
+  "name": "oBundle-CrescentMoon-2-23-2021",
   "version": "4.10.0-rc.1",
   "meta": {
     "price": 0,
@@ -49,6 +49,7 @@
     "wizard_tip_3": "Step 3 tip",
     "wizard_tip_4": "Step 4 tip",
     "wizard_tip_5": "Step 5 tip",
+    "show_top_banner_widget": false,
     "home_hero_heading": "Your Adventure Starts Here",
     "home_hero_btn_url": "/product-wizard/",
     "home_hero_btn_text": "Find My Snowshoe",
