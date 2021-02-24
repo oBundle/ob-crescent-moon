@@ -38,9 +38,9 @@
       },
       {
         "type": "checkbox",
-        "label": "Show Top Promo Banner Widget",
+        "label": "Hide Top Promo Banner Widget",
         "force_reload": true,
-        "id": "show_top_banner_widget"
+        "id": "hide_top_banner_widget"
       },
       {
         "type": "heading",

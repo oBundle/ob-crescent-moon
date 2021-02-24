@@ -6,29 +6,29 @@
   border-bottom: none;
   font-family: 'VisbyCF' !important;
   z-index: 1000;
-  top: 0px;
-  &.ob-has-banner {
-    top: 35px;
-    .ob-header-promo-banner {
-      background-color: $ob-red;
-      width: 100%;
-      text-align: center;
-      height: 35px;
-      position: fixed;
-      top: 0;
-      z-index: 1000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      font-size: 12px;
-      @include breakpoint("medium") {
-        font-size: 14px;
-      }
-    }
+  top: 35px;
+  &.ob-no-banner {
+    top: 0px;
   }
 }
 
+.ob-header-promo-banner {
+  background-color: $ob-red;
+  width: 100%;
+  text-align: center;
+  height: 35px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 12px;
+  @include breakpoint("medium") {
+    font-size: 14px;
+  }
+}
 
 .navPages {
   padding: 0px;
