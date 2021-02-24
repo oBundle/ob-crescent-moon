@@ -6,7 +6,10 @@
   border-bottom: none;
   font-family: 'VisbyCF' !important;
   z-index: 1000;
-  top: 35px;
+  top: 0px;
+  &.ob-has-banner {
+    top: 35px;
+  }
 }
 
 .ob-header-promo-banner {

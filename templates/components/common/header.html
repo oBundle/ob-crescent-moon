@@ -11,13 +11,14 @@
 </div>
 {{/if}}
 
+{{#if theme_settings.show_top_banner_widget}}
 <div class='ob-header-promo-banner' style='z-index: 1000;'>
     <span class='ob-desktop ob-text-white'>{{{region name="ob-desktop-promo--global"}}}</span><span class='ob-mobile ob-text-white'>{{{region name="ob-mobile-promo--global"}}}</span>
 </div>
+{{/if}}
 
 
-
-<header class="header" role="banner">
+<header class="header {{#if theme_settings.show_top_banner_widget}}ob-has-banner{{/if}}" role="banner">
     <a href="#" class="mobileMenu-toggle" data-mobile-menu-toggle="menu">
         <span class="mobileMenu-toggleIcon">Toggle menu</span>
     </a>
