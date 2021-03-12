@@ -257,6 +257,51 @@
   }
 }
 
+//*************************
+// Product Details
+//*************************
+.productView-options {
+  overflow: visible;
+}
+
+.form-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  grid-gap: 10px;
+  align-items: center;
+
+  .alertBox.alertBox--error {
+    margin: 0;
+  }
+
+  .form-field {
+    display: flex;
+    align-items: center;
+
+    margin: 0;
+    * {margin: 0;}
+  }
+
+  .wishlist {
+    position: relative;
+
+    [aria-controls='wishlist-dropdown'] {
+      margin: 0;
+    }
+
+    #wishlist-dropdown {
+
+      &.is-open {
+        top:0;
+        left: 0;
+        right: 0;
+        padding: 0;
+      }
+    }
+  }
+}
+
+
 //***************************
 //Product Details Mobile Styling
 //***************************
